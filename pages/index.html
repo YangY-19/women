@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" type="text/css" href="../public/css/style.css">
+<head>
+	<title>我们</title>
+</head>
+<body>
+	<!-- 音乐 -->
+	<audio src="../public/css/women.wav" loop="loop" id="myaudio"></audio>
+	<audio src="../public/css/feidie.wav" id="myfeifei"></audio>
+	<div class="topMusic MusiStop"></div>
+	<!--  01 —— loading页面 -->
+	<div class="loading">
+			<div class="loading-warp">
+				<div class="loading-bg-yun"></div>
+				<div class="loading-logo-bi"></div>
+				<div class="loading-logo-ye"></div>
+				<div class="loading-logo-ji"></div>
+				<div class="loading-logo-seal"></div>
+				<div class="loading-yun">
+					<img class="loading-yun-img" src="../public/img/loading_cloud.png" alt="">
+				</div>
+			</div>
+			<div class="loading-text-wrap">
+				<div class="loading-text-bg">
+					<img src="../public/img/01-jiazai.png" />
+				</div>
+			</div>
+			<div class="loading-percent"></div>
+			<div class="loanding-athor"></div>
+			<div class="loading-zu"></div>
+	</div>
+
+ <div class="item-wrap">
+	 <ul class="slide">
+			<!--  02 —— cover页面 -->
+			<li class="cover">
+				<div class="cover-warp">
+					<div class="cover-text"></div>
+					<div class="cover-arrows">
+						<img class="coverArrows" src="../public/img/02-jiantou.png" />
+					</div>
+				</div>
+				<div class="cover-ufo">
+					<img class="feidie" src="../public/img/02-feidie.png" />
+					<img class="guang" src="../public/img/02-fd-guang.png" />
+				</div>
+			</li>
+
+			<!--  03 —— choose页面 -->
+			<li class="choose">
+				<div class="choose-text"></div>
+				<div class="choose-btn">
+					<div class="choose-dm ac-shoose"></div>
+					<div class="choose-jy ac-shoose"></div>
+					<div class="choose-rj ac-shoose"></div>
+				</div>
+			</li>
+
+			<!--  04 —— main页面 -->
+			<li class="main">
+				<div class="main-masking">
+					<div class="masking-wenzi">
+				    <img src="../public/img/mainscene_tips1-.png" />
+					</div>
+					<div class="masking-arrows">
+						<img src="../public/img/mainscene_tips2.png">
+					</div>
+				</div>
+				 <div class="top">
+					<div class="className"></div>
+					<div class="paibian"></div>
+					<div class="pinfen"></div>
+					<div class="ren"></div>
+					<div class="maozi"></div>
+					<div class="yupei"></div>
+					<div class="bitong"></div>
+					<div class="class">
+						<div style="float: left;"><img src="../public/img/03-nianji.png"></div>
+						<span class="nianji">大一</span>
+					</div>
+				 </div>
+				 <div class="bottom">
+						<div class="de-arrows">
+							<img class="de-arrows-top" src="../public/img/mainscene_tips3.png">
+							<img class="de-arrows-bottom" src="../public/img/mainscene_tips4.png">
+						</div>
+					<div class="de ac-shoose"></div>
+					<div class="zhi ac-shoose"></div>
+					<div class="ti ac-shoose"></div>
+					<div class="mei ac-shoose"></div>
+					<div class="lao ac-shoose"></div>
+					<div class="shengji"></div>
+				 </div>
+			</li>
+			<!-- 05-答题页 -->
+			<li class="answer">
+				<div class="answer-box">
+					<div class="title"></div>
+					<div class="result-options">
+						<div class="opt">
+							<span><span>A、</span><span class="opt_span"></span></span>
+							<div class="animation-correct"></div>
+							<div class="animation-wrong"></div>
+						</div>
+						<div class="opt">
+							<span ><span>B、</span><span class="opt_span"></span></span>
+							<div class="animation-correct"></div>
+							<div class="animation-wrong"></div>
+							
+						</div>
+						<div class="opt">
+								<span><span>C、</span><span class="opt_span"></span></span>
+							<div class="animation-correct"></div>
+							<div class="animation-wrong"></div>
+						</div>
+					</div>
+		  	</div>
+				<!-- 结果页 -->
+				<div class="result-mskeing result-success">
+					<div class="result-wp">
+						<div class="result-title">解锁成功</div>
+						<div class="result-flag"></div>
+						<div class="result-text">恭喜获得玉佩</div>
+					</div>
+				</div>
+				<div class="result-mskeing tips_failed">
+					<div class="result-wp">
+						<div class="result-title">解锁失败</div>
+						<div class="result-text">您与道具擦肩而过，再试一次吧！</div>
+					</div>
+				</div>
+				<!-- 人物升级 -->
+				<!-- <div class="result-renwu-box">
+					<div class="result-wp">
+						<div class="result-title">答对4题</div>
+						<div class="result-text">恭喜你，人物形象升级为</div>
+						<div class="result-flag">贵妃</div>
+					</div>
+				</div> -->
+
+				<div class="num-count"><span>1</span>/3</div>
+				<div class="answer-bg"></div>
+			</li>
+	 </ul>
+ </div>
+</body>
+<script>
+	var pics = ["../public/img/music-note.png","../public/img/02-feidie.png","../public/img/02-fd-guang.png", "../public/img/01-bi.png", "../public/img/01-ji.png", "../public/img/01-jiazai.png", "../public/img/01-ye.png",
+			"../public/img/01-yinzhang.png", "../public/img/answer_bg.jpg", "../public/img/02-bg.jpg", "../public/img/02-jiantou.png", "../public/img/02-wengzi.png", "../public/img/03-bg.jpg","../public/img/03-maozi.png", "../public/img/03-nianji.png", "../public/img/03-paibian.png", "../public/img/03-pinfen.png", "../public/img/03-renwu.png", "../public/img/03-shengji.png", "../public/img/03-wengzi.png", "../public/img/03-yupei.png", "../public/img/03-zsp.png", "../public/img/03-zsp2.png", "../public/img/answer_allopen_bg.png",  "../public/img/answer_correct.png","../public/img/answer_wrong.png", "../public/img/leaf1.png", "../public/img/leaf2.png", "../public/img/leaf3.png", "../public/img/mainscene_tips2.png", "../public/img/mainscene_tips3.png", "../public/img/me_close.png", "../public/img/memorial_up_btn.png", "../public/img/ms_xiaojie.png", "../public/img/ms_yatou.png", "../public/img/ms_zaixiang.png","../public/img/share.png", "../public/img/share_btn.png", "../public/img/xz_dm.png", "../public/img/xz_jy.png", "../public/img/xz_rj.png"]
+</script>
+<script src="../public/js/index.js"></script>
+</html>

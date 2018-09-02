@@ -1,0 +1,3 @@
+glup clean  
+gulp default  生成public  views
+gulp watch    实时更新代码
