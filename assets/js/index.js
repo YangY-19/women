@@ -20,7 +20,10 @@ $(document).ready(function () {
           $('.cover-text').addClass("cover-text-am")
         }, 2000);
         setTimeout(function () {
-          $('.coverArrows').addClass("coverArrows-flash")
+          $('.cover-ufo').show();
+          setTimeout(function () {
+            $('.coverArrows').addClass("coverArrows-flash");
+            }, 1000);;
         }, 11000);
       }
     };
@@ -49,7 +52,7 @@ $(document).ready(function () {
       $('.cover').hide();
       $('.choose').show();
       $('.choose').animate({ opacity: "1" }, 2000);
-    }, 4000);
+    }, 4);
     // 4000
   });
 
@@ -61,10 +64,10 @@ $(document).ready(function () {
       .end().closest('.item-wrap').css({ 'transform': 'translateY(' + WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 4000)//4000
+      }, 4)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 6000)//6000
+      }, 6)//6000
    }
 
 

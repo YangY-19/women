@@ -80,7 +80,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		width: 1000px;
 		height: 400px;
 		position:absolute;
-		top: 236px;
+		bottom: 306px;
 }
 .loading-text-wrap{
 	width: 500px;
@@ -182,6 +182,10 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .coverArrows-flash{
 	 animation: coverArrows 2s linear both;
 }
+.cover-ufo {
+	display: none;
+}
+
 .cover-ufo .feidie{
 	width: 390px;
 	height: 138px;
@@ -483,7 +487,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	line-height: 58px;
 	position: absolute;
 	left: 60px;
-	top: 200px;
+	bottom: 760px;
 	text-align:left;
 	font-size: 30px;
 	font-weight: 400;
@@ -494,7 +498,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	margin-top:40px;
 	position: absolute;
 	left: 50px;
-	top: 400px;
+	bottom: 240px;
 }
 .answer .opt{
 	width: 520px;
@@ -531,13 +535,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	top: 18px;
 	display:none;
 }
-// .result-options .current{
-// 	background-color: #fff
-// }
+
 .answer .num-count {
 	text-align: center;
 	position: absolute;
-	bottom: 200px;
+	bottom: 160px;
 	width: 100%;
 	font-size: 36px;
 	color: #333
@@ -555,8 +557,8 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	z-index: 8;
 	display:none;
-	.result-wp{
-		background:  url(../img/answer_success_bg.png) no-repeat 0 0 / cover;
+	.result-wp {
+		background:  url(../img/answer_success_bg.png) no-repeat 0 0/cover;
 		width: 566px;
 		height: 571px;
 		position: absolute;
@@ -588,7 +590,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .tips_failed{
 	width: 100%;
 	height: 100%;
-	background-color: rgba(246, 245, 242, .8);
+	background-color:#e0ded7;
 	position: absolute;
 	z-index: 8;
 	display:none;

@@ -19,7 +19,7 @@ $(document).ready(function () {
           $('.de').addClass('current');       
         }});
       }})
-      $(this).css({ 'backgroundColor': "#e0ded7"});
+      $(this).css({ 'backgroundColor': "#ceccc6"});
       
      
     } else {
