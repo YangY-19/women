@@ -11,7 +11,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	z-index: 100;
 	border:1px #000 solid;
 	opacity: .4;
-	background: url(../img/music-note.png) no-repeat 0 0 / cover;
+	background: url(../img/music-note.png?v=d5c3f30312) no-repeat 0 0 / cover;
 	animation: musicIcon 20s linear infinite;
 }
 @keyframes musicIcon{
@@ -48,7 +48,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 36.875vw;
 		left: 41.094vw;
-		background: url(../img/01-bi.png) no-repeat 0 0 / cover;
+		background: url(../img/01-bi.png?v=2f40bc36ff) no-repeat 0 0 / cover;
 }
 .loading-logo-ye{
 		width: 18.75vw;
@@ -56,7 +56,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 52.344vw;
 		left: 56.25vw;
-		background: url(../img/01-ye.png) no-repeat 0 0 / cover
+		background: url(../img/01-ye.png?v=a1d7e0b965) no-repeat 0 0 / cover
 }
 .loading-logo-ji{
 		width: 15.625vw;
@@ -64,7 +64,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 67.969vw;
 		left: 36.563vw;
-		background: url(../img/01-ji.png) no-repeat 0 0 / cover
+		background: url(../img/01-ji.png?v=a874ded3a9) no-repeat 0 0 / cover
 }
 .loading-logo-seal{
 		width: 12.5vw;
@@ -72,7 +72,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 62.5vw;
 		left: 23.438vw;
-		background: url(../img/01-yinzhang.png) no-repeat 0 0 / cover
+		background: url(../img/01-yinzhang.png?v=2bc9e4e998) no-repeat 0 0 / cover
 }
 .loading-yun-img{
 		width: 156.25vw;
@@ -104,7 +104,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	font-family: unset;
 }
 .loanding-athor{
-	background: url(../img/01-athor.png) no-repeat 0 0 / cover;
+	background: url(../img/01-athor.png?v=95333abcdd) no-repeat 0 0 / cover;
 	width: 62.656vw;
 	height: 13.75vw;
 	position: absolute;
@@ -112,7 +112,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 19.531vw;
 }
 .loading-zu{
-	background: url(../img/01-zu.png) no-repeat 0 0 / cover;
+	background: url(../img/01-zu.png?v=34f0695292) no-repeat 0 0 / cover;
 	width: 51.25vw;
 	height: 54.844vw;
 	position: absolute;
@@ -142,7 +142,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .cover{
 	display: none;
-	background: url(../img/02-bg.jpg) no-repeat 0 0 / cover;
+	background: url(../img/02-bg.jpg?v=ed18d177e6) no-repeat 0 0 / cover;
 }
 .cover-text{
 	width: 76.563vw;
@@ -150,10 +150,10 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom:46.875vw;
   left: 12.5vw;
   position: absolute;
-	background: url(../img/02-wengzi.png) no-repeat 0 0 / cover;
+	background: url(../img/02-wengzi.png?v=d4576072a5) no-repeat 0 0 / cover;
 }
 .cover-text-am{
-	animation: cover-text-am 8s linear both; 
+	animation: cover-text-am 0.1s linear both; 
 }
 @keyframes cover-text-am {
 	0%{height: 0px}
@@ -220,7 +220,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 /* 03 - choose页面 */
 .choose{
-	background: url(../img/03-bg.jpg) no-repeat 0 0 / cover;
+	background: url(../img/03-bg.jpg?v=d07833e298) no-repeat 0 0 / cover;
 	opacity: 0;
 	display: none
 }
@@ -230,7 +230,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
   top: 29.688vw;
   left: 15.625vw;
   position: absolute;
-	background: url(../img/03-wengzi.png) no-repeat 0 0 / cover;	
+	background: url(../img/03-wengzi.png?v=9e9579c35b) no-repeat 0 0 / cover;	
 }
 .choose-btn > div{
   width: 15.313vw;
@@ -240,19 +240,19 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .choose-dm{
 	left: 15.625vw;
-	background: url(../img/xz_dm.png) no-repeat 0 0 / cover;	
+	background: url(../img/xz_dm.png?v=68428ebc97) no-repeat 0 0 / cover;	
 }
 .choose-jy{
 	left: 42.656vw;
-	background: url(../img/xz_jy.png) no-repeat 0 0 / cover;	
+	background: url(../img/xz_jy.png?v=e20d4732f7) no-repeat 0 0 / cover;	
 }
 .choose-rj{
 	left: 69.375vw;
-	background: url(../img/xz_rj.png) no-repeat 0 0 / cover;	
+	background: url(../img/xz_rj.png?v=d38f529f07) no-repeat 0 0 / cover;	
 }
 /* 04 - main页面 */
 .main{
-	background: #f3f3f4;
+	background:  #e5e5e5;
 	display: none;
 }
 .main-masking{
@@ -306,53 +306,58 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	0%{transform: scaleX(4);left: 62.5vw;}
 	100%{transform: scaleX(1);left: 39.063vw;}
 }
-.paibian{
-	background: url(../img/03-paibian.png) no-repeat 0 0 / cover;
+.main-de{
+	background: url(../img/03-paibian.png?v=4c55084342) no-repeat 0 0 / cover;
 	width: 64.063vw;
 	height: 15.313vw;
 	position: absolute;
 	bottom: 118.75vw;
 	left: 20.313vw;
+	display: none
 }
-.pinfen{
-	background: url(../img/03-pinfen.png) no-repeat 0 0 / cover;
+.main-zhi{
+	background: url(../img/03-pinfen.png?v=79c2953ac0) no-repeat 0 0 / cover;
 	width: 62.5vw;
 	height: 46.875vw;
 	position: absolute;
 	bottom: 37.5vw;
 	left: 18.75vw;
+	display: none
 }
 .ren{
-	background:url(../img/03-renwu.png) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu.png?v=1faa5b5004) no-repeat 0 0 / cover;
 	width: 22.656vw;
 	height: 78.125vw;
 	position: absolute;
 	bottom: 28.125vw;
 	left: 35.938vw;
 }
-.maozi{
-	background:url(../img/03-maozi.png) no-repeat 0 0 / cover;
+.main-ti{
+	background:url(../img/03-maozi.png?v=2397cda3d9) no-repeat 0 0 / cover;
 	width: 28.125vw;
 	height: 18.75vw;
 	position: absolute;
 	bottom:87.5vw;
 	left: 36.719vw;
+	display: none
 }
-.yupei{
-	background:url(../img/03-yupei.png) no-repeat 0 0 / cover;;
+.main-mei{
+	background:url(../img/03-yupei.png?v=ce7986e89c) no-repeat 0 0 / cover;;
 	width: 3.906vw;
 	height: 14.688vw;
 	position: absolute;
 	bottom:46.875vw;
 	left: 48.438vw;
+	display: none
 }
-.bitong{
-	background:url(../img/03-zsp.png) no-repeat 0 0 / cover;
+.main-lao{
+	background:url(../img/03-zsp.png?v=0fa964017a) no-repeat 0 0 / cover;
 	width: 12.5vw;
 	height: 25.625vw;
 	position: absolute;
 	bottom: 29.688vw;
 	left: 20.313vw;
+	display: none
 }
 .class{
 	width:26.563vw;
@@ -409,18 +414,15 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	100%{top: 2.5vw}
 }
 .de{
-	background: url(../img/btn_de.png) no-repeat 0 0 / cover;
+	background: url(../img/btn_de.png?v=a0b182ee02) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
 	bottom: 0;
 	left: 0px;
 }
-.current{
-	background: url(../img/btn_de.png) no-repeat 0 -20.469vw / cover;
-}
 .zhi{
-	background: url(../img/btn_zhi.png) no-repeat 0 0 / cover;
+	background: url(../img/btn_zhi.png?v=6f71de93b3) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -428,7 +430,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 14.375vw;
 }
 .ti{
-	background: url(../img/btn_ti.png) no-repeat 0 0 / cover;
+	background: url(../img/btn_ti.png?v=6a9ebbc0b6) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -436,7 +438,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 28.75vw;
 }
 .mei{
-	background: url(../img/btn_mei.png) no-repeat 0 0 / cover;
+	background: url(../img/btn_mei.png?v=75b643bee5) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -444,7 +446,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 43.125vw;
 }
 .lao{
-	background: url(../img/btn_lao.png) no-repeat 0 0 / cover;
+	background: url(../img/btn_lao.png?v=16fa76373d) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -452,7 +454,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 57.5vw;
 }
 .shengji{
-	background: url(../img/03-shengji.png) no-repeat 0 0 / cover;
+	background: url(../img/03-shengji.png?v=da7d24cd0d) no-repeat 0 0 / cover;
 	width: 28.125vw;
 	height: 20.625vw;
 	position: absolute;
@@ -460,15 +462,33 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 71.875vw;
 	right: 0;
 }
+.current-de{
+	background: url(../img/btn_de.png?v=a0b182ee02) no-repeat 0 -20.625vw / cover;
+}
+.current-zhi{
+	background: url(../img/btn_zhi.png?v=6f71de93b3) no-repeat 0 -20.625vw / cover;
+}
+.current-ti{
+	background: url(../img/btn_ti.png?v=6a9ebbc0b6) no-repeat 0 -20.625vw / cover;
+}
+.current-mei{
+	background: url(../img/btn_mei.png?v=75b643bee5) no-repeat 0 -20.625vw / cover;
+}
+.current-lao{
+	background: url(../img/btn_lao.png?v=16fa76373d) no-repeat 0 -20.625vw / cover;
+}
+.current-shengji{
+	background: url(../img/03-shengji.png?v=da7d24cd0d) no-repeat 0 -20.625vw / cover;
+}
 /* 05-答题页 */
 .answer{
 	display: none;
-	background-color: #eee7dd
+	background-color: #e5e5e5
 }
 .answer-bg{
-	width: 37.813vw;
-	height: 27.813vw;
-	background: url(../img/answer_bg.jpg) no-repeat 0 0 / cover;
+	width: 37.5vw;
+	height: 37.5vw;
+	background: url(../img/answer_bg.jpg?v=e458e8bd8e) no-repeat 0 0 / cover;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -498,7 +518,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	padding: 2.344vw 18.75vw 2.344vw 3.125vw;
 	margin-bottom: 6.25vw;
 	border-radius: 1.406vw;
-	background-color: rgb(224,222,215,.7);
+	background-color:#e0ded7;
 	position: relative;
 	box-sizing: border-box;
 	line-height: 6.25vw
@@ -512,7 +532,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .answer .opt  .animation-correct{
 	width: 12.188vw;
 	height: 10.938vw;
-	background: url(../img/answer_correct.png) no-repeat 0 0 / cover;
+	background: url(../img/answer_correct.png?v=511864af19) no-repeat 0 0 / cover;
 	position: absolute;
 	right: 3.906vw;
 	top: 2.813vw;
@@ -521,7 +541,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .answer .opt  .animation-wrong{
 	width: 12.188vw;
 	height: 10.938vw;
-	background: url(../img/answer_wrong.png) no-repeat 0 0 / cover;
+	background: url(../img/answer_wrong.png?v=7fe9164255) no-repeat 0 0 / cover;
 	position: absolute;
 	right: 3.906vw;
 	top: 2.813vw;
@@ -540,7 +560,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	color: #da464d;
 }
 /* 结果页 */
-.result-success{
+.resultSuccess{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(246, 245, 242, .8);
@@ -548,35 +568,59 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	z-index: 8;
 	display:none;
 }
-.result-success .result-wp {
-		background:  url(../img/answer_success_bg.png) no-repeat 0 0/cover;
+.resultSuccess .result-wp {
+		background:  url(../img/answer_success_bg.png?v=25dac38e85) no-repeat 0 0/cover;
 		width: 88.438vw;
 		height: 89.219vw;
 		position: absolute;
 		left: 4.844vw;
 		top:46.875vw;
 	}
-.result-success .result-wp .result-title{
+.resultSuccess .result-wp .result-title{
 			width: 100%;
 			text-align: center;
 			font-size: 11.719vw;
 			color: #ce3e3e;
 			margin-top: 10.938vw
     }
-.result-success .result-wp .result-flag{
-			background:  url(../img/03-zsp.png) no-repeat 0 0 / cover;
+.resultSuccess .result-wp .result-flag-de{
+			background:  url(../img/03-paibian.png?v=4c55084342) no-repeat 0 0 / cover;
+			width: 78.125vw;
+			height: 18.75vw;
+			margin:  7.813vw auto
+		}
+.resultSuccess .result-wp .result-flag-zhi{
+			background:  url(../img/03-pinfen.png?v=79c2953ac0) no-repeat 0 0 / cover;
+			width: 59.375vw;
+			height: 31.25vw;
+			margin:  4.688vw auto
+		}
+.resultSuccess .result-wp .result-flag-ti{
+			background:  url(../img/03-maozi.png?v=2397cda3d9) no-repeat 0 0 / cover;
+			width: 31.25vw;
+			height: 25vw;
+			margin:  7.813vw auto
+		}
+.resultSuccess .result-wp .result-flag-mei{
+			background:  url(../img/03-yupei.png?v=ce7986e89c) no-repeat 0 0 / cover;
+			width: 6.25vw;
+			height: 25vw;
+			margin:  7.813vw auto
+		}
+.resultSuccess .result-wp .result-flag-lao{
+			background:  url(../img/03-zsp.png?v=0fa964017a) no-repeat 0 0 / cover;
 			width: 12.5vw;
 			height: 25vw;
 			margin:  7.813vw auto
 		}
-.result-success .result-wp .result-text{
+.resultSuccess .result-wp .result-text{
 			width: 100%;
 			text-align: center;
 			font-size: 4.688vw;
 			color: #000;
 			margin-top: 7.813vw
 		}
-.tips_failed{
+.tipsFailed{
 	width: 100%;
 	height: 100%;
 	background-color:#e0ded7;
@@ -584,22 +628,22 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	z-index: 8;
 	display:none;
 }
-.tips_failed .result-wp{
-		background:  url(../img/answer_failed_bg.png) no-repeat 0 0 / cover;
+.tipsFailed .result-wp{
+		background:  url(../img/answer_failed_bg.png?v=dd3d94635f) no-repeat 0 0 / cover;
 		width: 88.438vw;
 		height: 89.219vw;
 		position: absolute;
 		left: 4.844vw;
 		top:46.875vw;
 	}
-.tips_failed .result-wp .result-title{
+.tipsFailed .result-wp .result-title{
 			width: 100%;
 			text-align: center;
 			font-size: 11.719vw;
 			color: #ce3e3e;
 			margin-top: 10.938vw
     }
-.tips_failed .result-wp .result-text{
+.tipsFailed .result-wp .result-text2{
 			width: 100%;
 			text-align: center;
 			font-size: 4.063vw;

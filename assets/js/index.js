@@ -24,7 +24,7 @@ $(document).ready(function () {
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11000);
+        }, 11); //11000
       }
     };
   };
@@ -61,7 +61,7 @@ $(document).ready(function () {
   function handleClass() {
     $('.choose-jy').closest('li').siblings().hide()
       .end().next().show()
-      .end().closest('.item-wrap').css({ 'transform': 'translateY(' + WinHeight + 'px)' });
+      .end().closest('.slide').css({ 'transform': 'translateY(' + WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
       }, 4)//4000
@@ -86,15 +86,7 @@ $(document).ready(function () {
     $('.className').html('软件一班').addClass('classNameAn');
   });
 
-  //04 -- 答题页
-  $('.main').on('click','.ac-shoose', function () {
-    var $t = $(this);
-    var $li = $t.closest('li');
-    var index = $li.index() - 1;
-    
-    $li.next().show()
-       .closest('ul').css({ transform : 'translateY(' +-$(window).height() * index+'px)' });
-  })
+ 
   //音乐控制
   $('.topMusic').on('click', function () {
     if (mstop == 1) {

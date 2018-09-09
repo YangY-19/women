@@ -157,7 +157,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	background: url(../img/02-wengzi.png) no-repeat 0 0 / cover;
 }
 .cover-text-am{
-	animation: cover-text-am 8s linear both; 
+	animation: cover-text-am 0.1s linear both; 
 }
 @keyframes cover-text-am {
 	0%{height: 0px}
@@ -259,7 +259,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 
 /* 04 - main页面 */
 .main{
-	background: #f3f3f4;
+	background:  #e5e5e5;
 	display: none;
 }
 .main-masking{
@@ -313,21 +313,23 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	0%{transform: scaleX(4);left: 400px;}
 	100%{transform: scaleX(1);left: 250px;}
 }
-.paibian{
+.main-de{
 	background: url(../img/03-paibian.png) no-repeat 0 0 / cover;
 	width: 410px;
 	height: 98px;
 	position: absolute;
 	bottom: 760px;
 	left: 130px;
+	display: none
 }
-.pinfen{
+.main-zhi{
 	background: url(../img/03-pinfen.png) no-repeat 0 0 / cover;
 	width: 400px;
 	height: 300px;
 	position: absolute;
 	bottom: 240px;
 	left: 120px;
+	display: none
 }
 .ren{
 	background:url(../img/03-renwu.png) no-repeat 0 0 / cover;
@@ -337,29 +339,32 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 180px;
 	left: 230px;
 }
-.maozi{
+.main-ti{
 	background:url(../img/03-maozi.png) no-repeat 0 0 / cover;
 	width: 180px;
 	height: 120px;
 	position: absolute;
 	bottom:560px;
 	left: 235px;
+	display: none
 }
-.yupei{
+.main-mei{
 	background:url(../img/03-yupei.png) no-repeat 0 0 / cover;;
 	width: 25px;
 	height: 94px;
 	position: absolute;
 	bottom:300px;
 	left: 310px;
+	display: none
 }
-.bitong{
+.main-lao{
 	background:url(../img/03-zsp.png) no-repeat 0 0 / cover;
 	width: 80px;
 	height: 164px;
 	position: absolute;
 	bottom: 190px;
 	left: 130px;
+	display: none
 }
 .class{
 	width:170px;
@@ -423,9 +428,6 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 0;
 	left: 0px;
 }
-.current{
-	background: url(../img/btn_de.png) no-repeat 0 -131px / cover;
-}
 .zhi{
 	background: url(../img/btn_zhi.png) no-repeat 0 0 / cover;
 	width: 92px;
@@ -467,15 +469,32 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 460px;
 	right: 0;
 }
-
+.current-de{
+	background: url(../img/btn_de.png) no-repeat 0 -132px / cover;
+}
+.current-zhi{
+	background: url(../img/btn_zhi.png) no-repeat 0 -132px / cover;
+}
+.current-ti{
+	background: url(../img/btn_ti.png) no-repeat 0 -132px / cover;
+}
+.current-mei{
+	background: url(../img/btn_mei.png) no-repeat 0 -132px / cover;
+}
+.current-lao{
+	background: url(../img/btn_lao.png) no-repeat 0 -132px / cover;
+}
+.current-shengji{
+	background: url(../img/03-shengji.png) no-repeat 0 -132px / cover;
+}
 /* 05-答题页 */
 .answer{
 	display: none;
-	background-color: #eee7dd
+	background-color: #e5e5e5
 }
 .answer-bg{
-	width: 242px;
-	height: 178px;
+	width: 240px;
+	height: 240px;
 	background: url(../img/answer_bg.jpg) no-repeat 0 0 / cover;
 	position: absolute;
 	bottom: 0;
@@ -506,7 +525,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	padding: 15px 120px 15px 20px;
 	margin-bottom: 40px;
 	border-radius: 9px;
-	background-color: rgb(224,222,215,.7);
+	background-color:#e0ded7;
 	position: relative;
 	box-sizing: border-box;
 	line-height: 40px
@@ -550,7 +569,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 
 /* 结果页 */
-.result-success{
+.resultSuccess{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(246, 245, 242, .8);
@@ -571,7 +590,31 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			color: #ce3e3e;
 			margin-top: 70px
     }
-		.result-flag{
+		.result-flag-de{
+			background:  url(../img/03-paibian.png) no-repeat 0 0 / cover;
+			width: 500px;
+			height: 120px;
+			margin:  50px auto
+		}
+		.result-flag-zhi{
+			background:  url(../img/03-pinfen.png) no-repeat 0 0 / cover;
+			width: 380px;
+			height: 200px;
+			margin:  30px auto
+		}
+		.result-flag-ti{
+			background:  url(../img/03-maozi.png) no-repeat 0 0 / cover;
+			width: 200px;
+			height: 160px;
+			margin:  50px auto
+		}
+		.result-flag-mei{
+			background:  url(../img/03-yupei.png) no-repeat 0 0 / cover;
+			width: 40px;
+			height: 160px;
+			margin:  50px auto
+		}
+		.result-flag-lao{
 			background:  url(../img/03-zsp.png) no-repeat 0 0 / cover;
 			width: 80px;
 			height: 160px;
@@ -587,7 +630,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	}
 }
 
-.tips_failed{
+.tipsFailed{
 	width: 100%;
 	height: 100%;
 	background-color:#e0ded7;
@@ -608,7 +651,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			color: #ce3e3e;
 			margin-top: 70px
     }
-		.result-text{
+		.result-text2{
 			width: 100%;
 			text-align: center;
 			font-size: 26px;

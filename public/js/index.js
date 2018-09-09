@@ -4675,7 +4675,7 @@ $(document).ready(function () {
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11000);
+        }, 11); //11000
       }
     };
   };
@@ -4712,7 +4712,7 @@ $(document).ready(function () {
   function handleClass() {
     $('.choose-jy').closest('li').siblings().hide()
       .end().next().show()
-      .end().closest('.item-wrap').css({ 'transform': 'translateY(' + WinHeight + 'px)' });
+      .end().closest('.slide').css({ 'transform': 'translateY(' + WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
       }, 4)//4000
@@ -4737,15 +4737,7 @@ $(document).ready(function () {
     $('.className').html('软件一班').addClass('classNameAn');
   });
 
-  //04 -- 答题页
-  $('.main').on('click','.ac-shoose', function () {
-    var $t = $(this);
-    var $li = $t.closest('li');
-    var index = $li.index() - 1;
-    
-    $li.next().show()
-       .closest('ul').css({ transform : 'translateY(' +-$(window).height() * index+'px)' });
-  })
+ 
   //音乐控制
   $('.topMusic').on('click', function () {
     if (mstop == 1) {
@@ -4768,289 +4760,136 @@ $(document).ready(function () {
     myAuto.pause();
   }
 })
+
 var data = {
-  // daoju: {
-  //   de: [
-  // {
-  question: '1、关于道德，下面答案中说法最准确的是?',
-  opitions: {
-    A: '道德就是做好人好事',
-    B: '做事符合他人利益就是道德',
-    C: '道德是处理人与人、人与社会之间关系的特殊行为规范'
-  },
-  correct: 'C'
-}
-  //     {
-  //       question: '2、以下哪一组人名都是《大家》作者？',
-  //       opitions: {
-  //         A: 'A、闫黄、红佟佟、小绿桑',
-  //         B: 'B、闫绿、黄佟佟、小红桑',
-  //         C: 'C、闫红、黄佟佟、小绿桑'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '3、以下哪一个观点是《大家》没推荐过的？',
-  //       opitions: {
-  //         A: 'A、中国人至少还要忍受30年雾霾',
-  //         B: 'B、雾霾越严重，越要发展大城市',
-  //         C: 'C、雾霾是工业污染的产物'
-  //       },
-  //       correct: 'C'
-  //     }
-  //   ],
-  //   zhi: [
-  //     {
-  //       question: '1、NASH是什么？',
-  //       opitions: {
-  //         A: 'A、一个数学家的名字',
-  //         B: 'B、几个对博弈论最有贡献的人的名字合写',
-  //         C: 'C、A+B'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '2、以下哪条内容是可信的？',
-  //       opitions: {
-  //         A: 'A、吃碘盐可以预防核辐射',
-  //         B: 'B、白壳鸡蛋更有营养',
-  //         C: 'C、早上身高比晚上更高一些'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '3、某编辑一月约稿量超量50%，二月约稿量上升了50%，三月放松警惕，业绩下滑50%，请回答：第三个月编辑约稿量考核如何？',
-  //       opitions: {
-  //         A: 'A、高于要求水平，超过很多(50%以上)',
-  //         B: 'B、高于要求水平，超过一点(50%以下)',
-  //         C: 'C、低于要求水平，差一点点(50%以下)'
-  //       },
-  //       correct: 'B'
-  //     }
-  //   ],
-  //   ti: [
-  //     {
-  //       question: '1、以下文章标题，哪个被读者点击次数更多？',
-  //       opitions: {
-  //         A: 'A、《这世上唯一能让窦唯潦倒的人》',
-  //         B: 'B、《你无法证明自己不是人渣》',
-  //         C: 'C、《崔永元用诡辩“战胜”科学》'
-  //       },
-  //       correct: 'A'
-  //     },
-  //     {
-  //       question: '2、以下文章，哪个被转发次数更多？',
-  //       opitions: {
-  //         A: 'A、《留美需要多长时间的准备？》',
-  //         B: 'B、《今日何人才配做我们的老师》',
-  //         C: 'C、《父子之间，很多话不知如何开口》'
-  //       },
-  //       correct: 'A'
-  //     },
-  //     {
-  //       question: '3、郭靖为什么能追到黄蓉？',
-  //       opitions: {
-  //         A: 'A、因为郭靖土豪',
-  //         B: 'B、因为郭靖豪爽、大气不滥情',
-  //         C: 'C、因为郭靖是蒙古高官'
-  //       },
-  //       correct: 'B'
-  //     }
-  //   ],
-  //   mei: [
-  //     {
-  //       question: '1、根据《大家》作者的观点，以下哪个是错误的？',
-  //       opitions: {
-  //         A: 'A、《红楼梦》里面贾瑞勾引王熙凤是因为他觉得“已婚女人很寂寞”',
-  //         B: 'B、名人公布恋情时，获利的首先是借机打广告的企业',
-  //         C: 'C、同性结婚在美国是违法的'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '2、关于黄圣依和杨子的感情，以下哪种观点没有在《大家》提起过？',
-  //       opitions: {
-  //         A: 'A、黄圣依和杨子的关系可能一直会是一个谜',
-  //         B: 'B、黄圣依和杨子很般配',
-  //         C: 'C、杨子并非为了孩子而承认和黄圣依的关系'
-  //       },
-  //       correct: 'B'
-  //     },
-  //     {
-  //       question: '3、以下哪条不是大家作者发表过的婚姻观',
-  //       opitions: {
-  //         A: 'A、不要结婚',
-  //         B: 'B、婚姻很昂贵',
-  //         C: 'C、婚姻不该用“狠”来维持'
-  //       },
-  //       correct: 'A'
-  //     }
-  //   ],
-  //   lao: [
-  //     {
-  //       question: '1、以下电视剧女主角谁更“玛丽苏”？',
-  //       opitions: {
-  //         A: 'A、花千骨',
-  //         B: 'B、何以笙箫默',
-  //         C: 'C、武媚娘传奇'
-  //       },
-  //       correct: 'A'
-  //     },
-  //     {
-  //       question: '2、2015年上半年以下哪个明星的情感问题没有在《大家》栏目中被提到？',
-  //       opitions: {
-  //         A: 'A、黄圣依',
-  //         B: 'B、古天乐',
-  //         C: 'C、刘翔'
-  //       },
-  //       correct: 'B'
-  //     },
-  //     {
-  //       question: '3、以下关于日本的描述哪一条是不对的？',
-  //       opitions: {
-  //         A: 'A、大多数日本人整容是为了让自己变得更普通',
-  //         B: 'B、大多数日本人不知道天皇是做什么的',
-  //         C: 'C、大多数日本人不喜欢吃日本料理'
-  //       },
-  //       correct: 'C'
-  //     }
-  //   ],
-  //   renwu: [
-  //     {
-  //       question: '1：《大家》目前有一位主编的名字叫做“jiajia”，请问对应的中文是哪两个字？',
-  //       opitions: {
-  //         A: 'A、贾佳',
-  //         B: 'B、贾葭',
-  //         C: 'C、贾嘉'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '2：填空题，下面句子中应该填入哪个词组：《大家》女编辑都是__常给大家带来欢乐',
-  //       opitions: {
-  //         A: 'A、女神经',
-  //         B: 'B、女神，经',
-  //         C: 'C、女，神经'
-  //       },
-  //       correct: 'B'
-  //     },
-  //     {
-  //       question: '3：以下哪一位不是《大家》作者',
-  //       opitions: {
-  //         A: 'A、刘波',
-  //         B: 'B、刘洪',
-  //         C: 'C、刘海'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '4：以下哪一组《大家》作者都是女的？',
-  //       opitions: {
-  //         A: 'A、唐映红、席越、师北宸、小绿桑',
-  //         B: 'B、席越、易小荷、陈思呈、侯虹斌',
-  //         C: 'C、朱天衣、云也退、毛利、唐映红'
-  //       },
-  //       correct: 'B'
-  //     },
-  //     {
-  //       question: '5：《大家》特别的牛的作者王欣，他的每一篇文章在微信客户端阅读量都超过10万，他的网名叫什么？',
-  //       opitions: {
-  //         A: 'A、反内裤阵地',
-  //         B: 'B、反裤衩阵地',
-  //         C: 'C、反优衣库阵地'
-  //       },
-  //       correct: 'B'
-  //     },
-  //     {
-  //       question: '6：杨早老师曾在一篇文章中预测过100年后，中国三位文学家会被称为“自贡三杰”，请问这三杰都是谁？',
-  //       opitions: {
-  //         A: 'A、易小荷、李静睿、恐龙化石',
-  //         B: 'B、郭敬明、饶雪漫、周小平',
-  //         C: 'C、郭敬明、冷吃兔、饶雪漫'
-  //       },
-  //       correct: 'B'
-  //     },
-  //     {
-  //       question: '7：《大家》作者毛利曾点评：“一部热衷讲道理的电影，打斗再精彩，演员再好看，所有人都恨不得快点结束。”她在说哪部片子：',
-  //       opitions: {
-  //         A: 'A、大圣归来',
-  //         B: 'B、道士下山',
-  //         C: 'C、聂隐娘'
-  //       },
-  //       correct: 'B'
-  //     },
-
-  //     {
-  //       question: '8：《大家书架》每天推荐一本“你不看就OUT了”的好书，请问以下哪本书没有在这个栏目里推荐过的：',
-  //       opitions: {
-  //         A: 'A、《拉布拉多鸭的诅咒》',
-  //         B: 'B、《没有女人的男人们》',
-  //         C: 'C、《三生三世 十里桃花》'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '9：《大家》编辑金凤每天白天要写400字的文章，晚上，她会删掉300个字，问：金凤写一篇1000字的文章要多少天？',
-  //       opitions: {
-  //         A: 'A、10天',
-  //         B: 'B、8天',
-  //         C: 'C、7天'
-  //       },
-  //       correct: 'C'
-  //     },
-  //     {
-  //       question: '10：小远和刀哥约见作者，距离为10，小远步速2，作者3，刀哥4，刀哥遇作者后回头，遇小远后又回头，如此反复，问：三人相遇时，刀哥共走多远？',
-  //       opitions: {
-  //         A: 'A、10公里',
-  //         B: 'B、8公里',
-  //         C: 'C、7公里'
-  //       },
-  //       correct: 'B'
-  //     }
-  //     //renwu            
-  //   ]
-  // }
-
-// };
+  daoju: {
+    de: [
+      {
+        question: '1、关于道德，下面答案中说法最准确的是?',
+        opitions: {
+          A: '道德就是做好人好事',
+          B: '做事符合他人利益就是道德',
+          C: '道德是处理人与人、人与社会之间关系的特殊行为规范'
+        },
+        correct: 'C'
+      },
+    ],
+    zhi: [
+      {
+        question: '1、红茶属于什么茶',
+        opitions: {
+          A: '半发酵茶',
+          B: '全发酵茶',
+          C: '不发酵茶'
+        },
+        correct: 'B'
+      },
+    ],
+    ti: [
+      {
+        question: '1、2018年苏炳添在亚运会成绩是',
+        opitions: {
+          A: '9秒92',
+          B: '9秒82',
+          C: '9秒95'
+        },
+        correct: 'A'
+      },
+    ],
+    mei: [
+      {
+        question: '1、“吾日三省吾身：为人谋而不忠乎？中省是什么意思',
+        opitions: {
+          A: '反省',
+          B: '守信',
+          C: '节约'
+        },
+        correct: 'A'
+      },
+    ],
+    lao: [
+      {
+        question: '1、按照用人单位的性质为标准进行划分，劳动法律关系可以分为什么劳动法律关系。',
+        opitions: {
+          A: '个人经济组织',
+          B: '民办企业单位',
+          C: '事业单位'
+        },
+        correct: 'A'
+      },
+    ]
+  }
+};
 $(document).ready(function () {
+ 
+  const map = {0:'A', 1:'B', 2:'C'};
+  var map_resut_text = { 'de': '忠匾', 'zhi': '屏风', 'ti': '帽子', 'mei': '玉佩', 'lao': '锐笔' };
 
-  let map = {0:'A', 1:'B', 2:'C'}
-  $('.answer .title').text(data.question);
-  $('.answer .opt .opt_span').each(function (index, item) {
-    var $item = $(item)
-    $item.text(data.opitions[map[index]]);
-    $item.data('opt',map[index]);
-  })
-  $('.answer-box').data('correct', data.correct)
-  $('.answer .opt').on('click', function() {
-    if ($(this).find('.opt_span').data('opt') == $('.answer-box').data('correct')) {
-      $(this).find('.animation-correct').velocity('fadeIn',{duration:1000, complete:function() {
-        $('.result-success').velocity('fadeIn',{complete:function() {
-          setTimeout(function() {
-            $('.slide').css({transform: 'translateY(0)'})
-            $('.result-success, .animation-correct, animation-wrong').velocity('fadeOut');
-          },2000);
-          $('.de').addClass('current');       
-        }});
-      }})
-      $(this).css({ 'backgroundColor': "#ceccc6"});
-      
+  let daoju;
+  //04 -- 答题页
+  //点击按钮
+  $('.main').on('click', '.ac-shoose', function () {
+    const $t = $(this);
+    // if (status.hasClass('current')) return;
+    const $li = $t.closest('li');
+    $li.next().show()
+      .closest('ul').css({ transform: 'translateY(' + -$(window).height() * 2 + 'px)' });
+      //绑定数据到页面上
+     daoju = $t.data('daoju');
+    $('.answer .title').text(data.daoju[daoju][0]['question']); //题目
+    $('.answer .opt .opt_span').each((index, item) => {
+      const $item = $(item)
+      $item.text(data.daoju[daoju][0]['opitions'][map[index]]);
      
-    } else {
-      $(this).find('.animation-wrong').velocity('fadeIn', {
-        duration: 1000, complete: function () {
-          $('.tips_failed').velocity('fadeIn', {
-            complete: function () {
-              setTimeout(function () {
-                $('.slide').css({ transform: 'translateY(0)'})
-                $('.result-success, .animation-correct, animation-wrong').velocity('fadeOut');
-              }, 2000);
-            }
-          });
-        }
-      })
-      $(this).css({ 'backgroundColor': "#e0ded7" });
-    }
-  })
+    })
+    //绑定正确答案到'.answer-box' 上
+    $('.answer-box').data('correct', data.daoju[daoju][0]['correct']);
+  }) 
+   
+  function result(daoju, $t) {
+    $('.' + daoju).addClass('current-' + daoju);
+    $t.find('.animation-correct').velocity('fadeIn', {
+      duration: 1000, complete: function () {
+        const $t = $(this);
+        
+        $t.velocity('fadeOut');
+        $('.result-flag').attr('class', 'result-flag result-flag-' + daoju);
+        $('.result-text').text('恭喜你获得'+ map_resut_text[daoju] );
+        $('.resultSuccess').velocity('fadeIn', {
+          complete: function () {
+            const $t = $(this);
+            $t.velocity('fadeOut', {
+              complete: function () {
+                $('.slide').css({ transform: 'translateY(' + -$(window).height() + 'px)' });
+                $('.main-' + daoju).show().velocity('callout.pulse');
+              }, delay: 1500
+            })
+          }, duration: 1000
+        })
+      }, duration: 2000
+    });
+  }
+    $('.answer .opt').on('click', function () {      //判断点击的答案和正确答案是否一样
+      if ($(this).data('opt') === $('.answer-box').data('correct')) {
+        result(daoju, $(this))
+      } else {
+        $(this).find('.animation-wrong').velocity('fadeIn', {
+          duration: 1000, complete: function () {
+            const $t = $(this);
+            $t.velocity('fadeOut');
+            $('.tipsFailed').velocity('fadeIn', {
+              complete: function () {
+                const $t = $(this);
+                $t.velocity('fadeOut', {
+                  complete: function () {
+                    $('.slide').css({ transform: 'translateY(' + -$(window).height() + 'px)' });
+                  }, delay: 1500
+                })
+              }, duration: 1000
+            })
+          }, duration: 2000
+        });
+      }
+    })
 })
 
