@@ -153,7 +153,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	background: url(../img/02-wengzi.png?v=d4576072a5) no-repeat 0 0 / cover;
 }
 .cover-text-am{
-	animation: cover-text-am 0.1s linear both; 
+	animation: cover-text-am 8s linear both; 
 }
 @keyframes cover-text-am {
 	0%{height: 0px}
@@ -196,11 +196,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 @keyframes bounce {
     0%{transform: scale(1); opacity: 1; bottom: 21.563vw;}
     40%{transform: scale(0.6); opacity: .6; bottom:63.75vw;}
-    80%{transform: scale(0.2); opacity: .5; bottom:109.375vw;}
-    92%{transform: scale(0.03); opacity: .1; bottom:112.5vw;}
-    94%{transform: scale(0.01); opacity: .1; bottom:112.5vw;}
-    97%{transform: scale(0.02); opacity: .05; bottom:112.5vw;}
-    100%{transform: scale(0); opacity: 0; bottom:112.5vw;}
+    80%{transform: scale(0.2); opacity: .5; bottom:100vw;}
+    92%{transform: scale(0.03); opacity: .1; bottom:101.563vw;}
+    94%{transform: scale(0.01); opacity: .1; bottom:101.563vw;}
+    97%{transform: scale(0.02); opacity: .05; bottom:101.563vw;}
+    100%{transform: scale(0); opacity: 0; bottom:101.563vw;}
 	}
 @keyframes coverArrows{
 	0%{opacity: 0}
@@ -315,6 +315,15 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 20.313vw;
 	display: none
 }
+.main-ruxue{
+	background: url(../img/djck.png?v=ef660ebbcd) no-repeat 0 0 / cover;
+	width: 64.063vw;
+	height: 15.313vw;
+	position: absolute;
+	bottom: 118.75vw;
+	left: 20.313vw;
+	display: none
+}
 .main-zhi{
 	background: url(../img/03-pinfen.png?v=79c2953ac0) no-repeat 0 0 / cover;
 	width: 62.5vw;
@@ -361,19 +370,37 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .class{
 	width:26.563vw;
-	height: 7.187vw;
+	height: 7.813vw;
 	position: absolute;
 	right: 0;
-	bottom: 21.875vw
+	bottom: 21.875vw;
 }
-.class img{
-	width: 13.281vw;
-	height: 7.187vw;
+.dayi{
+	width: 24.531vw;
+	height: 6.25vw;
+	background:url(../img/dayi.png?v=01772f600e) no-repeat 0 0 / cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
 }
-.nianji{
-	line-height: 8.438vw;
-	margin-left: 1.563vw;
-	font-family: cursive;
+.daer{
+	width: 24.531vw;
+	height: 6.25vw;
+	background:url(../img/daer.png?v=b98a8c005d) no-repeat 0 0 / cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.dasan{
+	width: 24.531vw;
+	height: 6.25vw;
+	background:url(../img/dasan.png?v=313e3ba71b) no-repeat 0 0 / cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
 }
 .de-arrows{
 	position: absolute;
@@ -398,7 +425,33 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 0.469vw;
 	top: 2.5vw;
 	z-index: 8;
-	animation: deArrow 6s linear both
+	animation: deArrow 6s linear both infinite
+}
+.shengji-arrows{
+	position: absolute;
+	right: 10.313vw;
+	bottom: 14.063vw;
+	width: 6.563vw;
+	height: 6.563vw;
+	z-index: 8;
+	display: none
+}
+.shengji-arrows .shengji-arrows-top{
+	width: 6.563vw;
+	height: 3.125vw;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 8;
+}
+.shengji-arrows .shengji-arrows-bottom{
+	width: 5.625vw;
+	height: 2.344vw;
+	position: absolute;
+	left: 0.469vw;
+	top: 2.5vw;
+	z-index: 8;
+	animation: deArrow 6s linear both infinite
 }
 @keyframes deArrow{
 	0%{top: 2.5vw}
@@ -560,7 +613,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	color: #da464d;
 }
 /* 结果页 */
-.resultSuccess{
+.resultSuccess, .resultSuccess-ruxue{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(246, 245, 242, .8);
@@ -568,7 +621,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	z-index: 8;
 	display:none;
 }
-.resultSuccess .result-wp {
+.resultSuccess .result-wp, .resultSuccess-ruxue .result-wp {
 		background:  url(../img/answer_success_bg.png?v=25dac38e85) no-repeat 0 0/cover;
 		width: 88.438vw;
 		height: 89.219vw;
@@ -576,49 +629,62 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		left: 4.844vw;
 		top:46.875vw;
 	}
-.resultSuccess .result-wp .result-title{
+.resultSuccess .result-wp .result-title,.resultSuccess-ruxue .result-wp .result-title{
 			width: 100%;
 			text-align: center;
 			font-size: 11.719vw;
 			color: #ce3e3e;
 			margin-top: 10.938vw
     }
-.resultSuccess .result-wp .result-flag-de{
+.resultSuccess .result-wp .result-flag-de,.resultSuccess-ruxue .result-wp .result-flag-de{
 			background:  url(../img/03-paibian.png?v=4c55084342) no-repeat 0 0 / cover;
 			width: 78.125vw;
 			height: 18.75vw;
 			margin:  7.813vw auto
 		}
-.resultSuccess .result-wp .result-flag-zhi{
+.resultSuccess .result-wp .result-flag-zhi,.resultSuccess-ruxue .result-wp .result-flag-zhi{
 			background:  url(../img/03-pinfen.png?v=79c2953ac0) no-repeat 0 0 / cover;
 			width: 59.375vw;
 			height: 31.25vw;
 			margin:  4.688vw auto
 		}
-.resultSuccess .result-wp .result-flag-ti{
+.resultSuccess .result-wp .result-flag-ti,.resultSuccess-ruxue .result-wp .result-flag-ti{
 			background:  url(../img/03-maozi.png?v=2397cda3d9) no-repeat 0 0 / cover;
 			width: 31.25vw;
 			height: 25vw;
 			margin:  7.813vw auto
 		}
-.resultSuccess .result-wp .result-flag-mei{
+.resultSuccess .result-wp .result-flag-mei,.resultSuccess-ruxue .result-wp .result-flag-mei{
 			background:  url(../img/03-yupei.png?v=ce7986e89c) no-repeat 0 0 / cover;
 			width: 6.25vw;
 			height: 25vw;
 			margin:  7.813vw auto
 		}
-.resultSuccess .result-wp .result-flag-lao{
+.resultSuccess .result-wp .result-flag-lao,.resultSuccess-ruxue .result-wp .result-flag-lao{
 			background:  url(../img/03-zsp.png?v=0fa964017a) no-repeat 0 0 / cover;
 			width: 12.5vw;
 			height: 25vw;
 			margin:  7.813vw auto
 		}
-.resultSuccess .result-wp .result-text{
+.resultSuccess .result-wp .result-flag-ruxue,.resultSuccess-ruxue .result-wp .result-flag-ruxue{
+			background:  url(../img/rxtz.jpg?v=80ccfcd45f) no-repeat 0 0 / cover;
+			width: 15.625vw;
+			height: 25vw;
+			margin:  7.813vw auto
+		}
+.resultSuccess .result-wp .result-text,.resultSuccess-ruxue .result-wp .result-text{
 			width: 100%;
 			text-align: center;
 			font-size: 4.688vw;
 			color: #000;
 			margin-top: 7.813vw
+		}
+.resultSuccess .result-wp .result-text2,.resultSuccess-ruxue .result-wp .result-text2{
+			width: 100%;
+			text-align: center;
+			font-size: 4.375vw;
+			color: #e42b2b;
+			margin-top: 2.344vw
 		}
 .tipsFailed{
 	width: 100%;
@@ -650,8 +716,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			color: #000;
 			margin-top: 37.5vw
 		}
-// 人物升级
-
+/* 人物升级 */
 .item-wrap ul .answer .result-renwu-box{
 				display: none;
 				position: absolute;
@@ -663,7 +728,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				z-index: 2;
 			}
 .item-wrap ul .answer .result-renwu-box .result-wp{
-	background: url(../img/pop_renwu_bg.png?v=c39ed58f75) no-repeat 0 0 /cover;
+	background: url(../img/pop_renwu_bg.png) no-repeat 0 0 /cover;
 	width: 100vw;
 	height: 157.656vw;
 	position: absolute;
@@ -687,7 +752,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 						width: 100%;
 					}
 .item-wrap ul .answer .result-renwu-box .result-wp .result-flag{
-	background: url(../img/upgrade_btn.png?v=0d3b547f5f) no-repeat 0 0 /cover;
+	background: url(../img/upgrade_btn.png) no-repeat 0 0 /cover;
 	width: 38.281vw;
 	height: 15.156vw;
 	position: absolute;
@@ -697,3 +762,22 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 						font-size: 9.375vw;
 						text-align: center;
 					}
+/* 入学通知 */
+.ruxueongzhi{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/rxtz.jpg?v=80ccfcd45f) no-repeat 0 0 / cover;
+	display:none;
+	
+}
+.memorial_up_btn{
+		width: 10.469vw;
+		height: 6.094vw;
+		background: url(../img/memorial_up_btn.png?v=a57cb5c395) no-repeat 0 0 /cover;
+	  position: absolute;
+		bottom: 6.25vw;
+		right: 43.75vw;
+	}

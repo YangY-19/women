@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  const WinHeight = $(window).height()
   let index = 0;
   let mstop = 1;
   let pics_lenght = pics.length;
@@ -24,50 +25,43 @@ $(document).ready(function () {
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11); //11000
+        }, 11000); //11000
       }
     };
   };
   $('.loading-yun-img').animate({ left: "-800px" }, 21000);
 
   //01 - cover页面
-  $('.feidie').on('click', function () {
-    $('.guang').hide();
-    const _this = $(this)
-    setTimeout(function () {
-      _this.addClass('feidie-go');
-      feidieguang()
-    }, 500)
-  })
   function feidieguang() {
-    var myAuto = document.getElementById('myfeifei');
+    const myAuto = document.getElementById('myfeifei');
     myAuto.play();
   }
   $('.feidie').on('click', function () {
-    $('.cover-text').animate({ opacity: "0" }, 2000);
+    let _this = $(this)
+    $('.cover-text, .cover-arrows, .guang').velocity('fadeOut', {duration:1500,
+      complete: function () {
+        _this.addClass('feidie-go');
+      }
+    });
     setTimeout(function () {
-      $('.cover').animate({ opacity: "0" }, 4000);
+      $('.cover').velocity('fadeOut');
+      $('.choose').velocity('fadeIn');;
     }, 4000);
-    setTimeout(function () {
-      $('.cover').hide();
-      $('.choose').show();
-      $('.choose').animate({ opacity: "1" }, 2000);
-    }, 4);
     // 4000
   });
 
   //03 - choose页面
-  const WinHeight = -$(window).height()
+  
   function handleClass() {
     $('.choose-jy').closest('li').siblings().hide()
       .end().next().show()
-      .end().closest('.slide').css({ 'transform': 'translateY(' + WinHeight + 'px)' });
+      .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 4)//4000
+      }, 4000)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 6)//6000
+      }, 6000)//6000
    }
 
 
@@ -101,11 +95,11 @@ $(document).ready(function () {
   })
 
   function autoPlay() {
-    var myAuto = document.getElementById('myaudio');
+    const myAuto = document.getElementById('myaudio');
     myAuto.play();
   }
   function closePlay() {
-    var myAuto = document.getElementById('myaudio');
+    const myAuto = document.getElementById('myaudio');
     myAuto.pause();
   }
 })

@@ -157,7 +157,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	background: url(../img/02-wengzi.png) no-repeat 0 0 / cover;
 }
 .cover-text-am{
-	animation: cover-text-am 0.1s linear both; 
+	animation: cover-text-am 8s linear both; 
 }
 @keyframes cover-text-am {
 	0%{height: 0px}
@@ -201,11 +201,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 @keyframes bounce {
     0%{transform: scale(1); opacity: 1; bottom: 138px;}
     40%{transform: scale(0.6); opacity: .6; bottom:408px;}
-    80%{transform: scale(0.2); opacity: .5; bottom:700px;}
-    92%{transform: scale(0.03); opacity: .1; bottom:720px;}
-    94%{transform: scale(0.01); opacity: .1; bottom:720px;}
-    97%{transform: scale(0.02); opacity: .05; bottom:720px;}
-    100%{transform: scale(0); opacity: 0; bottom:720px;}
+    80%{transform: scale(0.2); opacity: .5; bottom:640px;}
+    92%{transform: scale(0.03); opacity: .1; bottom:650px;}
+    94%{transform: scale(0.01); opacity: .1; bottom:650px;}
+    97%{transform: scale(0.02); opacity: .05; bottom:650px;}
+    100%{transform: scale(0); opacity: 0; bottom:650px;}
 	}
 @keyframes coverArrows{
 	0%{opacity: 0}
@@ -322,6 +322,15 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 130px;
 	display: none
 }
+.main-ruxue{
+	background: url(../img/djck.png) no-repeat 0 0 / cover;
+	width: 410px;
+	height: 98px;
+	position: absolute;
+	bottom: 760px;
+	left: 130px;
+	display: none
+}
 .main-zhi{
 	background: url(../img/03-pinfen.png) no-repeat 0 0 / cover;
 	width: 400px;
@@ -368,19 +377,37 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .class{
 	width:170px;
-	height: 46px;
+	height: 50px;
 	position: absolute;
 	right: 0;
-	bottom: 140px
+	bottom: 140px;
 }
-.class img{
-	width: 85px;
-	height: 46px;
+.dayi{
+	width: 157px;
+	height: 40px;
+	background:url(../img/dayi.png) no-repeat 0 0 / cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
 }
-.nianji{
-	line-height: 54px;
-	margin-left: 10px;
-	font-family: cursive;
+.daer{
+	width: 157px;
+	height: 40px;
+	background:url(../img/daer.png) no-repeat 0 0 / cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.dasan{
+	width: 157px;
+	height: 40px;
+	background:url(../img/dasan.png) no-repeat 0 0 / cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
 }
 .de-arrows{
 	position: absolute;
@@ -405,7 +432,34 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 3px;
 	top: 16px;
 	z-index: 8;
-	animation: deArrow 6s linear both
+	animation: deArrow 6s linear both infinite
+}
+
+.shengji-arrows{
+	position: absolute;
+	right: 66px;
+	bottom: 90px;
+	width: 42px;
+	height: 42px;
+	z-index: 8;
+	display: none
+}
+.shengji-arrows .shengji-arrows-top{
+	width: 42px;
+	height: 20px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 8;
+}
+.shengji-arrows .shengji-arrows-bottom{
+	width: 36px;
+	height: 15px;
+	position: absolute;
+	left: 3px;
+	top: 16px;
+	z-index: 8;
+	animation: deArrow 6s linear both infinite
 }
 @keyframes deArrow{
 	0%{top: 16px}
@@ -569,7 +623,8 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 
 /* 结果页 */
-.resultSuccess{
+
+.resultSuccess, .resultSuccess-ruxue{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(246, 245, 242, .8);
@@ -620,12 +675,25 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			height: 160px;
 			margin:  50px auto
 		}
+		.result-flag-ruxue{
+			background:  url(../img/rxtz.jpg) no-repeat 0 0 / cover;
+			width: 100px;
+			height: 160px;
+			margin:  50px auto
+		}
 		.result-text{
 			width: 100%;
 			text-align: center;
 			font-size: 30px;
 			color: #000;
 			margin-top: 50px
+		}
+		 .result-text2{
+			width: 100%;
+			text-align: center;
+			font-size: 28px;
+			color: #e42b2b;
+			margin-top: 15px
 		}
 	}
 }
@@ -661,7 +729,8 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	}
 }
 
-// 人物升级
+
+ /* 人物升级 */
 
 .item-wrap ul .answer .result-renwu-box{
 				display: none;
@@ -674,7 +743,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				z-index: 2;
 			}
 .item-wrap ul .answer .result-renwu-box .result-wp{
-	background: url(../img/pop_renwu_bg.png?v=c39ed58f75) no-repeat 0 0 /cover;
+	background: url(../img/pop_renwu_bg.png) no-repeat 0 0 /cover;
 	width: 100vw;
 	height: 157.656vw;
 	position: absolute;
@@ -698,7 +767,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 						width: 100%;
 					}
 .item-wrap ul .answer .result-renwu-box .result-wp .result-flag{
-	background: url(../img/upgrade_btn.png?v=0d3b547f5f) no-repeat 0 0 /cover;
+	background: url(../img/upgrade_btn.png) no-repeat 0 0 /cover;
 	width: 38.281vw;
 	height: 15.156vw;
 	position: absolute;
@@ -708,3 +777,22 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 						font-size: 9.375vw;
 						text-align: center;
 					}
+/* 入学通知 */
+.ruxueongzhi{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/rxtz.jpg) no-repeat 0 0 / cover;
+	display:none;
+	
+}
+.memorial_up_btn{
+		width: 67px;
+		height: 39px;
+		background: url(../img/memorial_up_btn.png) no-repeat 0 0 /cover;
+	  position: absolute;
+		bottom: 40px;
+		right: 280px;
+	}

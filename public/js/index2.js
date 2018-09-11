@@ -4650,6 +4650,7 @@ return function (global, window, document, undefined) {
 }((window.jQuery || window.Zepto || window), window, document);
 }));
 $(document).ready(function () {
+  const WinHeight = $(window).height()
   let index = 0;
   let mstop = 1;
   let pics_lenght = pics.length;
@@ -4675,50 +4676,43 @@ $(document).ready(function () {
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11); //11000
+        }, 11000); //11000
       }
     };
   };
   $('.loading-yun-img').animate({ left: "-800px" }, 21000);
 
   //01 - cover页面
-  $('.feidie').on('click', function () {
-    $('.guang').hide();
-    const _this = $(this)
-    setTimeout(function () {
-      _this.addClass('feidie-go');
-      feidieguang()
-    }, 500)
-  })
   function feidieguang() {
-    var myAuto = document.getElementById('myfeifei');
+    const myAuto = document.getElementById('myfeifei');
     myAuto.play();
   }
   $('.feidie').on('click', function () {
-    $('.cover-text').animate({ opacity: "0" }, 2000);
+    let _this = $(this)
+    $('.cover-text, .cover-arrows, .guang').velocity('fadeOut', {duration:1500,
+      complete: function () {
+        _this.addClass('feidie-go');
+      }
+    });
     setTimeout(function () {
-      $('.cover').animate({ opacity: "0" }, 4000);
+      $('.cover').velocity('fadeOut');
+      $('.choose').velocity('fadeIn');;
     }, 4000);
-    setTimeout(function () {
-      $('.cover').hide();
-      $('.choose').show();
-      $('.choose').animate({ opacity: "1" }, 2000);
-    }, 4);
     // 4000
   });
 
   //03 - choose页面
-  const WinHeight = -$(window).height()
+  
   function handleClass() {
     $('.choose-jy').closest('li').siblings().hide()
       .end().next().show()
-      .end().closest('.slide').css({ 'transform': 'translateY(' + WinHeight + 'px)' });
+      .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 4)//4000
+      }, 4000)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 6)//6000
+      }, 6000)//6000
    }
 
 
@@ -4752,11 +4746,11 @@ $(document).ready(function () {
   })
 
   function autoPlay() {
-    var myAuto = document.getElementById('myaudio');
+    const myAuto = document.getElementById('myaudio');
     myAuto.play();
   }
   function closePlay() {
-    var myAuto = document.getElementById('myaudio');
+    const myAuto = document.getElementById('myaudio');
     myAuto.pause();
   }
 })
@@ -4773,6 +4767,24 @@ var data = {
         },
         correct: 'C'
       },
+      {
+        question: '2、德育过和的基本要素包括教育者、受教育者、德育内容与什么?',
+        opitions: {
+          A: '德育过程',
+          B: '德育任务',
+          C: '德育影响'
+        },
+        correct: 'A'
+      },
+      {
+        question: '3、通过摆事实、讲道理，使学生提高认识、形成正确观点的德育方法是?',
+        opitions: {
+          A: '说服教育',
+          B: '实战锻炼',
+          C: '榜样示范'
+        },
+        correct: 'A'
+      }
     ],
     zhi: [
       {
@@ -4781,6 +4793,24 @@ var data = {
           A: '半发酵茶',
           B: '全发酵茶',
           C: '不发酵茶'
+        },
+        correct: 'B'
+      },
+      {
+        question: '2、人们常说花季的年纪指多少岁',
+        opitions: {
+          A: '16岁',
+          B: '17岁',
+          C: '18岁'
+        },
+        correct: 'A'
+      },
+      {
+        question: '3、中国和朝鲜两国的界河叫做什么江',
+        opitions: {
+          A: '黑龙江',
+          B: '鸭绿江',
+          C: '松花江'
         },
         correct: 'B'
       },
@@ -4795,10 +4825,28 @@ var data = {
         },
         correct: 'A'
       },
+      {
+        question: '2、2008年奥运会的口号同一个世界，下一句是什么',
+        opitions: {
+          A: '同一个国家',
+          B: '同一个中国',
+          C: '同一个梦想'
+        },
+        correct: 'C'
+      },
+      {
+        question: '3、奥运会旗是:"五色环"旗,其中黄色环代表',
+        opitions: {
+          A: '亚洲',
+          B: '欧洲',
+          C: '大洋洲'
+        },
+        correct: 'A'
+      },
     ],
     mei: [
       {
-        question: '1、“吾日三省吾身：为人谋而不忠乎？中省是什么意思',
+        question: '1、"吾日三省吾身：为人谋而不忠乎？"中省是什么意思',
         opitions: {
           A: '反省',
           B: '守信',
@@ -4806,14 +4854,50 @@ var data = {
         },
         correct: 'A'
       },
+      {
+        question: '2、“金屋藏娇”的故事与哪一位皇帝有关',
+        opitions: {
+          A: '唐高宗',
+          B: '唐玄宗',
+          C: '汉武帝'
+        },
+        correct: 'C'
+      },
+      {
+        question: '3、汉字中只有一笔的字有几个? ',
+        opitions: {
+          A: '3个',
+          B: '8个',
+          C: '10个以上'
+        },
+        correct: 'A'
+      },
     ],
     lao: [
       {
-        question: '1、按照用人单位的性质为标准进行划分，劳动法律关系可以分为什么劳动法律关系。',
+        question: '1、破釜沉舟"这个成语出于哪次战争',
         opitions: {
-          A: '个人经济组织',
-          B: '民办企业单位',
-          C: '事业单位'
+          A: '官渡之战',
+          B: '巨鹿之战',
+          C: '赤壁之战'
+        },
+        correct: 'B'
+      },
+      {
+        question: '2、《一千零一夜》又名《天方夜谭》，这里的“天方”是指',
+        opitions: {
+          A: '古代阿拉伯',
+          B: '古代印度',
+          C: '古代中国'
+        },
+        correct: 'A'
+      },
+      {
+        question: '3、劳动法规定，劳动者试用期不能超过几个月',
+        opitions: {
+          A: '三个月',
+          B: '六个月',
+          C: '十二个月'
         },
         correct: 'A'
       },
@@ -4821,10 +4905,10 @@ var data = {
   }
 };
 $(document).ready(function () {
- 
+  const winHight = $(window).height()
   const map = {0:'A', 1:'B', 2:'C'};
-  var map_resut_text = { 'de': '忠匾', 'zhi': '屏风', 'ti': '帽子', 'mei': '玉佩', 'lao': '锐笔' };
-
+  const map_resut_text = { 'de': '忠匾', 'zhi': '屏风', 'ti': '帽子', 'mei': '玉佩', 'lao': '锐笔'};
+  let daojuBtn = 0;
   let daoju;
   //04 -- 答题页
   //点击按钮
@@ -4833,7 +4917,7 @@ $(document).ready(function () {
     // if (status.hasClass('current')) return;
     const $li = $t.closest('li');
     $li.next().show()
-      .closest('ul').css({ transform: 'translateY(' + -$(window).height() * 2 + 'px)' });
+      .closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' });
       //绑定数据到页面上
      daoju = $t.data('daoju');
     $('.answer .title').text(data.daoju[daoju][0]['question']); //题目
@@ -4851,7 +4935,6 @@ $(document).ready(function () {
     $t.find('.animation-correct').velocity('fadeIn', {
       duration: 1000, complete: function () {
         const $t = $(this);
-        
         $t.velocity('fadeOut');
         $('.result-flag').attr('class', 'result-flag result-flag-' + daoju);
         $('.result-text').text('恭喜你获得'+ map_resut_text[daoju] );
@@ -4860,8 +4943,9 @@ $(document).ready(function () {
             const $t = $(this);
             $t.velocity('fadeOut', {
               complete: function () {
-                $('.slide').css({ transform: 'translateY(' + -$(window).height() + 'px)' });
-                $('.main-' + daoju).show().velocity('callout.pulse');
+                $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+                $('.main-' + daoju).show().velocity('transition.shrinkIn');
+                daojuBtn++;
               }, delay: 1500
             })
           }, duration: 1000
@@ -4869,9 +4953,10 @@ $(document).ready(function () {
       }, duration: 2000
     });
   }
-    $('.answer .opt').on('click', function () {      //判断点击的答案和正确答案是否一样
+    $('.answer .opt').on('click', function () {      
+      //判断点击的答案和正确答案是否一样
       if ($(this).data('opt') === $('.answer-box').data('correct')) {
-        result(daoju, $(this))
+        result(daoju, $(this));
       } else {
         $(this).find('.animation-wrong').velocity('fadeIn', {
           duration: 1000, complete: function () {
@@ -4882,7 +4967,7 @@ $(document).ready(function () {
                 const $t = $(this);
                 $t.velocity('fadeOut', {
                   complete: function () {
-                    $('.slide').css({ transform: 'translateY(' + -$(window).height() + 'px)' });
+                    $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
                   }, delay: 1500
                 })
               }, duration: 1000
@@ -4890,6 +4975,49 @@ $(document).ready(function () {
           }, duration: 2000
         });
       }
+      //显示入学通知
+      function ruxuetongzi() {
+        $('.result-flag').attr('class', 'result-flag result-flag-ruxue');
+        $('.result-text').text('恭喜你获得入学通知书');
+        $('.resultSuccess-ruxue').show().velocity('fadeIn', {
+          duration: 6000,
+          complete: function () {
+            const $t = $(this);
+            $t.velocity('fadeOut', {
+              complete: function () {
+                $('.main-ruxue').show().velocity('callout.pulse');
+              }, delay: 1500
+            })
+          }, duration: 1000
+        })
+      }
+      if (daojuBtn === 4) {
+        setTimeout( function () {
+          ruxuetongzi();
+        }, 4000);
+      }
     })
+
+    //入学通知
+  let $ruxue = $('.main-ruxue');
+  let $memorial = $('.memorial_up_btn');
+  let $sjarrows = $('.shengji-arrows');
+  let $dayi = $('.class .dayi');
+  $ruxue.on('click', function () {
+    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.ruxueongzhi').show();
+    setTimeout(() => {
+      $memorial.velocity('transition.slideUpBigIn');
+    }, 2000);
+  });
+  $memorial.on('click',function () {
+    
+    $(this).parents('ul').css({ transform: 'translateY(' + -winHight + 'px)' });
+    $('.main-ruxue').hide();
+    $sjarrows.show();
+    $dayi.show().velocity('callout.pulse');;
+    setTimeout(() => {
+      $sjarrows.hide();
+    }, 3000);
+  })
 })
 
