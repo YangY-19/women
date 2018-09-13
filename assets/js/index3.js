@@ -119,7 +119,7 @@ $(document).ready(function () {
         if (daojuBtn === 4) {
           setTimeout(function () {
             ruxuetongzi();
-          }, 7000);
+          }, 6000);
         }
       } else {
         wrongResult($(this))
@@ -143,7 +143,9 @@ $(document).ready(function () {
   $ruxue.on('click', function () {
     $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.ruxueongzhi').show();
     setTimeout(() => {
-      $memorial.velocity('transition.slideUpBigIn');
+      setInterval(() =>{
+        $memorial.velocity('transition.slideUpBigIn');
+      }, "3000");
     }, 2000);
   });
   $memorial.on('click',function () {

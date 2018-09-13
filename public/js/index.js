@@ -4676,7 +4676,7 @@ $(document).ready(function () {
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11); //11000
+        }, 11000); //11000
       }
     };
   };
@@ -4698,7 +4698,7 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4);
+    }, 4000);
     // 4000
   });
 
@@ -4710,10 +4710,10 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 4)//4000
+      }, 3000)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 6)//6000
+      }, 5000)//6000
    }
 
 
@@ -5120,7 +5120,7 @@ $(document).ready(function () {
         if (daojuBtn === 4) {
           setTimeout(function () {
             ruxuetongzi();
-          }, 7000);
+          }, 6000);
         }
       } else {
         wrongResult($(this))
@@ -5144,7 +5144,9 @@ $(document).ready(function () {
   $ruxue.on('click', function () {
     $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.ruxueongzhi').show();
     setTimeout(() => {
-      $memorial.velocity('transition.slideUpBigIn');
+      setInterval(() =>{
+        $memorial.velocity('transition.slideUpBigIn');
+      }, "3000");
     }, 2000);
   });
   $memorial.on('click',function () {
