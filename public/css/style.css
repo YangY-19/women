@@ -35,12 +35,12 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	height: 46.875vw;
 }
 .loading-bg-yun{
-		background: url(../img/01-bg.png) no-repeat 0 0 / cover;
-		width:95.313vw;
-		height: 80.938vw;
+		/* background: url(../img/01-bg.png) no-repeat 0 0 / cover;
+		width:610px;
+		height: 518px;
 		position:absolute;
-		top: 21.25vw;
-		left: 3.125vw;
+		top: 136px;
+		left: 20px; */
 }
 .loading-logo-bi{
 		width: 15.625vw;
@@ -294,10 +294,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .className{
 	width: 34.844vw;
 	height: 7.187vw;
-	font-size:5vw;
+	font-size:5.313vw;
 	position: absolute;
 	bottom: 139.063vw;
 	left: 39.063vw;
+	font-family: cursive;
 }
 .classNameAn{
 	animation: classNameAn 2s linear both
@@ -335,7 +336,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .ren{
 	background:url(../img/03-renwu.png?v=1faa5b5004) no-repeat 0 0 / cover;
-	width: 22.656vw;
+	width: 23.594vw;
 	height: 78.125vw;
 	position: absolute;
 	bottom: 28.125vw;
@@ -608,9 +609,56 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	font-size: 5.625vw;
 	color: #333
 }
-.answer .num-count span{
+.answer .num-count .number{
 	font-size: 5.625vw;
 	color: #da464d;
+}
+.dq-class{
+	width: 31.094vw;
+	height: 4.531vw;
+	position: absolute;
+	right: 6.25vw;
+	bottom: 23.438vw;
+}
+.dq-dayi{
+	width: 31.094vw;
+	height: 4.531vw;
+	position: absolute;
+	background: url(../img/dq-dayi.png?v=8d174787f6) no-repeat 0 0 / cover;
+	right: 0px;
+	bottom: 0px;
+	display: none
+}
+.dq-daer{
+	width: 31.094vw;
+	height: 4.531vw;
+	position: absolute;
+	background: url(../img/dq-daer.png?v=bfa44e6378) no-repeat 0 0 / cover;
+	right: 0px;
+	bottom: 0px;
+	display: none
+}
+.dq-dasan{
+	width: 31.094vw;
+	height: 4.531vw;
+	position: absolute;
+	background: url(../img/dq-dasan.png?v=22f2203c40) no-repeat 0 0 / cover;
+	right: 0px;
+	bottom: 0px;
+	display: none
+}
+.abandon{
+	width: 25vw;
+	height: 9.375vw;
+	background:  #da464d;
+	border-radius: 1.875vw;
+	color: #fff;
+	text-align: center;
+	line-height: 9.375vw;
+	position: absolute;
+	right: 9.375vw;
+	bottom: 10.938vw;
+	display: none
 }
 /* 结果页 */
 .resultSuccess, .resultSuccess-ruxue{
@@ -718,50 +766,40 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		}
 /* 人物升级 */
 .item-wrap ul .answer .result-renwu-box{
-				display: none;
-				position: absolute;
-				top: 0;
-				left:0;
-				width: 100%;
-				height: 100%;
-				background-color: #f2f1ec;
-				z-index: 2;
-			}
-.item-wrap ul .answer .result-renwu-box .result-wp{
-	background: url(../img/pop_renwu_bg.png) no-repeat 0 0 /cover;
-	width: 100vw;
-	height: 157.656vw;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-				}
+		display: none;
+		position: absolute;
+		top: 0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		border: 100%;
+		background-color: #f2f1ec;
+		z-index: 2;
+}
 .item-wrap ul .answer .result-renwu-box .result-wp .result-title{
-						color: #ce3e3e;
-						font-size: 11.719vw;
-						position: absolute;
-						top: 52.969vw;
-						text-align: center;
-						width: 100%;
-					}
+				color: #ce3e3e;
+				font-size: 10.313vw;
+				position: absolute;
+				bottom: 93.75vw;
+				text-align: center;
+				width: 100%;
+			}
 .item-wrap ul .answer .result-renwu-box .result-wp .result-text{
-						color: #333;
-						font-size: 3.75vw;
-						position: absolute;
-						top: 70.625vw;
-						text-align:center;
-						width: 100%;
-					}
+				color: #333;
+				font-size: 5vw;
+				position: absolute;
+				bottom: 85.938vw;
+				text-align:center;
+				width: 100%;
+			}
 .item-wrap ul .answer .result-renwu-box .result-wp .result-flag{
-	background: url(../img/upgrade_btn.png) no-repeat 0 0 /cover;
-	width: 38.281vw;
-	height: 15.156vw;
-	position: absolute;
-	left: 30.312vw;
-	top: 84.219vw;
-						color:#fff;
-						font-size: 9.375vw;
-						text-align: center;
-					}
+				background: url(../img/daer.png?v=b98a8c005d) no-repeat 0 0 /cover;
+				width: 49.063vw;
+				height: 12.5vw;
+				position: absolute;
+				left: 26.563vw;
+				bottom: 67.188vw;
+			}
 /* 入学通知 */
 .ruxueongzhi{
 	width: 100%;

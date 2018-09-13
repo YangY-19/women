@@ -36,12 +36,12 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	height: 300px;
 }
 .loading-bg-yun{
-		background: url(../img/01-bg.png) no-repeat 0 0 / cover;
+		/* background: url(../img/01-bg.png) no-repeat 0 0 / cover;
 		width:610px;
 		height: 518px;
 		position:absolute;
 		top: 136px;
-		left: 20px;
+		left: 20px; */
 }
 .loading-logo-bi{
 		width: 100px;
@@ -301,10 +301,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .className{
 	width: 223px;
 	height: 46px;
-	font-size:32px;
+	font-size:34px;
 	position: absolute;
 	bottom: 890px;
 	left: 250px;
+	font-family: cursive;
 }
 .classNameAn{
 	animation: classNameAn 2s linear both
@@ -342,7 +343,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .ren{
 	background:url(../img/03-renwu.png) no-repeat 0 0 / cover;
-	width: 145px;
+	width: 151px;
 	height: 500px;
 	position: absolute;
 	bottom: 180px;
@@ -617,11 +618,57 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	font-size: 36px;
 	color: #333
 }
-.answer .num-count span{
+.answer .num-count .number{
 	font-size: 36px;
 	color: #da464d;
 }
-
+.dq-class{
+	width: 199px;
+	height: 29px;
+	position: absolute;
+	right: 40px;
+	bottom: 150px;
+}
+.dq-dayi{
+	width: 199px;
+	height: 29px;
+	position: absolute;
+	background: url(../img/dq-dayi.png) no-repeat 0 0 / cover;
+	right: 0px;
+	bottom: 0px;
+	display: none
+}
+.dq-daer{
+	width: 199px;
+	height: 29px;
+	position: absolute;
+	background: url(../img/dq-daer.png) no-repeat 0 0 / cover;
+	right: 0px;
+	bottom: 0px;
+	display: none
+}
+.dq-dasan{
+	width: 199px;
+	height: 29px;
+	position: absolute;
+	background: url(../img/dq-dasan.png) no-repeat 0 0 / cover;
+	right: 0px;
+	bottom: 0px;
+	display: none
+}
+.abandon{
+	width: 160px;
+	height: 60px;
+	background:  #da464d;
+	border-radius: 12px;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	position: absolute;
+	right: 60px;
+	bottom: 70px;
+	display: none
+}
 /* 结果页 */
 
 .resultSuccess, .resultSuccess-ruxue{
@@ -733,50 +780,43 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
  /* 人物升级 */
 
 .item-wrap ul .answer .result-renwu-box{
-				display: none;
+		display: none;
+		position: absolute;
+		top: 0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		border: 100%;
+		background-color: #f2f1ec;
+		z-index: 2;
+		.result-wp{
+			.result-title{
+				color: #ce3e3e;
+				font-size: 66px;
 				position: absolute;
-				top: 0;
-				left:0;
+				bottom: 600px;
+				text-align: center;
 				width: 100%;
-				height: 100%;
-				background-color: #f2f1ec;
-				z-index: 2;
 			}
-.item-wrap ul .answer .result-renwu-box .result-wp{
-	background: url(../img/pop_renwu_bg.png) no-repeat 0 0 /cover;
-	width: 100vw;
-	height: 157.656vw;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-				}
-.item-wrap ul .answer .result-renwu-box .result-wp .result-title{
-						color: #ce3e3e;
-						font-size: 11.719vw;
-						position: absolute;
-						top: 52.969vw;
-						text-align: center;
-						width: 100%;
-					}
-.item-wrap ul .answer .result-renwu-box .result-wp .result-text{
-						color: #333;
-						font-size: 3.75vw;
-						position: absolute;
-						top: 70.625vw;
-						text-align:center;
-						width: 100%;
-					}
-.item-wrap ul .answer .result-renwu-box .result-wp .result-flag{
-	background: url(../img/upgrade_btn.png) no-repeat 0 0 /cover;
-	width: 38.281vw;
-	height: 15.156vw;
-	position: absolute;
-	left: 30.312vw;
-	top: 84.219vw;
-						color:#fff;
-						font-size: 9.375vw;
-						text-align: center;
-					}
+		  .result-text{
+				color: #333;
+				font-size: 32px;
+				position: absolute;
+				bottom: 550px;
+				text-align:center;
+				width: 100%;
+			}
+		  .result-flag{
+				background: url(../img/daer.png) no-repeat 0 0 /cover;
+				width: 314px;
+				height: 80px;
+				position: absolute;
+				left: 170px;
+				bottom: 430px;
+			}
+   }
+}
+
 /* 入学通知 */
 .ruxueongzhi{
 	width: 100%;

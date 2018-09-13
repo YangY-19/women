@@ -19,20 +19,20 @@ $(document).ready(function () {
         $('.cover').show();
         setTimeout(function () {
           $('.cover-text').addClass("cover-text-am")
-        }, 2000);
+        }, 2);//2000
         setTimeout(function () {
           $('.cover-ufo').show();
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11000); //11000
+        }, 11); //11000
       }
     };
   };
   $('.loading-yun-img').animate({ left: "-800px" }, 21000);
 
   //01 - cover页面
-  function feidieguang() {
+  function feidieplay() {
     const myAuto = document.getElementById('myfeifei');
     myAuto.play();
   }
@@ -41,12 +41,13 @@ $(document).ready(function () {
     $('.cover-text, .cover-arrows, .guang').velocity('fadeOut', {duration:1500,
       complete: function () {
         _this.addClass('feidie-go');
+        feidieplay()
       }
     });
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4000);
+    }, 4);
     // 4000
   });
 
@@ -58,10 +59,10 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 4000)//4000
+      }, 4)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 6000)//6000
+      }, 6)//6000
    }
 
 
@@ -83,14 +84,14 @@ $(document).ready(function () {
  
   //音乐控制
   $('.topMusic').on('click', function () {
-    if (mstop == 1) {
+    if (mstop === 1) {
       $(this).removeClass("MusiStop");
       autoPlay();
       mstop = 0;
     } else {
       $(this).addClass("MusiStop");
       closePlay();
-      mstop = 0;
+      mstop = 1;
     }
   })
 

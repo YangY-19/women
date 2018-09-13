@@ -145,6 +145,100 @@ var data = {
         },
         correct: 'A'
       },
+    ],
+    
+renwu: [
+      {
+        question: '1、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '2、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '3、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '4、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '5、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '6、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '7、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '8、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '9、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+      {
+        question: '10、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      }
+      //renwu            
     ]
   }
 };
