@@ -19,14 +19,14 @@
 				<div class="loading-logo-ye"></div>
 				<div class="loading-logo-ji"></div>
 				<div class="loading-logo-seal"></div>
-				<div class="loading-yun">
-					<img class="loading-yun-img" src="../public/img/loading_cloud.png" alt="">
-				</div>
 			</div>
 			<div class="loading-text-wrap">
 				<div class="loading-text-bg">
 					<img src="../public/img/01-jiazai.png" />
 				</div>
+			</div>
+			<div class="loading-yun">
+				<img class="loading-yun-img" src="../public/img/loading_cloud.png" alt="">
 			</div>
 			<div class="loading-percent"></div>
 			<div class="loanding-athor"></div>
@@ -69,6 +69,9 @@
 						<img src="../public/img/mainscene_tips2.png">
 					</div>
 				</div>
+				<div class="animate-leaf"></div>
+				<div class="animate-leaf2"></div>
+				<div class="animate-leaf3"></div>
 				 <div class="top">
 					<div class="className"></div>
 					<div class="main-de"></div>
@@ -110,7 +113,7 @@
 				</div>
 			</li>
 			<!-- 05-答题页 -->
-			<li class="answer">
+			<li class="answer" style="display: none">
 				<div class="answer-box">
 					<div class="title"></div>
 					<div class="result-options">
@@ -123,7 +126,7 @@
 							<span ><span>B、</span><span class="opt_span"></span></span>
 							<div class="animation-correct"></div>
 							<div class="animation-wrong"></div>
-							
+
 						</div>
 						<div class="opt" data-opt="C">
 								<span><span>C、</span><span class="opt_span"></span></span>
@@ -168,12 +171,26 @@
 			<li class="ruxueongzhi">
          <div class="memorial_up_btn"></div>
 			</li>
+			<li class="biye-name">
+				<div class="by-explain"></div>
+				<p class="name-title">请输入你的姓名</p>
+				<input class="nameInput" type="text" placeholder="在此输入姓名">
+				<button class="notarize-name" type="button">打印毕业证书</button>
+				<p class="name-wrong">姓名必须汉字且不能小于两个字符</p>
+			</li>
+			<li class="byzs">
+				<div class="dyzs-share"></div>
+          <div class="byzs-wrapper">
+					  <div class="uers-name"></div>
+				  	<div class="uers-major"></div>
+				 </div>
+				<div class="web"></div>
+			</li>
 	 </ul>
  </div>
 </body>
 <script>
-	var pics = ["../public/img/01-bi.png", "../public/img/01-ji.png", "../public/img/01-jiazai.png", "../public/img/01-ye.png", "../public/img/01-yinzhang.png","../public/img/music-note.png","../public/img/02-feidie.png","../public/img/02-fd-guang.png",
-			 "../public/img/answer_bg.jpg", "../public/img/02-bg.jpg", "../public/img/02-jiantou.png", "../public/img/02-wengzi.png", "../public/img/03-bg.jpg","../public/img/03-maozi.png", "../public/img/03-nianji.png", "../public/img/03-paibian.png", "../public/img/03-pinfen.png", "../public/img/03-renwu.png", "../public/img/03-shengji.png", "../public/img/03-wengzi.png", "../public/img/03-yupei.png", "../public/img/03-zsp.png","../public/img/answer_correct.png","../public/img/answer_wrong.png", "../public/img/leaf1.png", "../public/img/leaf2.png", "../public/img/leaf3.png", "../public/img/mainscene_tips2.png", "../public/img/mainscene_tips3.png", "../public/img/me_close.png", "../public/img/memorial_up_btn.png","../public/img/share.png", "../public/img/share_btn.png", "../public/img/xz_dm.png", "../public/img/xz_jy.png", "../public/img/xz_rj.png"]
+	var pics = ["../public/img/01-athor.png","../public/img/01-bg-yun.png","../public/img/01-bi.png","../public/img/01-ji.png","../public/img/01-jiazai.png","../public/img/01-ye.png","../public/img/01-yinzhang.png","../public/img/01-zu.png","../public/img/02-bg.jpg","../public/img/02-fd-guang.png","../public/img/02-feidie.png","../public/img/02-jiantou.png","../public/img/02-wengzi.png","../public/img/03-bg.jpg","../public/img/03-maozi.png","../public/img/03-nianji.png","../public/img/03-paibian.png","../public/img/03-pinfen.png","../public/img/03-renwu.png","../public/img/03-renwu-2.png","../public/img/03-renwu-3.png","../public/img/03-shengji.png","../public/img/03-wengzi.png", "../public/img/byzs.png","../public/img/03-yupei.png", "../public/img/03-zsp.png","../public/img/answer_bg.jpg","../public/img/answer_correct.png","../public/img/answer_failed_bg.png","../public/img/answer_success_bg.png","../public/img/answer_wrong.png","../public/img/btn_de.png","../public/img/btn_lao.png","../public/img/btn_mei.png","../public/img/btn_ti.png","../public/img/btn_zhi.png","../public/img/daer.png","../public/img/dasan.png","../public/img/dayi.png","../public/img/by-explain.png","../public/img/djck.png","../public/img/dq-daer.png","../public/img/dq-dasan.png","../public/img/dq-dayi.png","../public/img/loading_cloud.png","../public/img/logo.png","../public/img/mainscene_tips1-.png","../public/img/mainscene_tips2.png","../public/img/mainscene_tips3.png","../public/img/mainscene_tips4.png","../public/img/me_close.png","../public/img/memorial_up_btn.png","../public/img/music-note.png","../public/img/rxtz.jpg","../public/img/share.png","../public/img/share_btn.png","../public/img/xz_dm.png","../public/img/xz_jy.png","../public/img/xz_rj.png"]
 </script>
 <script src="../public/js/index.js"></script>
 </html>

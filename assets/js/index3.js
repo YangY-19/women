@@ -45,6 +45,7 @@ $(document).ready(function () {
               complete: function () {
                 $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
                 $('.main-' + daoju).show().velocity('transition.shrinkIn');
+                $('.answer').hide();
                 daojuBtn++;
               }, delay: 1500
             })
@@ -106,6 +107,7 @@ $(document).ready(function () {
         $t.velocity('fadeOut', {
           complete: function () {
             $('.main-ruxue').show().velocity('callout.pulse');
+            
           }, delay: 1500
         })
       }, duration: 1000
@@ -121,15 +123,11 @@ $(document).ready(function () {
             ruxuetongzi();
           }, 6000);
         }
-      } else {
+      } else if ($(this).data('opt') === $('.answer').data('correct')) {  //判断人物点击的答案和正确答案是否一样
+        renwuresult($(this))
+      }else {
         wrongResult($(this))
       }
-
-    if ($(this).data('opt') === $('.answer').data('correct')) {  //判断人物点击的答案和正确答案是否一样
-      renwuresult($(this))
-
-    }
-      
     })
 
 
@@ -141,11 +139,11 @@ $(document).ready(function () {
   let $sjarrows = $('.shengji-arrows');
   let $dayi = $('.class .dayi');
   $ruxue.on('click', function () {
-    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.ruxueongzhi').show();
+    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' }).children('.ruxueongzhi').show();
     setTimeout(() => {
       setInterval(() =>{
         $memorial.velocity('transition.slideUpBigIn');
-      }, "3000");
+      }, 3000);
     }, 2000);
   });
   $memorial.on('click',function () {
@@ -154,6 +152,7 @@ $(document).ready(function () {
     $('.main-ruxue').hide();
     $sjarrows.show();
     $dayi.show().velocity('callout.pulse');
+    $('.shengji').addClass('current-shengji')
     setTimeout(() => {
       $sjarrows.hide();
     }, 3000);

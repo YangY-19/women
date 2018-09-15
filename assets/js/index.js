@@ -25,11 +25,11 @@ $(document).ready(function () {
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11000); //11000
+        }, 11); //11000
       }
     };
   };
-  $('.loading-yun-img').animate({ left: "-800px" }, 21000);
+  $('.loading-yun-img').animate({ left: "-800px" }, 21000);     
 
   //01 - cover页面
   function feidieplay() {
@@ -47,7 +47,7 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4000);
+    }, 4);
     // 4000
   });
 
@@ -59,10 +59,16 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3000)//4000
+      }, 3)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 5000)//6000
+      }, 5)//6000
+      setInterval(function () {
+        $('.ren').addClass('animation-renwu')
+        setTimeout(function () {
+          $('.ren').removeClass('animation-renwu')
+        },500)
+      },4000)
    }
 
 

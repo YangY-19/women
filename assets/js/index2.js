@@ -147,9 +147,18 @@ var data = {
       },
     ],
     
-renwu: [
+  dongman: [
       {
-        question: '1、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '1、动漫是什么',
+        opitions: {
+          A: '动漫',
+          B: '动漫2',
+          C: '动漫3'
+        },
+        correct: 'A'
+      },
+      {
+        question: '动漫',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -158,7 +167,28 @@ renwu: [
         correct: 'A'
       },
       {
-        question: '2、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '动漫',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+     {major:'动漫设计与制作'},      
+    ],
+  jiying: [
+      {
+        question: '计应是什么',
+        opitions: {
+          A: '计应',
+          B: '计应',
+          C: '计应'
+        },
+        correct: 'A'
+      },
+      {
+        question: '计应',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -167,7 +197,29 @@ renwu: [
         correct: 'A'
       },
       {
-        question: '3、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '计应',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+    
+    {major: '  计算机应用  '}
+    ],
+  ruanjian: [
+      {
+        question: '软件是什么',
+        opitions: {
+          A: '软件',
+          B: '软件',
+          C: '软件'
+        },
+        correct: 'A'
+      },
+      {
+        question: '计应',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -176,7 +228,7 @@ renwu: [
         correct: 'A'
       },
       {
-        question: '4、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '计应',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -184,61 +236,7 @@ renwu: [
         },
         correct: 'A'
       },
-      {
-        question: '5、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '6、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '7、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '8、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '9、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '10、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      }
-      //renwu            
-    ]
+    {major: '  软件技术开发 '},
+    ],
   }
 };

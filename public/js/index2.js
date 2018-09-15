@@ -4676,11 +4676,11 @@ $(document).ready(function () {
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
             }, 1000);;
-        }, 11000); //11000
+        }, 11); //11000
       }
     };
   };
-  $('.loading-yun-img').animate({ left: "-800px" }, 21000);
+  $('.loading-yun-img').animate({ left: "-800px" }, 21000);     
 
   //01 - cover页面
   function feidieplay() {
@@ -4698,7 +4698,7 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4000);
+    }, 4);
     // 4000
   });
 
@@ -4710,10 +4710,16 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3000)//4000
+      }, 3)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 5000)//6000
+      }, 5)//6000
+      setInterval(function () {
+        $('.ren').addClass('animation-renwu')
+        setTimeout(function () {
+          $('.ren').removeClass('animation-renwu')
+        },500)
+      },4000)
    }
 
 
@@ -4904,9 +4910,18 @@ var data = {
       },
     ],
     
-renwu: [
+  dongman: [
       {
-        question: '1、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '1、动漫是什么',
+        opitions: {
+          A: '动漫',
+          B: '动漫2',
+          C: '动漫3'
+        },
+        correct: 'A'
+      },
+      {
+        question: '动漫',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -4915,7 +4930,28 @@ renwu: [
         correct: 'A'
       },
       {
-        question: '2、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '动漫',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+     {major:'动漫设计与制作'},      
+    ],
+  jiying: [
+      {
+        question: '计应是什么',
+        opitions: {
+          A: '计应',
+          B: '计应',
+          C: '计应'
+        },
+        correct: 'A'
+      },
+      {
+        question: '计应',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -4924,7 +4960,29 @@ renwu: [
         correct: 'A'
       },
       {
-        question: '3、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '计应',
+        opitions: {
+          A: 'A、选项a',
+          B: 'B、选项b',
+          C: 'C、选项c'
+        },
+        correct: 'A'
+      },
+    
+    {major: '  计算机应用  '}
+    ],
+  ruanjian: [
+      {
+        question: '软件是什么',
+        opitions: {
+          A: '软件',
+          B: '软件',
+          C: '软件'
+        },
+        correct: 'A'
+      },
+      {
+        question: '计应',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -4933,7 +4991,7 @@ renwu: [
         correct: 'A'
       },
       {
-        question: '4、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
+        question: '计应',
         opitions: {
           A: 'A、选项a',
           B: 'B、选项b',
@@ -4941,62 +4999,8 @@ renwu: [
         },
         correct: 'A'
       },
-      {
-        question: '5、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '6、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '7、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '8、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '9、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      },
-      {
-        question: '10、标题标题标题标题标题标题标题标题标题标题标题标题标题标题标',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
-      }
-      //renwu            
-    ]
+    {major: '  软件技术开发 '},
+    ],
   }
 };
 $(document).ready(function () {
@@ -5046,6 +5050,7 @@ $(document).ready(function () {
               complete: function () {
                 $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
                 $('.main-' + daoju).show().velocity('transition.shrinkIn');
+                $('.answer').hide();
                 daojuBtn++;
               }, delay: 1500
             })
@@ -5107,6 +5112,7 @@ $(document).ready(function () {
         $t.velocity('fadeOut', {
           complete: function () {
             $('.main-ruxue').show().velocity('callout.pulse');
+            
           }, delay: 1500
         })
       }, duration: 1000
@@ -5122,15 +5128,11 @@ $(document).ready(function () {
             ruxuetongzi();
           }, 6000);
         }
-      } else {
+      } else if ($(this).data('opt') === $('.answer').data('correct')) {  //判断人物点击的答案和正确答案是否一样
+        renwuresult($(this))
+      }else {
         wrongResult($(this))
       }
-
-    if ($(this).data('opt') === $('.answer').data('correct')) {  //判断人物点击的答案和正确答案是否一样
-      renwuresult($(this))
-
-    }
-      
     })
 
 
@@ -5142,11 +5144,11 @@ $(document).ready(function () {
   let $sjarrows = $('.shengji-arrows');
   let $dayi = $('.class .dayi');
   $ruxue.on('click', function () {
-    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.ruxueongzhi').show();
+    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' }).children('.ruxueongzhi').show();
     setTimeout(() => {
       setInterval(() =>{
         $memorial.velocity('transition.slideUpBigIn');
-      }, "3000");
+      }, 3000);
     }, 2000);
   });
   $memorial.on('click',function () {
@@ -5155,9 +5157,103 @@ $(document).ready(function () {
     $('.main-ruxue').hide();
     $sjarrows.show();
     $dayi.show().velocity('callout.pulse');
+    $('.shengji').addClass('current-shengji')
     setTimeout(() => {
       $sjarrows.hide();
     }, 3000);
   })
 })
 
+
+$(document).ready(function () {
+  const map = {0:'A', 1:'B', 2:'C'};
+  const winHight = $(window).height();
+  // 人物升级
+
+  function shengjidata(classData) {
+    $('.sj-shoose').on('click', function () {
+      const $t = $(this);
+      // if (status.hasClass('current')) return;
+      const $li = $t.closest('li');
+      $li.next().show()
+        .closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' });
+    
+      
+
+
+
+
+
+      //绑定数据到页面上
+      $('.answer .title').text(data.daoju[classData][0]['question']); //题目
+      $('.answer .opt .opt_span').each(function (index, item) {
+        const $item = $(item)
+        $item.text(data.daoju[classData][0]['opitions'][map[index]]);
+      })
+      //绑定正确答案到'.answer-box' 上
+      $('.answer').data('correct', data.daoju[classData][0]['correct']);
+      alert($('.answer').data('correct'));
+      $('.num-count .total').text('10');
+      $('.dq-dayi, .abandon').velocity('fadeIn');
+    })
+  }
+  
+  
+  $('.choose-dm').on('click', function () {
+    shengjidata('dongman');
+    $('.item-wrap').data('zhuanye', data.daoju['dongman'][3]['major']);
+  })
+
+
+  $('.choose-jy').on('click', function () {
+    shengjidata('jiying')
+    $('.item-wrap').data('zhuanye', data.daoju['jiying'][3]['major']);
+  })
+
+  $('.choose-rj').on('click', function () {
+    shengjidata('ruanjian')
+    $('.item-wrap').data('zhuanye', data.daoju['ruanjian'][3]['major']);
+  })
+
+
+
+
+
+
+
+
+
+
+
+  $('.main-lao').on('click', function () {
+    const $t = $(this);
+    const $li = $t.closest('li');
+    $li.next().show()
+      .closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.biye-name').show();
+  })
+
+
+  $('.notarize-name').on('click', function () {
+    let nameValue = $('.nameInput').val();
+    var myReg = /^[\u4e00-\u9fa5]+$/;
+    if (myReg.test(nameValue) && nameValue.length >= 2 && nameValue.length < 5) {
+      const $t = $(this);
+      $('.nameInput').hide()
+      const $li = $t.closest('li');
+      $li.next().show()
+        .closest('ul').css({ transform: 'translateY(' + -winHight * 4 + 'px)' }).children('.byzs').show();
+      $('.uers-name').text(nameValue);
+      var zhuanyeData = $('.item-wrap').data('zhuanye');
+      $('.uers-major').text(zhuanyeData)
+    } else {
+      $('.name-wrong').show()
+    }
+    setInterval( () => {
+      $('.dyzs-share').show();
+      setTimeout(() => {
+        $('.dyzs-share').hide();
+      }, 2000);
+    },5000)
+    $('.topMusic').hide()
+  })
+})
