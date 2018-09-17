@@ -4670,13 +4670,16 @@ $(document).ready(function () {
         $('.cover').show();
         setTimeout(function () {
           $('.cover-text').addClass("cover-text-am")
-        }, 2);//2000
+        }, 2000);//2000
         setTimeout(function () {
           $('.cover-ufo').show();
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
+            setTimeout(()=> {
+              $('.coverArrows').hide();
+            },700)
             }, 1000);;
-        }, 11); //11000
+        }, 11000); //11000
       }
     };
   };
@@ -4698,46 +4701,50 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4);
+    }, 4000);
     // 4000
   });
 
   //03 - choose页面
   
-  function handleClass() {
+  function handleClass(chooseClass) {
     $('.choose-jy').closest('li').siblings().hide()
       .end().next().show()
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3)//4000
+      }, 3000)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 5)//6000
+      }, 5000)//6000
       setInterval(function () {
         $('.ren').addClass('animation-renwu')
         setTimeout(function () {
           $('.ren').removeClass('animation-renwu')
         },500)
       },4000)
+    $(this).closest('li').siblings().hide();
+    $('.className').html(chooseClass).addClass('classNameAn');
    }
 
 
   $('.choose').on('click', '.choose-dm', function () {
-    handleClass();
-    $('.className').html('动漫一班').addClass('classNameAn');
-  });
+    handleClass('动漫班');
+      });
   $('.choose').on('click', '.choose-jy', function () {
-    $(this).closest('li').siblings().hide()
-    handleClass();
-    $('.className').html('计应一班').addClass('classNameAn');
+        handleClass('计应班');
   });
   $('.choose').on('click', '.choose-rj', function () {
-    $(this).closest('li').siblings().hide()
-    handleClass();
-    $('.className').html('软件一班').addClass('classNameAn');
+    handleClass('软件班');
+
   });
 
+  $('.shengji-kaoshi').on('click', function () {
+    const $t = $(this);
+    const $li = $t.closest('li');
+    $li.next().show()
+      .closest('ul').css({ transform: 'translateY(' + -WinHeight * 3 + 'px)' }).children('.answer-upgrade').show();
+  })
  
   //音乐控制
   $('.topMusic').on('click', function () {
@@ -4914,199 +4921,451 @@ var data = {
       {
         question: '1、动漫是什么',
         opitions: {
-          A: '动漫',
-          B: '动漫2',
-          C: '动漫3'
+          A: '即动画、漫画的合称，指动画与漫画的集合',
+          B: '用简单而夸张的手法来描绘生活或时事的图画',
+          C: '以一定的速度连续播放的成组画面。'
         },
         correct: 'A'
       },
+    {
+      question: '2、动漫专业有学过下面那个软件',
+      opitions: {
+        A: '3Dmax建模',
+        B: 'Vue.js实战',
+        C: '高级程序开发'
+      },
+      correct: 'A'
+    },
       {
-        question: '动漫',
+        question: '3、名侦探柯南漫画出品时间是？',
         opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
+          A: '1989年',
+          B: '1994年',
+          C: '2009年'
         },
-        correct: 'A'
+        correct: 'B'
       },
-      {
-        question: '动漫',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
+    {
+      question: '4、国画的技法分为那两类',
+      opitions: {
+        A: '工笔、写实',
+        B: '工笔、写意',
+        C: '工笔、写生'
       },
+      correct: 'B'
+    },
+    {
+      question: '5、在3Dmax中默认保存的文件名是',
+      opitions: {
+        A: '*.3ds',
+        B: '*.Dwg',
+        C: '*.max'
+      },
+      correct: 'C'
+    },
+    {
+      question: '6、maya是由那个国家那个公司开发的软件',
+      opitions: {
+        A: '美国、ADOBE',
+        B: '法国、AUTODESK', 
+        C: '美国、AUTODESK'
+      },
+      correct: 'C'
+    },
+    {
+      question: '7、3dmax默认界面分为',
+      opitions: {
+        A: '顶、前、右、透',
+        B: '顶、前、左、透',
+        C: '顶、后、右、透'
+      },
+      correct: 'A'
+    },
+    {
+      question: '8、帧是构成影像的最小单位元，在我国编辑影像时怎么进行的',
+      opitions: {
+        A: '24帧/秒',
+        B: '25帧/秒',
+        C: '18帧/秒'
+      },
+      correct: 'A'
+    },
+    {
+      question: '9、用什么来表示音量：',
+      opitions: {
+        A: '赫兹',
+        B: '分贝',
+        C: '安培'
+      },
+      correct: 'B'
+    },
+    {
+      question: '10、Photoshop新建图层快捷键是',
+      opitions: {
+        A: 'Ctrl + C',
+        B: 'Ctrl + N',
+        C: 'Ctrl + D'
+      },
+      correct: 'B'
+    },
      {major:'动漫设计与制作'},      
-    ],
-  jiying: [
+  ],
+
+
+    jiying: [
       {
-        question: '计应是什么',
+        question: '1、计算机应用是什么',
         opitions: {
-          A: '计应',
-          B: '计应',
-          C: '计应'
+          A: '即动画、漫画的合称，指动画与漫画的集合',
+          B: '用简单而夸张的手法来描绘生活或时事的图画',
+          C: '以一定的速度连续播放的成组画面。'
         },
         correct: 'A'
       },
       {
-        question: '计应',
+        question: '2、动漫专业有学过下面那个软件',
         opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
+          A: '3Dmax建模',
+          B: 'Vue.js实战',
+          C: '高级程序开发'
         },
         correct: 'A'
       },
       {
-        question: '计应',
+        question: '3、名侦探柯南漫画出品时间是？',
         opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
+          A: '1989年',
+          B: '1994年',
+          C: '2009年'
+        },
+        correct: 'B'
+      },
+      {
+        question: '4、国画的技法分为那两类',
+        opitions: {
+          A: '工笔、写实',
+          B: '工笔、写意',
+          C: '工笔、写生'
+        },
+        correct: 'B'
+      },
+      {
+        question: '5、在3Dmax中默认保存的文件名是',
+        opitions: {
+          A: '*.3ds',
+          B: '*.Dwg',
+          C: '*.max'
+        },
+        correct: 'C'
+      },
+      {
+        question: '6、maya是由那个国家那个公司开发的软件',
+        opitions: {
+          A: '美国、ADOBE',
+          B: '法国、AUTODESK',
+          C: '美国、AUTODESK'
+        },
+        correct: 'C'
+      },
+      {
+        question: '7、3dmax默认界面分为',
+        opitions: {
+          A: '顶、前、右、透',
+          B: '顶、前、左、透',
+          C: '顶、后、右、透'
         },
         correct: 'A'
       },
-    
-    {major: '  计算机应用  '}
+      {
+        question: '8、帧是构成影像的最小单位元，在我国编辑影像时怎么进行的',
+        opitions: {
+          A: '24帧/秒',
+          B: '25帧/秒',
+          C: '18帧/秒'
+        },
+        correct: 'A'
+      },
+      {
+        question: '9、用什么来表示音量：',
+        opitions: {
+          A: '赫兹',
+          B: '分贝',
+          C: '安培'
+        },
+        correct: 'B'
+      },
+      {
+        question: '10、Photoshop新建图层快捷键是',
+        opitions: {
+          A: 'Ctrl + C',
+          B: 'Ctrl + N',
+          C: 'Ctrl + D'
+        },
+        correct: 'B'
+      },
+      { major: '计算机应用' },
     ],
   ruanjian: [
-      {
-        question: '软件是什么',
-        opitions: {
-          A: '软件',
-          B: '软件',
-          C: '软件'
-        },
-        correct: 'A'
+    {
+      question: '1、软件是什么',
+      opitions: {
+        A: '即动画、漫画的合称，指动画与漫画的集合',
+        B: '用简单而夸张的手法来描绘生活或时事的图画',
+        C: '以一定的速度连续播放的成组画面。'
       },
-      {
-        question: '计应',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
+      correct: 'A'
+    },
+    {
+      question: '2、动漫专业有学过下面那个软件',
+      opitions: {
+        A: '3Dmax建模',
+        B: 'Vue.js实战',
+        C: '高级程序开发'
       },
-      {
-        question: '计应',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
+      correct: 'A'
+    },
+    {
+      question: '3、名侦探柯南漫画出品时间是？',
+      opitions: {
+        A: '1989年',
+        B: '1994年',
+        C: '2009年'
       },
+      correct: 'B'
+    },
+    {
+      question: '4、国画的技法分为那两类',
+      opitions: {
+        A: '工笔、写实',
+        B: '工笔、写意',
+        C: '工笔、写生'
+      },
+      correct: 'B'
+    },
+    {
+      question: '5、在3Dmax中默认保存的文件名是',
+      opitions: {
+        A: '*.3ds',
+        B: '*.Dwg',
+        C: '*.max'
+      },
+      correct: 'C'
+    },
+    {
+      question: '6、maya是由那个国家那个公司开发的软件',
+      opitions: {
+        A: '美国、ADOBE',
+        B: '法国、AUTODESK',
+        C: '美国、AUTODESK'
+      },
+      correct: 'C'
+    },
+    {
+      question: '7、3dmax默认界面分为',
+      opitions: {
+        A: '顶、前、右、透',
+        B: '顶、前、左、透',
+        C: '顶、后、右、透'
+      },
+      correct: 'A'
+    },
+    {
+      question: '8、帧是构成影像的最小单位元，在我国编辑影像时怎么进行的',
+      opitions: {
+        A: '24帧/秒',
+        B: '25帧/秒',
+        C: '18帧/秒'
+      },
+      correct: 'A'
+    },
+    {
+      question: '9、用什么来表示音量：',
+      opitions: {
+        A: '赫兹',
+        B: '分贝',
+        C: '安培'
+      },
+      correct: 'B'
+    },
+    {
+      question: '10、Photoshop新建图层快捷键是',
+      opitions: {
+        A: 'Ctrl + C',
+        B: 'Ctrl + N',
+        C: 'Ctrl + D'
+      },
+      correct: 'B'
+    },
     {major: '  软件技术开发 '},
     ],
   }
 };
 $(document).ready(function () {
   const winHight = $(window).height()
-  const map = {0:'A', 1:'B', 2:'C'};
+  const map_opt = {0:'A', 1:'B', 2:'C'};
   const map_resut_text = { 'de': '忠匾', 'zhi': '屏风', 'ti': '帽子', 'mei': '玉佩', 'lao': '锐笔'};
   let daojuBtn = 0;
-  let count = 0;
   let daoju;
-  let isfinished = false;
+  let count = 0;
+  let number = 1;
+  let correctCount = 0;
+  let isFinished = 0; 
 
   //04 -- 答题页
-
-  function initData(daoju, count) {
-    let isfinished = (count == 2) ? true : false;
-    let newData = data.daoju[daoju];
-    let lenght = newData.lenght;
-    $('.answer .title').text(data.daoju[daoju][0]['question']); //题目
-    $('.answer .opt .opt_span').each((index, item) => {
-      const $item = $(item)
-      $item.text(data.daoju[daoju][0]['opitions'][map[index]]);
-    })
-    $('.answer-box').data('correct', data.daoju[daoju][0]['correct']); //绑定正确答案到'.answer-box' 上
-  }
-  //点击按钮
+ //点击按钮
   $('.main').on('click', '.ac-shoose', function () {
     const $t = $(this);
+    var lock = $t.data('lock')
+    if (lock == 1) return false;
+    count = 0;
+    number = 0
+    correctCount = 0;
+    isFinished = 0;
     const $li = $t.closest('li');
     $li.next().show()
-      .closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' });
-    daoju = $t.data('daoju');
-    initData(daoju);  //绑定数据到页面上
-  }) 
- //道具正确显示内容
-  function result(daoju, $t) {
-    $('.' + daoju).addClass('current-' + daoju);
-    $t.find('.animation-correct').velocity('fadeIn', {
-      duration: 1000, complete: function () {
-        const $t = $(this);
-        $t.velocity('fadeOut');
-        $('.result-flag').attr('class', 'result-flag result-flag-' + daoju);
-        $('.result-text').text('恭喜你获得'+ map_resut_text[daoju] );
-        $('.resultSuccess').velocity('fadeIn', {
-          complete: function () {
-            const $t = $(this);
-            $t.velocity('fadeOut', {
-              complete: function () {
-                $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
-                $('.main-' + daoju).show().velocity('transition.shrinkIn');
-                $('.answer').hide();
-                daojuBtn++;
-              }, delay: 1500
-            })
-          }, duration: 1000
-        })
-      }, duration: 2000
-    });
+      .closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.answer').show();
+    daoju = $t.data('daoju'); //获取点击的道具
+    let newData = data['daoju'][daoju][0];
+    initData(newData);  //绑定数据到页面上
+  })
+
+ 
+  function initData(newData) {
+    isFinished++;
+    number++
+    $('.answer .title').text(newData.question); //题目
+    $('.answer .opt .opt_span').each((index, item) => {
+      const $item = $(item)
+      $item.text(newData.opitions[map_opt[index]]); //选项
+    })
+    $('.answer-box').data('correct', newData.correct); //正确答案到'.answer-box' 上
+    $('.num-count .number').text(number);
   }
 
-//错误显示内容
-  function wrongResult($t) {
-    $t.find('.animation-wrong').velocity('fadeIn', {
-      duration: 1000, complete: function () {
+  //点击选项
+    $('.answer .opt').on('click', function (e) {
+      if (e.handled !== true) {
         const $t = $(this);
-        $t.velocity('fadeOut');
-        $('.tipsFailed').velocity('fadeIn', {
-          complete: function () {
-            const $t = $(this);
-            $t.velocity('fadeOut', {
-              complete: function () {
-                $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
-              }, delay: 1500
-            })
-          }, duration: 1000
-        })
-      }, duration: 2000
-    });
-  }
-
-  //人物正确显示内容
-  function renwuresult($t) {
-    $t.find('.animation-correct').velocity('fadeIn', {
-      duration: 1000, complete: function () {
+        count++;
+       
+        if ($(this).data('opt') === $('.answer-box').data('correct')) {  //判断道具点击的答案和正确答案是否一样
+          correctCount++
+          correct($t);
+        } else {  // 错误
+          wrong($t)
+        }
+      }
+      e.handled = true
+    })
+ 
+// 每题选择正确
+  function correct ($t) {
+    $t.find('.animation-correct').velocity('fadeIn', {duration: 700, 
+      complete: function () {
         const $t = $(this);
+        let newData = data['daoju'][daoju][count];
         $t.velocity('fadeOut');
-        $('.result-renwu-box').velocity('fadeIn', {
-          duration: 3000,
-          complete: function () {
-            const $t = $(this);
-            $t.velocity('fadeOut', {
-              complete: function () {
-                $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
-              }
-            })
+        if (isFinished == 3) {
+          if(correctCount >= 2) {
+            correctResult(daoju)
+          } else {
+            wrongResult()
           }
+        } else {
+          initData(newData)
+        }
+    }})
+  }
+
+  //答对两题以上的结果
+  function correctResult(daoju) {
+    $('.' + daoju).addClass('current-' + daoju);
+    $('.result-flag').attr('class', 'result-flag result-flag-' + daoju);
+    $('.result-text').text('恭喜你获得' + map_resut_text[daoju]);
+    $('.resultSuccess').velocity('fadeIn', {
+      complete: function () {
+        const $t = $(this);
+        $t.velocity('fadeOut', {
+          complete: function () {
+            $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+            $('.main-' + daoju).show().velocity('transition.shrinkIn');
+            $('.answer').hide();
+            daojuBtn++;
+          }, delay: 1500
         })
+      }, duration: 1000
+    })
+    $('.'+ daoju).data('lock', '1');
+    if (daojuBtn === 4) {  //入学通知显示
+      setTimeout(function () {
+        ruxuetongzi();
+      }, 4000);
+    }
+  }
+
+// 每题选择错误
+  function wrong($t) {
+    $t.find('.animation-wrong').velocity('fadeIn', { duration: 700,
+      complete: function () {
+        const $t = $(this);
+        let newData = data['daoju'][daoju][count];
+        if (isFinished == 3) {
+          $t.velocity('fadeOut');
+          if (correctCount < 2) {
+            wrongResult(daoju)
+          } else {
+            correctResult(daoju)
+          }
+        } else {
+          $t.velocity('fadeOut');
+          initData(newData)
+        }
       }
     })
   }
+
+
+  function wrongResult () {
+    $('.tipsFailed').velocity('fadeIn', {
+      complete: function () {
+        const $t = $(this);
+        $t.velocity('fadeOut', {
+          complete: function () {
+            $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+          }, delay: 1500
+        })
+      }, duration: 1000
+    })
+  }
+
+
+  //人物正确显示内容
+  // function renwuresult($t) {
+  //   $t.find('.animation-correct').velocity('fadeIn', {
+  //     duration: 1000, complete: function () {
+  //       const $t = $(this);
+  //       $t.velocity('fadeOut');
+  //       $('.result-renwu-box').velocity('fadeIn', {
+  //         duration: 3000,
+  //         complete: function () {
+  //           const $t = $(this);
+  //           $t.velocity('fadeOut', {
+  //             complete: function () {
+  //               $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+  //             }
+  //           })
+  //         }
+  //       })
+  //     }
+  //   })
+  // }
   
   //显示入学通知
   function ruxuetongzi() {
     $('.result-flag').attr('class', 'result-flag result-flag-ruxue');
     $('.result-text').text('恭喜你获得入学通知书');
     $('.resultSuccess-ruxue').show().velocity('fadeIn', {
-      duration: 6000,
+      duration: 5000,
       complete: function () {
         const $t = $(this);
         $t.velocity('fadeOut', {
@@ -5119,24 +5378,9 @@ $(document).ready(function () {
     })
 
   }
-  //点击选项
-  $('.answer .opt').on('click', function () {  
-      if ($(this).data('opt') === $('.answer-box').data('correct')) {  //判断道具点击的答案和正确答案是否一样
-        result(daoju, $(this));
-        if (daojuBtn === 4) {
-          setTimeout(function () {
-            ruxuetongzi();
-          }, 6000);
-        }
-      } else if ($(this).data('opt') === $('.answer').data('correct')) {  //判断人物点击的答案和正确答案是否一样
-        renwuresult($(this))
-      }else {
-        wrongResult($(this))
-      }
-    })
+  
 
-
-      
+ 
 
     //入学通知
   let $ruxue = $('.main-ruxue');
@@ -5144,7 +5388,7 @@ $(document).ready(function () {
   let $sjarrows = $('.shengji-arrows');
   let $dayi = $('.class .dayi');
   $ruxue.on('click', function () {
-    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' }).children('.ruxueongzhi').show();
+    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.ruxueongzhi').show();
     setTimeout(() => {
       setInterval(() =>{
         $memorial.velocity('transition.slideUpBigIn');
@@ -5152,67 +5396,171 @@ $(document).ready(function () {
     }, 2000);
   });
   $memorial.on('click',function () {
-    $(this).parents('ul').css({ transform: 'translateY(' + -winHight + 'px)' });
-    // $('.shengji').attr('class', 'shengji sj-shoose');    
+    $(this).parents('ul').css({ transform: 'translateY(' + -winHight + 'px)' }).children('.ruxueongzhi').hide(); 
     $('.main-ruxue').hide();
     $sjarrows.show();
     $dayi.show().velocity('callout.pulse');
-    $('.shengji').addClass('current-shengji')
+    $('.shengji').hide();
+    $('.shengji-kaoshi').show()
     setTimeout(() => {
       $sjarrows.hide();
     }, 3000);
   })
+
+
 })
 
 
 $(document).ready(function () {
-  const map = {0:'A', 1:'B', 2:'C'};
+  const map_opt = {0:'A', 1:'B', 2:'C'};
   const winHight = $(window).height();
+  let sjCount = 0;
+  let sjIsFinished = 0; 
+  let topic = 0;
   // 人物升级
 
+ 
+
   function shengjidata(classData) {
-    $('.sj-shoose').on('click', function () {
+    $('.item-wrap').data('zhuanye', data.daoju[classData][10]['major']);
+   
+// 点击考试 跳转
+    $('.shengji-kaoshi').on('click', function () {
+      topic = 0;
+      sjCount = 0;
+      sjIsFinished = 0;
+      $('.dq-daer, .dq-dasan,.result-flag-daer,.result-flag-dasan, .ren-daer, .result-renwu-box').hide();
+      $('.result-flag-dayi, .ren, .main-ti, .main-mei').show();
       const $t = $(this);
-      // if (status.hasClass('current')) return;
       const $li = $t.closest('li');
       $li.next().show()
         .closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' });
-    
-      
-
-
-
-
-
-      //绑定数据到页面上
-      $('.answer .title').text(data.daoju[classData][0]['question']); //题目
-      $('.answer .opt .opt_span').each(function (index, item) {
-        const $item = $(item)
-        $item.text(data.daoju[classData][0]['opitions'][map[index]]);
-      })
-      //绑定正确答案到'.answer-box' 上
-      $('.answer').data('correct', data.daoju[classData][0]['correct']);
-      alert($('.answer').data('correct'));
+      let sjNewdata = data.daoju[classData][0]
+      sjInitData(sjNewdata)
       $('.num-count .total').text('10');
       $('.dq-dayi, .abandon').velocity('fadeIn');
     })
+    
+
+//点击选项
+    $('.answer-upgrade').on('click','.opt', function () {
+      sjCount++;
+      if (sjCount > 10) {
+        sjCount = '10'
+      }
+      const $t = $(this);
+      if ($(this).data('opt') === $('.answer-upgrade').data('sjcorrect')) {  //判断人物点击的答案和正确答案是否一样
+        renwucorrect($t)
+      } else {
+        renwuwrong($t);
+      }
+    })
+
+//正确时显示
+   function renwucorrect($t) {
+     topic++;
+     $t.find('.animation-correct').velocity('fadeIn', {
+        duration: 700,
+        complete: function () {
+          const $t = $(this);
+          let sjNewdata = data.daoju[classData][sjCount];
+          $t.velocity('fadeOut');
+          sjInitData(sjNewdata)
+        }
+      })
+     //当前年级显示
+     if (topic > 10) {
+       topic = '10'
+     }
+     $('.topic-corect .topic-num').text(topic)
+     if (topic == 4) {
+       $('.dq-class .dq-dayi').velocity('fadeOut', {
+         complete: function () {
+           $('.dq-class .dq-daer').velocity('fadeIn')
+         }
+       })
+     } else if (topic == 8) {
+       $('.dq-class .dq-daer').hide();
+       $('.dq-class .dq-dasan').show();
+     } hengji - kaoshi
+    }
+
+//错误时显示
+    function renwuwrong($t) {
+      $t.find('.animation-wrong').velocity('fadeIn', {
+        duration: 700,
+        complete: function () {
+          const $t = $(this);
+          let sjNewdata = data.daoju[classData][sjCount];
+          $t.velocity('fadeOut');
+          sjInitData(sjNewdata)
+        }
+      })
+    }
+
+//放弃回答
+    $('.abandon').on('click', function() {
+      $('.topic-corect .topic-num').text('0')
+      $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+    })
+
+ //数据加载 
+    function sjInitData(sjNewdata) {
+      if (sjIsFinished == 10) {
+        $('.result-title span').text(topic)
+        $('.result-renwu-box').velocity('fadeIn', {
+          complete: function () {
+            let $t = $(this);
+            if (topic >= 4 && topic < 8) {
+              $('.result-flag-daer, .daer, .ren-daer').show();
+              $('.result-flag-dayi, .result-flag-dasan, .dayi, .ren, .main-ti, .main-mei').hide();
+            } 
+             if (topic >= 8) {
+               $('.result-flag-dayi, .result-flag-daer, .shengji-kaoshi, .dayi, .daer, .ren, .ren-daer, .main-ti, .main-mei').hide();
+               $('.result-flag-dasan, .shengji-biye, .dasan, .ren-dasan').show();
+            }
+            setTimeout(() => {
+              $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+            }, 1000)
+            $('.shengji-arrows').velocity('fadeIn', {
+              complete: function () {
+                let $t = $(this);
+                setTimeout(() => {
+                  $t.velocity('fadeOut')
+                },2500)
+              }
+          });
+
+          }
+        })
+      }
+      sjIsFinished++;
+      if (sjIsFinished >= 10) {
+        sjIsFinished = '10'
+      }
+      $('.upgrade-count .number').text(sjIsFinished)
+      $('.answer-upgrade .title').text(sjNewdata.question); //题目
+      $('.answer-upgrade .opt .opt_span').each(function (index, item) {  //选项
+        const $item = $(item)
+        $item.text(sjNewdata.opitions[map_opt[index]]);
+      })
+      $('.answer-upgrade').data('sjcorrect', sjNewdata.correct); //绑定正确答案到'.answer-box' 上
+      
+     
+    }
   }
-  
-  
+
+
+
+
   $('.choose-dm').on('click', function () {
     shengjidata('dongman');
-    $('.item-wrap').data('zhuanye', data.daoju['dongman'][3]['major']);
   })
-
-
   $('.choose-jy').on('click', function () {
     shengjidata('jiying')
-    $('.item-wrap').data('zhuanye', data.daoju['jiying'][3]['major']);
   })
-
   $('.choose-rj').on('click', function () {
     shengjidata('ruanjian')
-    $('.item-wrap').data('zhuanye', data.daoju['ruanjian'][3]['major']);
   })
 
 
@@ -5224,8 +5572,7 @@ $(document).ready(function () {
 
 
 
-
-  $('.main-lao').on('click', function () {
+  $('.shengji-biye').on('click', function () {
     const $t = $(this);
     const $li = $t.closest('li');
     $li.next().show()
@@ -5233,27 +5580,33 @@ $(document).ready(function () {
   })
 
 
+  function addName(nameNum, $t) {
+    $('.nameInput').hide()
+    const $li = $t.closest('li');
+    $li.next().show()
+      .closest('ul').css({ transform: 'translateY(' + -winHight * 4 + 'px)' }).children('.byzs').show();
+    $('.uers-name').text(nameNum);
+    var zhuanyeData = $('.item-wrap').data('zhuanye');
+    $('.uers-major').text(zhuanyeData)
+  }
+
   $('.notarize-name').on('click', function () {
     let nameValue = $('.nameInput').val();
     var myReg = /^[\u4e00-\u9fa5]+$/;
     if (myReg.test(nameValue) && nameValue.length >= 2 && nameValue.length < 5) {
       const $t = $(this);
-      $('.nameInput').hide()
-      const $li = $t.closest('li');
-      $li.next().show()
-        .closest('ul').css({ transform: 'translateY(' + -winHight * 4 + 'px)' }).children('.byzs').show();
-      $('.uers-name').text(nameValue);
-      var zhuanyeData = $('.item-wrap').data('zhuanye');
-      $('.uers-major').text(zhuanyeData)
+      if (nameValue.length == 2) {
+        var nameValue2 = nameValue.charAt(0) + '    ' + nameValue.charAt(1)
+        addName(nameValue2, $t);
+      } else {
+        addName(nameValue, $t);
+      }
     } else {
       $('.name-wrong').show()
     }
-    setInterval( () => {
-      $('.dyzs-share').show();
-      setTimeout(() => {
-        $('.dyzs-share').hide();
-      }, 2000);
-    },5000)
-    $('.topMusic').hide()
+    setTimeout(() => {
+      $('.dyzs-share').hide();
+      $('.topMusic').hide()
+    }, 4000);
   })
 })

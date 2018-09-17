@@ -151,91 +151,281 @@ var data = {
       {
         question: '1、动漫是什么',
         opitions: {
-          A: '动漫',
-          B: '动漫2',
-          C: '动漫3'
+          A: '即动画、漫画的合称，指动画与漫画的集合',
+          B: '用简单而夸张的手法来描绘生活或时事的图画',
+          C: '以一定的速度连续播放的成组画面。'
         },
         correct: 'A'
       },
+    {
+      question: '2、动漫专业有学过下面那个软件',
+      opitions: {
+        A: '3Dmax建模',
+        B: 'Vue.js实战',
+        C: '高级程序开发'
+      },
+      correct: 'A'
+    },
       {
-        question: '动漫',
+        question: '3、名侦探柯南漫画出品时间是？',
         opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
+          A: '1989年',
+          B: '1994年',
+          C: '2009年'
         },
-        correct: 'A'
+        correct: 'B'
       },
-      {
-        question: '动漫',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
+    {
+      question: '4、国画的技法分为那两类',
+      opitions: {
+        A: '工笔、写实',
+        B: '工笔、写意',
+        C: '工笔、写生'
       },
+      correct: 'B'
+    },
+    {
+      question: '5、在3Dmax中默认保存的文件名是',
+      opitions: {
+        A: '*.3ds',
+        B: '*.Dwg',
+        C: '*.max'
+      },
+      correct: 'C'
+    },
+    {
+      question: '6、maya是由那个国家那个公司开发的软件',
+      opitions: {
+        A: '美国、ADOBE',
+        B: '法国、AUTODESK', 
+        C: '美国、AUTODESK'
+      },
+      correct: 'C'
+    },
+    {
+      question: '7、3dmax默认界面分为',
+      opitions: {
+        A: '顶、前、右、透',
+        B: '顶、前、左、透',
+        C: '顶、后、右、透'
+      },
+      correct: 'A'
+    },
+    {
+      question: '8、帧是构成影像的最小单位元，在我国编辑影像时怎么进行的',
+      opitions: {
+        A: '24帧/秒',
+        B: '25帧/秒',
+        C: '18帧/秒'
+      },
+      correct: 'A'
+    },
+    {
+      question: '9、用什么来表示音量：',
+      opitions: {
+        A: '赫兹',
+        B: '分贝',
+        C: '安培'
+      },
+      correct: 'B'
+    },
+    {
+      question: '10、Photoshop新建图层快捷键是',
+      opitions: {
+        A: 'Ctrl + C',
+        B: 'Ctrl + N',
+        C: 'Ctrl + D'
+      },
+      correct: 'B'
+    },
      {major:'动漫设计与制作'},      
-    ],
-  jiying: [
+  ],
+
+
+    jiying: [
       {
-        question: '计应是什么',
+        question: '1、计算机应用是什么',
         opitions: {
-          A: '计应',
-          B: '计应',
-          C: '计应'
+          A: '即动画、漫画的合称，指动画与漫画的集合',
+          B: '用简单而夸张的手法来描绘生活或时事的图画',
+          C: '以一定的速度连续播放的成组画面。'
         },
         correct: 'A'
       },
       {
-        question: '计应',
+        question: '2、动漫专业有学过下面那个软件',
         opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
+          A: '3Dmax建模',
+          B: 'Vue.js实战',
+          C: '高级程序开发'
         },
         correct: 'A'
       },
       {
-        question: '计应',
+        question: '3、名侦探柯南漫画出品时间是？',
         opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
+          A: '1989年',
+          B: '1994年',
+          C: '2009年'
+        },
+        correct: 'B'
+      },
+      {
+        question: '4、国画的技法分为那两类',
+        opitions: {
+          A: '工笔、写实',
+          B: '工笔、写意',
+          C: '工笔、写生'
+        },
+        correct: 'B'
+      },
+      {
+        question: '5、在3Dmax中默认保存的文件名是',
+        opitions: {
+          A: '*.3ds',
+          B: '*.Dwg',
+          C: '*.max'
+        },
+        correct: 'C'
+      },
+      {
+        question: '6、maya是由那个国家那个公司开发的软件',
+        opitions: {
+          A: '美国、ADOBE',
+          B: '法国、AUTODESK',
+          C: '美国、AUTODESK'
+        },
+        correct: 'C'
+      },
+      {
+        question: '7、3dmax默认界面分为',
+        opitions: {
+          A: '顶、前、右、透',
+          B: '顶、前、左、透',
+          C: '顶、后、右、透'
         },
         correct: 'A'
       },
-    
-    {major: '  计算机应用  '}
+      {
+        question: '8、帧是构成影像的最小单位元，在我国编辑影像时怎么进行的',
+        opitions: {
+          A: '24帧/秒',
+          B: '25帧/秒',
+          C: '18帧/秒'
+        },
+        correct: 'A'
+      },
+      {
+        question: '9、用什么来表示音量：',
+        opitions: {
+          A: '赫兹',
+          B: '分贝',
+          C: '安培'
+        },
+        correct: 'B'
+      },
+      {
+        question: '10、Photoshop新建图层快捷键是',
+        opitions: {
+          A: 'Ctrl + C',
+          B: 'Ctrl + N',
+          C: 'Ctrl + D'
+        },
+        correct: 'B'
+      },
+      { major: '计算机应用' },
     ],
   ruanjian: [
-      {
-        question: '软件是什么',
-        opitions: {
-          A: '软件',
-          B: '软件',
-          C: '软件'
-        },
-        correct: 'A'
+    {
+      question: '1、软件是什么',
+      opitions: {
+        A: '即动画、漫画的合称，指动画与漫画的集合',
+        B: '用简单而夸张的手法来描绘生活或时事的图画',
+        C: '以一定的速度连续播放的成组画面。'
       },
-      {
-        question: '计应',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
+      correct: 'A'
+    },
+    {
+      question: '2、动漫专业有学过下面那个软件',
+      opitions: {
+        A: '3Dmax建模',
+        B: 'Vue.js实战',
+        C: '高级程序开发'
       },
-      {
-        question: '计应',
-        opitions: {
-          A: 'A、选项a',
-          B: 'B、选项b',
-          C: 'C、选项c'
-        },
-        correct: 'A'
+      correct: 'A'
+    },
+    {
+      question: '3、名侦探柯南漫画出品时间是？',
+      opitions: {
+        A: '1989年',
+        B: '1994年',
+        C: '2009年'
       },
+      correct: 'B'
+    },
+    {
+      question: '4、国画的技法分为那两类',
+      opitions: {
+        A: '工笔、写实',
+        B: '工笔、写意',
+        C: '工笔、写生'
+      },
+      correct: 'B'
+    },
+    {
+      question: '5、在3Dmax中默认保存的文件名是',
+      opitions: {
+        A: '*.3ds',
+        B: '*.Dwg',
+        C: '*.max'
+      },
+      correct: 'C'
+    },
+    {
+      question: '6、maya是由那个国家那个公司开发的软件',
+      opitions: {
+        A: '美国、ADOBE',
+        B: '法国、AUTODESK',
+        C: '美国、AUTODESK'
+      },
+      correct: 'C'
+    },
+    {
+      question: '7、3dmax默认界面分为',
+      opitions: {
+        A: '顶、前、右、透',
+        B: '顶、前、左、透',
+        C: '顶、后、右、透'
+      },
+      correct: 'A'
+    },
+    {
+      question: '8、帧是构成影像的最小单位元，在我国编辑影像时怎么进行的',
+      opitions: {
+        A: '24帧/秒',
+        B: '25帧/秒',
+        C: '18帧/秒'
+      },
+      correct: 'A'
+    },
+    {
+      question: '9、用什么来表示音量：',
+      opitions: {
+        A: '赫兹',
+        B: '分贝',
+        C: '安培'
+      },
+      correct: 'B'
+    },
+    {
+      question: '10、Photoshop新建图层快捷键是',
+      opitions: {
+        A: 'Ctrl + C',
+        B: 'Ctrl + N',
+        C: 'Ctrl + D'
+      },
+      correct: 'B'
+    },
     {major: '  软件技术开发 '},
     ],
   }

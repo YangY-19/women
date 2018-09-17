@@ -19,13 +19,16 @@ $(document).ready(function () {
         $('.cover').show();
         setTimeout(function () {
           $('.cover-text').addClass("cover-text-am")
-        }, 2);//2000
+        }, 2000);//2000
         setTimeout(function () {
           $('.cover-ufo').show();
           setTimeout(function () {
             $('.coverArrows').addClass("coverArrows-flash");
+            setTimeout(()=> {
+              $('.coverArrows').hide();
+            },700)
             }, 1000);;
-        }, 11); //11000
+        }, 11000); //11000
       }
     };
   };
@@ -47,46 +50,50 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4);
+    }, 4000);
     // 4000
   });
 
   //03 - choose页面
   
-  function handleClass() {
+  function handleClass(chooseClass) {
     $('.choose-jy').closest('li').siblings().hide()
       .end().next().show()
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3)//4000
+      }, 3000)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 5)//6000
+      }, 5000)//6000
       setInterval(function () {
         $('.ren').addClass('animation-renwu')
         setTimeout(function () {
           $('.ren').removeClass('animation-renwu')
         },500)
       },4000)
+    $(this).closest('li').siblings().hide();
+    $('.className').html(chooseClass).addClass('classNameAn');
    }
 
 
   $('.choose').on('click', '.choose-dm', function () {
-    handleClass();
-    $('.className').html('动漫一班').addClass('classNameAn');
-  });
+    handleClass('动漫班');
+      });
   $('.choose').on('click', '.choose-jy', function () {
-    $(this).closest('li').siblings().hide()
-    handleClass();
-    $('.className').html('计应一班').addClass('classNameAn');
+        handleClass('计应班');
   });
   $('.choose').on('click', '.choose-rj', function () {
-    $(this).closest('li').siblings().hide()
-    handleClass();
-    $('.className').html('软件一班').addClass('classNameAn');
+    handleClass('软件班');
+
   });
 
+  $('.shengji-kaoshi').on('click', function () {
+    const $t = $(this);
+    const $li = $t.closest('li');
+    $li.next().show()
+      .closest('ul').css({ transform: 'translateY(' + -WinHeight * 3 + 'px)' }).children('.answer-upgrade').show();
+  })
  
   //音乐控制
   $('.topMusic').on('click', function () {

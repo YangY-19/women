@@ -23,11 +23,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 /* 01 - loading页面 */
 .loading{
-	position: absolute;
-	left:0;
-	right: 0;
 	width: 100%;
 	height: 100%;
+	position: absolute;
+	left:0px;
+	top: 0px;
 	background: #efeeeb;
 }
 .loading-warp{
@@ -228,9 +228,25 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 /* 03 - choose页面 */
 .choose{
-	background: url(../img/03-bg.jpg?v=d07833e298) no-repeat 0 0 / cover;
+	background: #eee6db;
 	opacity: 0;
 	display: none
+}
+.choose-top{
+  width: 48.438vw;
+	height: 47.813vw;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+	background: url(../img/02-top.png?v=ea786611c9) no-repeat 0 0 / cover;	
+}
+.choose-bottom{
+	width: 100.156vw;
+	height: 67.031vw;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+	background: url(../img/03-bottom.png?v=544eef972d) no-repeat 0 0 / cover;	
 }
 .choose-text{
 	width: 69.375vw;
@@ -359,7 +375,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	font-size:5.313vw;
 	position: absolute;
 	bottom: 139.063vw;
-	left: 39.063vw;
+	left: 40.625vw;
 	font-family: cursive;
 }
 .classNameAn{
@@ -403,7 +419,25 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	bottom: 28.125vw;
 	left: 35.938vw;
-	
+}
+.ren-daer{
+	background:url(../img/03-renwu-2.png?v=295d6db761) no-repeat 0 0 / cover;
+	width: 26.563vw;
+	height: 79.688vw;
+	position: absolute;
+	bottom: 28.125vw;
+	left: 35.938vw;
+	display: none;
+
+}
+.ren-dasan{
+  background:url(../img/03-renwu-3.png?v=d16d7d5d12) no-repeat 0 0 / cover;
+	 width: 46.875vw;
+	height: 96.875vw;
+	position: absolute;
+	bottom: 20.313vw;
+	left: 23.438vw;
+	display: none;
 }
 .animation-renwu{
    animation: renwu 0.5s steps(2, start) infinite;
@@ -437,7 +471,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	bottom: 29.688vw;
 	left: 20.313vw;
-	/* display: none */
+	display: none
 }
 .class{
 	width:26.563vw;
@@ -585,6 +619,27 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 0;
 	left: 71.875vw;
 	right: 0;
+	
+}
+.shengji-biye{
+	background: url(../img/03-sj-biye.png?v=08d69e6cc9) no-repeat 0 0 / cover;
+	width: 28.125vw;
+	height: 20.625vw;
+	position: absolute;
+	bottom: 0;
+	left: 71.875vw;
+	right: 0;
+	display: none;
+}
+.shengji-kaoshi{
+	background: url(../img/03-shengji-kaoshi.png?v=eced683ceb) no-repeat 0 0 / cover;
+	width: 28.125vw;
+	height: 20.625vw;
+	position: absolute;
+	bottom: 0;
+	left: 71.875vw;
+	right: 0;
+	display: none;
 }
 .current-de{
 	background: url(../img/btn_de.png?v=a0b182ee02) no-repeat 0 -20.625vw / cover;
@@ -601,13 +656,10 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .current-lao{
 	background: url(../img/btn_lao.png?v=16fa76373d) no-repeat 0 -20.625vw / cover;
 }
-.current-shengji{
-	background: url(../img/03-shengji.png?v=f24d58291a) no-repeat 0 -21.406vw / cover;
-}
 /* 05-答题页 */
 .answer{
-	display: none;
-	background-color: #e5e5e5
+	background-color: #e5e5e5;
+	display:none;
 }
 .answer-bg{
 	width: 37.5vw;
@@ -684,11 +736,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	color: #da464d;
 }
 .dq-class{
-	width: 31.094vw;
+	width: 27.969vw;
 	height: 4.531vw;
 	position: absolute;
-	right: 6.25vw;
-	bottom: 23.438vw;
+	left: 15.625vw;
+	bottom: 20.313vw;
 }
 .dq-dayi{
 	width: 31.094vw;
@@ -697,7 +749,6 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	background: url(../img/dq-dayi.png?v=f93c6379bc) no-repeat 0 0 / cover;
 	right: 0px;
 	bottom: 0px;
-	display: none
 }
 .dq-daer{
 	width: 31.094vw;
@@ -719,16 +770,16 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .abandon{
 	width: 25vw;
-	height: 9.375vw;
+	height: 7.813vw;
 	background:  #da464d;
 	border-radius: 1.875vw;
 	color: #fff;
 	text-align: center;
-	line-height: 9.375vw;
+	line-height: 7.813vw;
 	position: absolute;
-	right: 9.375vw;
-	bottom: 10.938vw;
-	display: none
+	left: 15.625vw;
+	bottom: 7.813vw;
+	font-size: 2.813vw;
 }
 /* 结果页 */
 .resultSuccess, .resultSuccess-ruxue{
@@ -801,7 +852,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			width: 100%;
 			text-align: center;
 			font-size: 4.375vw;
-			color: #e42b2b;
+			color: #000000;
 			margin-top: 2.344vw
 		}
 .tipsFailed{
@@ -834,8 +885,99 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			color: #000;
 			margin-top: 37.5vw
 		}
+/* 人物升级   答题页*/
+.answer-upgrade{
+	display: none;
+	background-color: #f2f2f2;
+	/* #fff9fa #fdf9ff #f9faff #f9faff #fafff9 #fffff9 #fff7f6 #fdf9ff   #fff9fa*/
+}
+.answer-upgrade-bg{
+	background: #f2f2f2;
+	height: 10%;
+}
+.answer-box > .title{
+	width: 80%;
+	height: 19.375vw;
+	line-height: 9.063vw;
+	position: absolute;
+	left: 9.375vw;
+	bottom: 118.75vw;
+	text-align:left;
+	font-size: 4.688vw;
+	font-weight: 400;
+	margin-bottom: 2.5vw;
+	color: #000;
+}
+.answer-upgrade .result-options{
+	margin-top:6.25vw;
+	position: absolute;
+	left: 7.813vw;
+	bottom: 37.5vw;
+}
+.answer-upgrade .opt{
+	width: 81.25vw;
+	height: 17.188vw;
+	padding: 2.344vw 18.75vw 2.344vw 3.125vw;
+	margin-bottom: 6.25vw;
+	border-radius: 1.406vw;
+	background-color:#e0ded7;
+	position: relative;
+	box-sizing: border-box;
+	line-height: 6.25vw
+}
+.answer-upgrade .opt > span{
+	height: 12.812vw;
+	font-size: 4.063vw;
+	display: flex;
+	align-items: center;
+}
+.answer-upgrade .opt  .animation-correct{
+	width: 12.188vw;
+	height: 10.938vw;
+	background: url(../img/answer_correct.png?v=511864af19) no-repeat 0 0 / cover;
+	position: absolute;
+	right: 3.906vw;
+	top: 2.813vw;
+	display:none;
+}
+.answer-upgrade .opt  .animation-wrong{
+	width: 12.188vw;
+	height: 10.938vw;
+	background: url(../img/answer_wrong.png?v=7fe9164255) no-repeat 0 0 / cover;
+	position: absolute;
+	right: 3.906vw;
+	top: 2.813vw;
+	display:none;
+}
+.upgrade-count {
+		position: absolute;
+	bottom: 15.625vw;
+	right: 18.75vw;
+	font-size: 5.625vw;
+	color: #333
+}
+.upgrade-count .number{
+	font-size: 5.625vw;
+	color: #da464d;
+}
+.topic-corect{
+	font-size: 3.125vw;
+	position: absolute;
+	right: 17.188vw;
+	bottom: 10.156vw;
+}
+.topic-corect .topic-num{
+   color: #da464d;
+}
+.topic-hint{
+	font-size: 2.5vw;
+	position: absolute;
+	right: 13.281vw;
+	bottom: 5.469vw;
+	color: #865937
+}
 /* 人物升级 */
-.item-wrap ul .answer .result-renwu-box{
+.item-wrap ul .answer-upgrade .result-renwu-box{
 		display: none;
 		position: absolute;
 		top: 0;
@@ -846,7 +988,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		background-color: #f2f1ec;
 		z-index: 2;
 }
-.item-wrap ul .answer .result-renwu-box .result-wp .result-title{
+.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-title{
 				color: #ce3e3e;
 				font-size: 10.313vw;
 				position: absolute;
@@ -854,7 +996,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				text-align: center;
 				width: 100%;
 			}
-.item-wrap ul .answer .result-renwu-box .result-wp .result-text{
+.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-text{
 				color: #333;
 				font-size: 5vw;
 				position: absolute;
@@ -862,13 +1004,32 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				text-align:center;
 				width: 100%;
 			}
-.item-wrap ul .answer .result-renwu-box .result-wp .result-flag{
+.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-flag-dayi{
+				background: url(../img/dayi.png?v=01772f600e) no-repeat 0 0 /cover;
+				width: 49.063vw;
+				height: 12.5vw;
+				position: absolute;
+				left: 26.563vw;
+				bottom: 67.188vw;
+				display: none
+			}
+.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-flag-daer{
 				background: url(../img/daer.png?v=b98a8c005d) no-repeat 0 0 /cover;
 				width: 49.063vw;
 				height: 12.5vw;
 				position: absolute;
 				left: 26.563vw;
 				bottom: 67.188vw;
+				display: none;
+			}
+.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-flag-dasan{
+				background: url(../img/dasan.png?v=313e3ba71b) no-repeat 0 0 /cover;
+				width: 49.063vw;
+				height: 12.5vw;
+				position: absolute;
+				left: 26.563vw;
+				bottom: 67.188vw;
+				display: none;
 			}
 /* 入学通知 */
 .ruxueongzhi{
@@ -962,7 +1123,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .byzs-wrapper{
 	width: 100%;
 	height: 62.5vw;
-	background: url(../img/byzs.png?v=ccd50da114) no-repeat 0 0 /cover;
+	background: url(../img/byzs.png?v=5df439d7c4) no-repeat 0 0 /cover;
 	position: absolute;
 	bottom: 46.875vw;
 	left: 0;
@@ -970,15 +1131,15 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .uers-name{
 	position: absolute;
 	left: 31.25vw;
-	bottom: 27.344vw;
+	bottom: 28.125vw;
 	font-size: 3.125vw;
 	font-weight:bold;
 	font-family: cursive;
 }
 .uers-major{
   position: absolute;
-	left: 28.125vw;
-	bottom: 22.656vw;
+	left: 29.375vw;
+	bottom: 24.219vw;
 	font-size: 2.813vw;
 	font-weight:bold;
 	font-family: cursive;
@@ -991,11 +1152,11 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 125vw;
 	left: 14.844vw;
 }
-.web{
-	width: 45.938vw;
-	height: 6.719vw;
-	background: url(../img/web.jpg?v=ffc545ec8f) no-repeat 0 0 /cover;
+.uers-school{
 	position: absolute;
-	bottom: 7.813vw;
-	left: 30.469vw;	
+	left: 29.375vw;
+	bottom: 12.031vw;
+	font-size: 2.5vw;
+	font-weight:bold;
+	font-family: cursive;
 }

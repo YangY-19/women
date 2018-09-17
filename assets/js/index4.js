@@ -1,51 +1,153 @@
 $(document).ready(function () {
-  const map = {0:'A', 1:'B', 2:'C'};
+  const map_opt = {0:'A', 1:'B', 2:'C'};
   const winHight = $(window).height();
+  let sjCount = 0;
+  let sjIsFinished = 0; 
+  let topic = 0;
   // 人物升级
 
+ 
+
   function shengjidata(classData) {
-    $('.sj-shoose').on('click', function () {
+    $('.item-wrap').data('zhuanye', data.daoju[classData][10]['major']);
+   
+// 点击考试 跳转
+    $('.shengji-kaoshi').on('click', function () {
+      topic = 0;
+      sjCount = 0;
+      sjIsFinished = 0;
+      $('.dq-daer, .dq-dasan,.result-flag-daer,.result-flag-dasan, .ren-daer, .result-renwu-box').hide();
+      $('.result-flag-dayi, .ren, .main-ti, .main-mei').show();
       const $t = $(this);
-      // if (status.hasClass('current')) return;
       const $li = $t.closest('li');
       $li.next().show()
         .closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' });
-    
-      
-
-
-
-
-
-      //绑定数据到页面上
-      $('.answer .title').text(data.daoju[classData][0]['question']); //题目
-      $('.answer .opt .opt_span').each(function (index, item) {
-        const $item = $(item)
-        $item.text(data.daoju[classData][0]['opitions'][map[index]]);
-      })
-      //绑定正确答案到'.answer-box' 上
-      $('.answer').data('correct', data.daoju[classData][0]['correct']);
-      alert($('.answer').data('correct'));
+      let sjNewdata = data.daoju[classData][0]
+      sjInitData(sjNewdata)
       $('.num-count .total').text('10');
       $('.dq-dayi, .abandon').velocity('fadeIn');
     })
+    
+
+//点击选项
+    $('.answer-upgrade').on('click','.opt', function () {
+      sjCount++;
+      if (sjCount > 10) {
+        sjCount = '10'
+      }
+      const $t = $(this);
+      if ($(this).data('opt') === $('.answer-upgrade').data('sjcorrect')) {  //判断人物点击的答案和正确答案是否一样
+        renwucorrect($t)
+      } else {
+        renwuwrong($t);
+      }
+    })
+
+//正确时显示
+   function renwucorrect($t) {
+     topic++;
+     $t.find('.animation-correct').velocity('fadeIn', {
+        duration: 700,
+        complete: function () {
+          const $t = $(this);
+          let sjNewdata = data.daoju[classData][sjCount];
+          $t.velocity('fadeOut');
+          sjInitData(sjNewdata)
+        }
+      })
+     //当前年级显示
+     if (topic > 10) {
+       topic = '10'
+     }
+     $('.topic-corect .topic-num').text(topic)
+     if (topic == 4) {
+       $('.dq-class .dq-dayi').velocity('fadeOut', {
+         complete: function () {
+           $('.dq-class .dq-daer').velocity('fadeIn')
+         }
+       })
+     } else if (topic == 8) {
+       $('.dq-class .dq-daer').hide();
+       $('.dq-class .dq-dasan').show();
+     } hengji - kaoshi
+    }
+
+//错误时显示
+    function renwuwrong($t) {
+      $t.find('.animation-wrong').velocity('fadeIn', {
+        duration: 700,
+        complete: function () {
+          const $t = $(this);
+          let sjNewdata = data.daoju[classData][sjCount];
+          $t.velocity('fadeOut');
+          sjInitData(sjNewdata)
+        }
+      })
+    }
+
+//放弃回答
+    $('.abandon').on('click', function() {
+      $('.topic-corect .topic-num').text('0')
+      $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+    })
+
+ //数据加载 
+    function sjInitData(sjNewdata) {
+      if (sjIsFinished == 10) {
+        $('.result-title span').text(topic)
+        $('.result-renwu-box').velocity('fadeIn', {
+          complete: function () {
+            let $t = $(this);
+            if (topic >= 4 && topic < 8) {
+              $('.result-flag-daer, .daer, .ren-daer').show();
+              $('.result-flag-dayi, .result-flag-dasan, .dayi, .ren, .main-ti, .main-mei').hide();
+            } 
+             if (topic >= 8) {
+               $('.result-flag-dayi, .result-flag-daer, .shengji-kaoshi, .dayi, .daer, .ren, .ren-daer, .main-ti, .main-mei').hide();
+               $('.result-flag-dasan, .shengji-biye, .dasan, .ren-dasan').show();
+            }
+            setTimeout(() => {
+              $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
+            }, 1000)
+            $('.shengji-arrows').velocity('fadeIn', {
+              complete: function () {
+                let $t = $(this);
+                setTimeout(() => {
+                  $t.velocity('fadeOut')
+                },2500)
+              }
+          });
+
+          }
+        })
+      }
+      sjIsFinished++;
+      if (sjIsFinished >= 10) {
+        sjIsFinished = '10'
+      }
+      $('.upgrade-count .number').text(sjIsFinished)
+      $('.answer-upgrade .title').text(sjNewdata.question); //题目
+      $('.answer-upgrade .opt .opt_span').each(function (index, item) {  //选项
+        const $item = $(item)
+        $item.text(sjNewdata.opitions[map_opt[index]]);
+      })
+      $('.answer-upgrade').data('sjcorrect', sjNewdata.correct); //绑定正确答案到'.answer-box' 上
+      
+     
+    }
   }
-  
-  
+
+
+
+
   $('.choose-dm').on('click', function () {
     shengjidata('dongman');
-    $('.item-wrap').data('zhuanye', data.daoju['dongman'][3]['major']);
   })
-
-
   $('.choose-jy').on('click', function () {
     shengjidata('jiying')
-    $('.item-wrap').data('zhuanye', data.daoju['jiying'][3]['major']);
   })
-
   $('.choose-rj').on('click', function () {
     shengjidata('ruanjian')
-    $('.item-wrap').data('zhuanye', data.daoju['ruanjian'][3]['major']);
   })
 
 
@@ -57,8 +159,7 @@ $(document).ready(function () {
 
 
 
-
-  $('.main-lao').on('click', function () {
+  $('.shengji-biye').on('click', function () {
     const $t = $(this);
     const $li = $t.closest('li');
     $li.next().show()
@@ -66,27 +167,33 @@ $(document).ready(function () {
   })
 
 
+  function addName(nameNum, $t) {
+    $('.nameInput').hide()
+    const $li = $t.closest('li');
+    $li.next().show()
+      .closest('ul').css({ transform: 'translateY(' + -winHight * 4 + 'px)' }).children('.byzs').show();
+    $('.uers-name').text(nameNum);
+    var zhuanyeData = $('.item-wrap').data('zhuanye');
+    $('.uers-major').text(zhuanyeData)
+  }
+
   $('.notarize-name').on('click', function () {
     let nameValue = $('.nameInput').val();
     var myReg = /^[\u4e00-\u9fa5]+$/;
     if (myReg.test(nameValue) && nameValue.length >= 2 && nameValue.length < 5) {
       const $t = $(this);
-      $('.nameInput').hide()
-      const $li = $t.closest('li');
-      $li.next().show()
-        .closest('ul').css({ transform: 'translateY(' + -winHight * 4 + 'px)' }).children('.byzs').show();
-      $('.uers-name').text(nameValue);
-      var zhuanyeData = $('.item-wrap').data('zhuanye');
-      $('.uers-major').text(zhuanyeData)
+      if (nameValue.length == 2) {
+        var nameValue2 = nameValue.charAt(0) + '    ' + nameValue.charAt(1)
+        addName(nameValue2, $t);
+      } else {
+        addName(nameValue, $t);
+      }
     } else {
       $('.name-wrong').show()
     }
-    setInterval( () => {
-      $('.dyzs-share').show();
-      setTimeout(() => {
-        $('.dyzs-share').hide();
-      }, 2000);
-    },5000)
-    $('.topMusic').hide()
+    setTimeout(() => {
+      $('.dyzs-share').hide();
+      $('.topMusic').hide()
+    }, 4000);
   })
 })
