@@ -63,7 +63,7 @@ $(document).ready(function () {
      if (topic == 4) {
        $('.dq-class .dq-dayi').velocity('fadeOut', {
          complete: function () {
-           $('.dq-class .dq-daer').velocity('fadeIn')
+           $('.dq-class .dq-daer').velocity('transition.shrinkIn')
          }
        })
      } else if (topic == 8) {
@@ -74,7 +74,7 @@ $(document).ready(function () {
 
 //错误时显示
     function renwuwrong($t) {
-      $t.find('.animation-wrong').velocity('fadeIn', {
+      $t.find('.animation-wrong').velocity('transition.shrinkIn', {
         duration: 700,
         complete: function () {
           const $t = $(this);
@@ -182,8 +182,9 @@ $(document).ready(function () {
     var myReg = /^[\u4e00-\u9fa5]+$/;
     if (myReg.test(nameValue) && nameValue.length >= 2 && nameValue.length < 5) {
       const $t = $(this);
+      // const $nbsp = $('.nbsp').html();
       if (nameValue.length == 2) {
-        var nameValue2 = nameValue.charAt(0) + '    ' + nameValue.charAt(1)
+        var nameValue2 = nameValue.charAt(0) + '  ' + nameValue.charAt(1)
         addName(nameValue2, $t);
       } else {
         addName(nameValue, $t);
@@ -192,8 +193,45 @@ $(document).ready(function () {
       $('.name-wrong').show()
     }
     setTimeout(() => {
-      $('.dyzs-share').hide();
+      $('.dyzs-share, .byzs-revampImg').hide();
       $('.topMusic').hide()
-    }, 4000);
+    }, 5000);
+  })
+
+  //更换毕业证书
+  let $byzsWrapper = $('.byzs-wrapper');
+  let $byzsChoose = $('.swiper-wrapper li')
+  $byzsWrapper.on('click', function () {
+    $('.byzs-choose').show();
+  })
+  $byzsChoose.on('click', 'img', function () {
+    let bgImg = $(this).attr("src");
+    $('.swiper-container').show()
+    $('.byzs-choose').hide();  
+    $('.byzsImg').attr('src', bgImg)
+  })
+
+  $('.uers-school, .uers-name').on('click', function () {
+    $('.revamp-school').show()
+    $('.swiper-container').hide()
+  })
+
+
+  $('.notarize-revamp').on('click', function () {
+    var myReg = /^[\u4e00-\u9fa5]+$/;
+    let $revampSchool = $('.revampSchool').val();
+    let $revampName = $('.revampName').val();
+    if (myReg.test($revampName)  && $revampName.length >= 2 ) {
+      if ($revampName.length == 2) {
+        let $revampName2 = $revampName.charAt(0) + '  ' + $revampName.charAt(1)
+        $('.uers-name').text($revampName2);
+      }
+      $('.uers-name').text($revampName);
+    }
+    if (myReg.test($revampSchool) && $revampSchool.length >= 4) {
+      $('.uers-school').text($revampSchool);
+    }
+    $('.revamp-school, .byzs-choose').hide();
+    
   })
 })

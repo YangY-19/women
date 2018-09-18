@@ -29,7 +29,14 @@ $(document).ready(function () {
 
  
   function initData(newData) {
-    isFinished++;
+    
+    let timer;
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(() => {
+      isFinished++;
+    }, 400)
     number++
     $('.answer .title').text(newData.question); //题目
     $('.answer .opt .opt_span').each((index, item) => {
@@ -38,22 +45,27 @@ $(document).ready(function () {
     })
     $('.answer-box').data('correct', newData.correct); //正确答案到'.answer-box' 上
     $('.num-count .number').text(number);
+    console.log(count);
+    
   }
 
   //点击选项
-    $('.answer .opt').on('click', function (e) {
-      if (e.handled !== true) {
+     
+  
+    $('.answer .opt').on('click', function () {
+      $('.opt').data('lock','1')
+      if ($('.opt').data('lock') == 1) {
         const $t = $(this);
-        count++;
-       
+        count++
         if ($(this).data('opt') === $('.answer-box').data('correct')) {  //判断道具点击的答案和正确答案是否一样
           correctCount++
           correct($t);
+          $('.opt').data('lock', '0')
         } else {  // 错误
           wrong($t)
+          $('.opt').data('lock', '0')
         }
       }
-      e.handled = true
     })
  
 // 每题选择正确
@@ -73,6 +85,8 @@ $(document).ready(function () {
           initData(newData)
         }
     }})
+    var lock = $t.data('lock')
+    if (lock == 1) return false;
   }
 
   //答对两题以上的结果

@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="../public/css/swiper-3.4.2.min.css">
 		<link rel="stylesheet" type="text/css" href="../public/css/style.css">
 		<title>我们</title>
 		<link rel="icon" href="../public/img/logo.png">
@@ -125,18 +126,18 @@
 				<div class="answer-box">
 					<div class="title"></div>
 					<div class="result-options">
-						<div class="opt" data-opt="A">
+						<div class="opt" data-opt="A" data-lock="0"> 
 							<span><span>A、</span><span class="opt_span"></span></span>
 							<div class="animation-correct"></div>
 							<div class="animation-wrong"></div>
 						</div>
-						<div class="opt" data-opt="B">
+						<div class="opt" data-opt="B" data-lock="0">
 							<span><span>B、</span><span class="opt_span"></span></span>
 							<div class="animation-correct"></div>
 							<div class="animation-wrong"></div>
 			
 						</div>
-						<div class="opt" data-opt="C">
+						<div class="opt" data-opt="C" data-lock="0">
 							<span><span>C、</span><span class="opt_span"></span></span>
 							<div class="animation-correct"></div>
 							<div class="animation-wrong"></div>
@@ -218,15 +219,70 @@
 				<input class="nameInput" type="text" placeholder="在此输入姓名">
 				<button class="notarize-name" type="button">打印毕业证书</button>
 				<p class="name-wrong">姓名必须汉字且不能小于两个字符</p>
+				<span class="nbsp">&nbsp;&nbsp;</span>
 			</li>
 			<li class="byzs">
+				
 				<div class="dyzs-share"></div>
           <div class="byzs-wrapper">
+						<img class="byzsImg" src="../public/img/byzs.png" alt="">
 					  <div class="uers-name"></div>
 						<div class="uers-major"></div>
 						<div class="uers-school">苏州信息学院</div>						
 				 </div>
+				 <div class="byzs-revampImg"></div>
+				 <ul class="byzs-choose">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<li class="byzs-one">
+									<img src="../public/img/byzs.png" alt="">
+								</li>
+								<li class="byzs-one">
+									<img src="../public/img/byzs-2.png"  alt="">
+								</li>
+								<li class="byzs-two">
+									<img src="../public/img/byzs-3.png" alt="">
+								</li>
+								<li class="byzs-three">
+									<img src="../public/img/byzs-4.png" alt="">
+								</li>
+								<li class="byzs-three">
+									<img src="../public/img/byzs-5.png" alt="">
+								</li>
+								<li class="byzs-three">
+									<img src="../public/img/byzs-6.png" alt="">
+								</li>
+								<li class="byzs-three">
+									<img src="../public/img/byzs-7.png" alt="">
+								</li>
+								<li class="byzs-three">
+									<img src="../public/img/byzs-8.png" alt="">
+								</li>
+								<li class="byzs-three">
+									<img src="../public/img/byzs-9.png" alt="">
+								</li>
+								<li class="byzs-three">
+									<img src="../public/img/byzs-10.png" alt="">
+								</li>
+								<div class="byzs-three">
+									<img src="../public/img/byzs-11.png" alt="">
+								</div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+
+				 </ul>
+				 <div class="revamp-school">
+					<label class="revamp-title">修改姓名与学校</label>
+					 <label class="revampName-title">更改姓名</label>
+					<input class="revampName" type="text" placeholder="在此输入姓名">
+					<label class="revampSchool-title">更改学校</label>
+					<input class="revampSchool" type="text" placeholder="在此输入学校">
+					<button class="notarize-revamp" type="button">确认修改</button>
+				 </div>
 			</li>
+
 	 </ul>
  </div>
 </body>
@@ -234,4 +290,12 @@
 	var pics = ["../public/img/01-athor.png","../public/img/01-bg-yun.png","../public/img/01-bi.png","../public/img/01-ji.png","../public/img/01-jiazai.png","../public/img/01-ye.png","../public/img/01-yinzhang.png","../public/img/01-zu.png","../public/img/02-bg.jpg","../public/img/02-fd-guang.png","../public/img/02-feidie.png","../public/img/02-jiantou.png","../public/img/02-wengzi.png","../public/img/02-top.png", "../public/img/03-bottom.png","../public/img/03-maozi.png","../public/img/03-nianji.png","../public/img/03-paibian.png","../public/img/03-pinfen.png","../public/img/03-renwu.png","../public/img/03-renwu-2.png","../public/img/03-renwu-3.png","../public/img/03-shengji.png","../public/img/03-wengzi.png", "../public/img/byzs.png","../public/img/03-yupei.png", "../public/img/03-zsp.png","../public/img/answer_bg.jpg","../public/img/answer_correct.png","../public/img/answer_failed_bg.png","../public/img/answer_success_bg.png","../public/img/answer_wrong.png","../public/img/btn_de.png","../public/img/btn_lao.png","../public/img/btn_mei.png","../public/img/btn_ti.png","../public/img/btn_zhi.png","../public/img/daer.png","../public/img/dasan.png","../public/img/dayi.png","../public/img/by-explain.png","../public/img/djck.png","../public/img/dq-daer.png","../public/img/dq-dasan.png","../public/img/dq-dayi.png","../public/img/loading_cloud.png","../public/img/logo.png","../public/img/mainscene_tips1-.png","../public/img/mainscene_tips2.png","../public/img/mainscene_tips3.png","../public/img/mainscene_tips4.png","../public/img/me_close.png","../public/img/memorial_up_btn.png","../public/img/music-note.png","../public/img/rxtz.jpg","../public/img/share.png","../public/img/share_btn.png","../public/img/xz_dm.png","../public/img/xz_jy.png","../public/img/xz_rj.png"]
 </script>
 <script src="../public/js/index.js"></script>
+<script>
+	  var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1,
+				paginationClickable: true,
+				spaceBetween: 30,
+				loop: true
+			});
+</script>
 </html>
