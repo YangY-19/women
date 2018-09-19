@@ -5515,7 +5515,7 @@ $(document).ready(function () {
      } else if (topic == 8) {
        $('.dq-class .dq-daer').hide();
        $('.dq-class .dq-dasan').show();
-     } hengji - kaoshi
+     }
     }
 
 //错误时显示
@@ -5643,12 +5643,11 @@ $(document).ready(function () {
       $('.topMusic').hide()
     }, 5000);
   })
-
   //更换毕业证书
   let $byzsWrapper = $('.byzs-wrapper');
   let $byzsChoose = $('.swiper-wrapper li')
   $byzsWrapper.on('click', function () {
-    $('.byzs-choose').show();
+    $('.byzs-choose, .swiper-container').show();
   })
   $byzsChoose.on('click', 'img', function () {
     let bgImg = $(this).attr("src");
@@ -5669,10 +5668,11 @@ $(document).ready(function () {
     let $revampName = $('.revampName').val();
     if (myReg.test($revampName)  && $revampName.length >= 2 ) {
       if ($revampName.length == 2) {
-        let $revampName2 = $revampName.charAt(0) + '  ' + $revampName.charAt(1)
+        let $revampName2 = $revampName.charAt(0) + '    ' + $revampName.charAt(1)
         $('.uers-name').text($revampName2);
+      } else {
+        $('.uers-name').text($revampName);
       }
-      $('.uers-name').text($revampName);
     }
     if (myReg.test($revampSchool) && $revampSchool.length >= 4) {
       $('.uers-school').text($revampSchool);
