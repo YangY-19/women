@@ -408,6 +408,9 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 18.75vw;
 	display: none
 }
+.main-zhi2{
+			background:  url(../img/03-pinfen2.png?v=0a873b303d) no-repeat 0 0 / cover;
+		}
 .ren{
 	background:url(../img/03-renwu.png?v=642012f4f8) no-repeat 0 0 / cover;
 	width: 22.344vw;
@@ -415,6 +418,14 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	bottom: 28.125vw;
 	left: 35.938vw;
+}
+.jiying-ren{
+	background:url(../img/03-renwu2-1.png?v=0147888136) no-repeat 0 0 / cover;
+	animation: none
+}
+.ruanjian-ren{
+	background:url(../img/03-renwu2-2.png?v=157ff66101) no-repeat 0 0 / cover;
+	animation: none
 }
 .ren-daer{
 	background:url(../img/03-renwu-2.png?v=295d6db761) no-repeat 0 0 / cover;
@@ -434,6 +445,18 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 20.313vw;
 	left: 23.438vw;
 	display: none;
+}
+.jiying-daer{
+	background:url(../img/03-renwu2-3.png?v=217dfafb03) no-repeat 0 0 / cover;
+}
+.ruanjian-daer{
+	background:url(../img/03-renwu2-4.png?v=c56ae06154) no-repeat 0 0 / cover;
+}
+.jiying-dasan{
+	background:url(../img/03-renwu-3-2.png?v=882e7a6e6a) no-repeat 0 0 / cover;
+}
+.ruanjian-dasan{
+	background:url(../img/03-renwu-3-3.png?v=0cbe02e0ae) no-repeat 0 0 / cover;
 }
 .animation-renwu{
    animation: renwu 0.5s steps(2, start) infinite;
@@ -614,8 +637,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	bottom: 0;
 	left: 71.875vw;
-	right: 0;
-	
+	right: 0;;
 }
 .shengji-biye{
 	background: url(../img/03-sj-biye.png?v=08d69e6cc9) no-repeat 0 0 / cover;
@@ -625,7 +647,9 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 0;
 	left: 71.875vw;
 	right: 0;
-	display: none;
+		display: none;
+
+
 }
 .shengji-kaoshi{
 	background: url(../img/03-shengji-kaoshi.png?v=eced683ceb) no-repeat 0 0 / cover;
@@ -1123,10 +1147,41 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 46.875vw;
 	left: 0;
 }
-.byzs-wrapper img{
+.byzsImg{
 	width: 100%;
 	height: 67.188vw;
 	
+}
+.top200{
+	position: absolute;
+	top:31.25vw;
+	display: none
+}
+.uers-photo{
+	width:9.375vw;
+	height: 14.063vw;
+	border: 1px solid #9d9c9c;
+	position: absolute;
+	bottom: 84.375vw;
+	right: 14.063vw;
+}
+.photohide{
+	width:9.063vw;
+	height: 13.75vw;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+}
+.urlhide{
+	display: none;
+}
+.photo-title{
+	width: 1.563vw;
+	font-size: 1.25vw;
+	margin: 1.875vw 3.438vw 
+}
+.bottom600{
+	bottom: 109.375vw;
 }
 .uers-name{
 	position: absolute;
@@ -1179,27 +1234,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	 position: absolute;
 	 display: none;
 }
-/* .byzs-one{
-	width: 100%;
-	height: 228px;
-	background: no-repeat 0 0 /cover;
-	background-image: url(../img/byzs-2.png?v=b26389b9c0);
-
-}
-.byzs-two{
-	width: 100%;
-	height: 228px;
-	background: no-repeat 0 0 /cover;
-	background-image: url(../img/byzs-3.png?v=bc0a1eaa76);
-
-}
-.byzs-three{
-	width: 100%;
-	height: 228px;
- 	background: no-repeat 0 0 /cover;
-	background-image: url(../img/byzs-4.png?v=5e887987df);
-
-} */
+/* //修改姓名 毕业证书 */
 .revamp-school{
    width: 100%;
 	 height: 100%;
@@ -1207,15 +1242,31 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	 position: absolute;
 	 display: none
 }
-.revampName{
-	width: 62.5vw;
-	height: 7.813vw;
-	border: #cccccc 0.313vw solid;
-	border-radius: 2.188vw;
-	text-align: center;
+.revamp-title{
 	position: absolute;
-	bottom: 40.625vw;
-	left: 20.313vw;
+	left: 15.625vw;
+	bottom: 137.5vw;
+	font-size: 5.625vw;
+	color: #e42b2b;
+}
+.swiper-container {
+		width: 100%;
+		height: 46.875vw;
+		margin: 3.125vw auto;
+		top:40.625vw
+}
+.swiper-container {
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+}
+.revampSchool-title{
+	position: absolute;
+	left: 42.188vw;
+	bottom: 60.938vw;
+	font-size: 4.375vw;
+	color: #e42b2b;
 }
 .revampSchool{
 	width: 62.5vw;
@@ -1224,29 +1275,25 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	border-radius: 2.188vw;
 	text-align: center;
 	position: absolute;
-	bottom: 67.188vw;
+	bottom: 50vw;
 	left: 20.313vw;
-}
-.revamp-title{
-	position: absolute;
-	left: 31.25vw;
-	bottom: 128.125vw;
-	font-size: 5.625vw;
-	color: #e42b2b;
-}
-.revampSchool-title{
-	position: absolute;
-	left: 42.188vw;
-	bottom: 82.813vw;
-	font-size: 4.688vw;
-	color: #e42b2b;
 }
 .revampName-title{
 	position: absolute;
-	left: 42.188vw;
-	bottom: 54.688vw;
-	font-size: 4.688vw;
+	left: 40.625vw;
+	bottom: 39.063vw;
+	font-size: 4.375vw;
 	color: #e42b2b;
+}
+.revampName{
+	width: 62.5vw;
+	height: 7.813vw;
+	border: #cccccc 0.313vw solid;
+	border-radius: 2.188vw;
+	text-align: center;
+	position: absolute;
+	bottom: 28.125vw;
+	left: 20.313vw;
 }
 .notarize-revamp{
 	width: 31.25vw;
@@ -1258,21 +1305,9 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	line-height: 9.375vw;
 	text-align: center;
 	position: absolute;
-	bottom: 21.875vw;
+	bottom: 12.5vw;
 	left: 35.156vw;
 }
-.swiper-container {
-        width: 100%;
-        height: 46.875vw;
-				margin: 3.125vw auto;
-				top:46.875vw
-    }
-.swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 .byzs-one img{
 	width: 100vw;
 	height: 62.5vw;

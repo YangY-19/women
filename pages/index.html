@@ -147,7 +147,7 @@
 				<div class="result-renwu-box">
 					<div class="result-wp">
 						<div class="result-title">答对<span>0</span>题</div>
-						<div class="result-text">恭喜你，人物形象升级</div>
+						<div class="result-text2">恭喜你，人物形象升级</div>
 						<div class="result-flag-dasan"></div>
 						<div class="result-flag-daer"></div>
 						<div class="result-flag-dayi"></div>
@@ -219,17 +219,23 @@
 				<input class="nameInput" type="text" placeholder="在此输入姓名">
 				<button class="notarize-name" type="button">打印毕业证书</button>
 				<p class="name-wrong">姓名必须汉字且不能小于两个字符</p>
-				<span class="nbsp">&nbsp;&nbsp;</span>
+				<!-- <span class="nbsp">&nbsp;&nbsp;</span> -->
 			</li>
+
+			<!-- 毕业证书 -->
 			<li class="byzs">
-				
-				<div class="dyzs-share"></div>
           <div class="byzs-wrapper">
 						<img class="byzsImg" src="../public/img/byzs.png" alt="">
 					  <div class="uers-name"></div>
 						<div class="uers-major"></div>
 						<div class="uers-school">苏州信息学院</div>						
 				 </div>
+				<div class="uers-photo">
+
+					<p class="photo-title">贴照片</p>
+					<input type="file" id="photoInput" multiple="multiple" style=" opacity: 0;" />
+					<img src="" id="upphoto" class="photohide urlhide">
+				</div>
 				 <div class="byzs-revampImg"></div>
 				 <ul class="byzs-choose">
 						<div class="swiper-container">
@@ -274,7 +280,8 @@
 
 				 </ul>
 				 <div class="revamp-school">
-					<label class="revamp-title">修改姓名与学校</label>
+					<label class="revamp-title">修改姓名、学校及毕业证书</label>
+					<img class="byzsImg top200" src="../public/img/byzs.png" alt="">
 					 <label class="revampName-title">更改姓名</label>
 					<input class="revampName" type="text" placeholder="在此输入姓名">
 					<label class="revampSchool-title">更改学校</label>
@@ -287,7 +294,7 @@
  </div>
 </body>
 <script>
-	var pics = ["../public/img/01-athor.png","../public/img/01-bg-yun.png","../public/img/01-bi.png","../public/img/01-ji.png","../public/img/01-jiazai.png","../public/img/01-ye.png","../public/img/01-yinzhang.png","../public/img/01-zu.png","../public/img/02-bg.jpg","../public/img/02-fd-guang.png","../public/img/02-feidie.png","../public/img/02-jiantou.png","../public/img/02-wengzi.png","../public/img/02-top.png", "../public/img/03-bottom.png","../public/img/03-maozi.png","../public/img/03-nianji.png","../public/img/03-paibian.png","../public/img/03-pinfen.png","../public/img/03-renwu.png","../public/img/03-renwu-2.png","../public/img/03-renwu-3.png","../public/img/03-shengji.png","../public/img/03-wengzi.png", "../public/img/byzs.png","../public/img/03-yupei.png", "../public/img/03-zsp.png","../public/img/answer_bg.jpg","../public/img/answer_correct.png","../public/img/answer_failed_bg.png","../public/img/answer_success_bg.png","../public/img/answer_wrong.png","../public/img/btn_de.png","../public/img/btn_lao.png","../public/img/btn_mei.png","../public/img/btn_ti.png","../public/img/btn_zhi.png","../public/img/daer.png","../public/img/dasan.png","../public/img/dayi.png","../public/img/by-explain.png","../public/img/djck.png","../public/img/dq-daer.png","../public/img/dq-dasan.png","../public/img/dq-dayi.png","../public/img/loading_cloud.png","../public/img/logo.png","../public/img/mainscene_tips1-.png","../public/img/mainscene_tips2.png","../public/img/mainscene_tips3.png","../public/img/mainscene_tips4.png","../public/img/me_close.png","../public/img/memorial_up_btn.png","../public/img/music-note.png","../public/img/rxtz.jpg","../public/img/share.png","../public/img/share_btn.png","../public/img/xz_dm.png","../public/img/xz_jy.png","../public/img/xz_rj.png"]
+	var pics = ["../public/img/01-athor.png","../public/img/01-bg-yun.png","../public/img/01-bi.png","../public/img/01-ji.png","../public/img/01-jiazai.png","../public/img/01-ye.png","../public/img/01-yinzhang.png","../public/img/01-zu.png","../public/img/02-bg.jpg","../public/img/03-shengji-kaoshi.png", "../public/img/03-sj-biye.png","../public/img/02-fd-guang.png","../public/img/02-feidie.png","../public/img/02-jiantou.png","../public/img/02-wengzi.png","../public/img/02-top.png", "../public/img/03-bottom.png","../public/img/03-maozi.png","../public/img/03-nianji.png","../public/img/03-paibian.png","../public/img/03-pinfen.png","../public/img/03-renwu.png","../public/img/03-renwu-2.png","../public/img/03-renwu-3.png","../public/img/03-shengji.png","../public/img/03-wengzi.png", "../public/img/byzs.png","../public/img/03-yupei.png", "../public/img/03-zsp.png","../public/img/answer_bg.jpg","../public/img/answer_correct.png","../public/img/answer_failed_bg.png","../public/img/answer_success_bg.png","../public/img/answer_wrong.png","../public/img/btn_de.png","../public/img/btn_lao.png","../public/img/btn_mei.png","../public/img/btn_ti.png","../public/img/btn_zhi.png","../public/img/daer.png","../public/img/dasan.png","../public/img/dayi.png","../public/img/by-explain.png","../public/img/djck.png","../public/img/dq-daer.png","../public/img/dq-dasan.png","../public/img/dq-dayi.png","../public/img/loading_cloud.png","../public/img/logo.png","../public/img/mainscene_tips1-.png","../public/img/mainscene_tips2.png","../public/img/mainscene_tips3.png","../public/img/mainscene_tips4.png","../public/img/me_close.png","../public/img/memorial_up_btn.png","../public/img/music-note.png","../public/img/rxtz.jpg","../public/img/share.png","../public/img/share_btn.png","../public/img/xz_dm.png","../public/img/xz_jy.png","../public/img/xz_rj.png"]
 </script>
 <script src="../public/js/index.js"></script>
 <script>

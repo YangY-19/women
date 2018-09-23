@@ -28,7 +28,7 @@ $(document).ready(function () {
               $('.coverArrows').hide();
             },700)
             }, 1000);;
-        }, 11); //11000
+        }, 11000); //11000
       }
     };
   };
@@ -50,7 +50,7 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4);
+    }, 4000);
     // 4000
   });
 
@@ -62,10 +62,10 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 30)//4000
+      }, 3000)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 50)//6000
+      }, 5000)//6000
       setInterval(function () {
         $('.ren').addClass('animation-renwu')
         setTimeout(function () {

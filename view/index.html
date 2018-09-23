@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<link rel="stylesheet" type="text/css" href="../public/css/swiper-3.4.2.min.css?v=0d3b28dbdf">
-		<link rel="stylesheet" type="text/css" href="../public/css/style.css?v=d066294b16">
+		<link rel="stylesheet" type="text/css" href="../public/css/style.css?v=c6f27291b5">
 		<title>我们</title>
 		<link rel="icon" href="../public/img/logo.png?v=c1b9ea2d87">
 	</head>
@@ -147,7 +147,7 @@
 				<div class="result-renwu-box">
 					<div class="result-wp">
 						<div class="result-title">答对<span>0</span>题</div>
-						<div class="result-text">恭喜你，人物形象升级</div>
+						<div class="result-text2">恭喜你，人物形象升级</div>
 						<div class="result-flag-dasan"></div>
 						<div class="result-flag-daer"></div>
 						<div class="result-flag-dayi"></div>
@@ -219,17 +219,23 @@
 				<input class="nameInput" type="text" placeholder="在此输入姓名">
 				<button class="notarize-name" type="button">打印毕业证书</button>
 				<p class="name-wrong">姓名必须汉字且不能小于两个字符</p>
-				<span class="nbsp">&nbsp;&nbsp;</span>
+				<!-- <span class="nbsp">&nbsp;&nbsp;</span> -->
 			</li>
+
+			<!-- 毕业证书 -->
 			<li class="byzs">
-				
-				<div class="dyzs-share"></div>
           <div class="byzs-wrapper">
 						<img class="byzsImg" src="../public/img/byzs.png?v=5df439d7c4" alt="">
 					  <div class="uers-name"></div>
 						<div class="uers-major"></div>
 						<div class="uers-school">苏州信息学院</div>						
 				 </div>
+				<div class="uers-photo">
+
+					<p class="photo-title">贴照片</p>
+					<input type="file" id="photoInput" multiple="multiple" style=" opacity: 0;" />
+					<img src="" id="upphoto" class="photohide urlhide">
+				</div>
 				 <div class="byzs-revampImg"></div>
 				 <ul class="byzs-choose">
 						<div class="swiper-container">
@@ -274,7 +280,8 @@
 
 				 </ul>
 				 <div class="revamp-school">
-					<label class="revamp-title">修改姓名与学校</label>
+					<label class="revamp-title">修改姓名、学校及毕业证书</label>
+					<img class="byzsImg top200" src="../public/img/byzs.png?v=5df439d7c4" alt="">
 					 <label class="revampName-title">更改姓名</label>
 					<input class="revampName" type="text" placeholder="在此输入姓名">
 					<label class="revampSchool-title">更改学校</label>
@@ -287,7 +294,7 @@
  </div>
 </body>
 <script>
-	var pics = ["../public/img/01-athor.png?v=95333abcdd","../public/img/01-bg-yun.png?v=e09978f342","../public/img/01-bi.png?v=2f40bc36ff","../public/img/01-ji.png?v=a874ded3a9","../public/img/01-jiazai.png?v=6d4406c12a","../public/img/01-ye.png?v=a1d7e0b965","../public/img/01-yinzhang.png?v=2bc9e4e998","../public/img/01-zu.png?v=34f0695292","../public/img/02-bg.jpg?v=0ea613eb11","../public/img/02-fd-guang.png?v=cccaef7492","../public/img/02-feidie.png?v=c5711ec90c","../public/img/02-jiantou.png?v=f6ecc43f7c","../public/img/02-wengzi.png?v=d4576072a5","../public/img/02-top.png?v=ea786611c9", "../public/img/03-bottom.png?v=544eef972d","../public/img/03-maozi.png?v=2397cda3d9","../public/img/03-nianji.png?v=7ca1b61555","../public/img/03-paibian.png?v=e35af70e48","../public/img/03-pinfen.png?v=79c2953ac0","../public/img/03-renwu.png?v=642012f4f8","../public/img/03-renwu-2.png?v=295d6db761","../public/img/03-renwu-3.png?v=d16d7d5d12","../public/img/03-shengji.png?v=f24d58291a","../public/img/03-wengzi.png?v=9e9579c35b", "../public/img/byzs.png?v=5df439d7c4","../public/img/03-yupei.png?v=ce7986e89c", "../public/img/03-zsp.png?v=0fa964017a","../public/img/answer_bg.jpg?v=e458e8bd8e","../public/img/answer_correct.png?v=511864af19","../public/img/answer_failed_bg.png?v=0e9c1289ae","../public/img/answer_success_bg.png?v=25dac38e85","../public/img/answer_wrong.png?v=7fe9164255","../public/img/btn_de.png?v=a0b182ee02","../public/img/btn_lao.png?v=16fa76373d","../public/img/btn_mei.png?v=75b643bee5","../public/img/btn_ti.png?v=6a9ebbc0b6","../public/img/btn_zhi.png?v=6f71de93b3","../public/img/daer.png?v=b98a8c005d","../public/img/dasan.png?v=313e3ba71b","../public/img/dayi.png?v=01772f600e","../public/img/by-explain.png?v=42ea0f658c","../public/img/djck.png?v=ef660ebbcd","../public/img/dq-daer.png?v=bfa44e6378","../public/img/dq-dasan.png?v=22f2203c40","../public/img/dq-dayi.png?v=f93c6379bc","../public/img/loading_cloud.png?v=402ad00c70","../public/img/logo.png?v=c1b9ea2d87","../public/img/mainscene_tips1-.png?v=436dba24cc","../public/img/mainscene_tips2.png?v=88d183aac4","../public/img/mainscene_tips3.png?v=e9d24c8091","../public/img/mainscene_tips4.png?v=231b93931e","../public/img/me_close.png?v=eb72b8403c","../public/img/memorial_up_btn.png?v=a57cb5c395","../public/img/music-note.png?v=d5c3f30312","../public/img/rxtz.jpg?v=80ccfcd45f","../public/img/share.png?v=ecdcb0c165","../public/img/share_btn.png?v=d6e77e02e3","../public/img/xz_dm.png?v=68428ebc97","../public/img/xz_jy.png?v=e20d4732f7","../public/img/xz_rj.png?v=d38f529f07"]
+	var pics = ["../public/img/01-athor.png?v=95333abcdd","../public/img/01-bg-yun.png?v=e09978f342","../public/img/01-bi.png?v=2f40bc36ff","../public/img/01-ji.png?v=a874ded3a9","../public/img/01-jiazai.png?v=6d4406c12a","../public/img/01-ye.png?v=a1d7e0b965","../public/img/01-yinzhang.png?v=2bc9e4e998","../public/img/01-zu.png?v=34f0695292","../public/img/02-bg.jpg?v=0ea613eb11","../public/img/03-shengji-kaoshi.png?v=eced683ceb", "../public/img/03-sj-biye.png?v=08d69e6cc9","../public/img/02-fd-guang.png?v=cccaef7492","../public/img/02-feidie.png?v=c5711ec90c","../public/img/02-jiantou.png?v=f6ecc43f7c","../public/img/02-wengzi.png?v=d4576072a5","../public/img/02-top.png?v=ea786611c9", "../public/img/03-bottom.png?v=544eef972d","../public/img/03-maozi.png?v=2397cda3d9","../public/img/03-nianji.png?v=7ca1b61555","../public/img/03-paibian.png?v=043b7c3723","../public/img/03-pinfen.png?v=79c2953ac0","../public/img/03-renwu.png?v=642012f4f8","../public/img/03-renwu-2.png?v=295d6db761","../public/img/03-renwu-3.png?v=d16d7d5d12","../public/img/03-shengji.png?v=f24d58291a","../public/img/03-wengzi.png?v=9e9579c35b", "../public/img/byzs.png?v=5df439d7c4","../public/img/03-yupei.png?v=ce7986e89c", "../public/img/03-zsp.png?v=0fa964017a","../public/img/answer_bg.jpg?v=e458e8bd8e","../public/img/answer_correct.png?v=511864af19","../public/img/answer_failed_bg.png?v=0e9c1289ae","../public/img/answer_success_bg.png?v=25dac38e85","../public/img/answer_wrong.png?v=7fe9164255","../public/img/btn_de.png?v=a0b182ee02","../public/img/btn_lao.png?v=16fa76373d","../public/img/btn_mei.png?v=75b643bee5","../public/img/btn_ti.png?v=6a9ebbc0b6","../public/img/btn_zhi.png?v=6f71de93b3","../public/img/daer.png?v=b98a8c005d","../public/img/dasan.png?v=313e3ba71b","../public/img/dayi.png?v=01772f600e","../public/img/by-explain.png?v=42ea0f658c","../public/img/djck.png?v=ef660ebbcd","../public/img/dq-daer.png?v=bfa44e6378","../public/img/dq-dasan.png?v=22f2203c40","../public/img/dq-dayi.png?v=f93c6379bc","../public/img/loading_cloud.png?v=402ad00c70","../public/img/logo.png?v=c1b9ea2d87","../public/img/mainscene_tips1-.png?v=436dba24cc","../public/img/mainscene_tips2.png?v=88d183aac4","../public/img/mainscene_tips3.png?v=e9d24c8091","../public/img/mainscene_tips4.png?v=231b93931e","../public/img/me_close.png?v=eb72b8403c","../public/img/memorial_up_btn.png?v=a57cb5c395","../public/img/music-note.png?v=d5c3f30312","../public/img/rxtz.jpg?v=80ccfcd45f","../public/img/share.png?v=ecdcb0c165","../public/img/share_btn.png?v=d6e77e02e3","../public/img/xz_dm.png?v=68428ebc97","../public/img/xz_jy.png?v=e20d4732f7","../public/img/xz_rj.png?v=d38f529f07"]
 </script>
 <script src="../public/js/index.js"></script>
 <script>

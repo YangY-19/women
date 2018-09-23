@@ -151,30 +151,10 @@ $(document).ready(function () {
   }
 
 
-  //人物正确显示内容
-  // function renwuresult($t) {
-  //   $t.find('.animation-correct').velocity('fadeIn', {
-  //     duration: 1000, complete: function () {
-  //       const $t = $(this);
-  //       $t.velocity('fadeOut');
-  //       $('.result-renwu-box').velocity('fadeIn', {
-  //         duration: 3000,
-  //         complete: function () {
-  //           const $t = $(this);
-  //           $t.velocity('fadeOut', {
-  //             complete: function () {
-  //               $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
-  //             }
-  //           })
-  //         }
-  //       })
-  //     }
-  //   })
-  // }
-  
   //显示入学通知
   function ruxuetongzi() {
     $('.result-flag').attr('class', 'result-flag result-flag-ruxue');
+    $('.result-title').text('全部解锁成功');
     $('.result-text').text('恭喜你获得入学通知书');
     $('.resultSuccess-ruxue').show().velocity('fadeIn', {
       duration: 5000,

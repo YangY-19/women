@@ -10,7 +10,10 @@ $(document).ready(function () {
 
   function shengjidata(classData) {
     $('.item-wrap').data('zhuanye', data.daoju[classData][10]['major']);
-   
+    $('.ren').addClass(classData + '-ren');
+    $('.ren-daer').addClass(classData + '-daer')
+    $('.ren-dasan').addClass(classData + '-dasan')
+    $('.main-zhi').addClass('main-zhi2')
 // 点击考试 跳转
     $('.shengji-kaoshi').on('click', function () {
       topic = 0;
@@ -137,26 +140,17 @@ $(document).ready(function () {
     }
   }
 
-
-
-
   $('.choose-dm').on('click', function () {
     shengjidata('dongman');
   })
   $('.choose-jy').on('click', function () {
     shengjidata('jiying')
+    
   })
   $('.choose-rj').on('click', function () {
     shengjidata('ruanjian')
+    $('.ren').addClass('ruanjian-ren').removeClass('animation-renwu');
   })
-
-
-
-
-
-
-
-
 
 
   $('.shengji-biye').on('click', function () {
@@ -196,23 +190,26 @@ $(document).ready(function () {
       $('.dyzs-share, .byzs-revampImg').hide();
       $('.topMusic').hide()
     }, 5000);
+    setTimeout(() => {
+      $('.photo-title').velocity('transition.flipBounceXOut')
+    },2000 );
   })
   //更换毕业证书
-  let $byzsWrapper = $('.byzs-wrapper');
   let $byzsChoose = $('.swiper-wrapper li')
-  $byzsWrapper.on('click', function () {
-    $('.byzs-choose, .swiper-container').show();
-  })
   $byzsChoose.on('click', 'img', function () {
     let bgImg = $(this).attr("src");
-    $('.swiper-container').show()
+    $('.swiper-container, .top200').show()
     $('.byzs-choose').hide();  
     $('.byzsImg').attr('src', bgImg)
   })
+  $('.top200').on('click',function() {
+    $(this).hide();
+    $('.revamp-school, .byzs-choose, .swiper-wrapper, .swiper-container').show()
+  })
 
-  $('.uers-school, .uers-name').on('click', function () {
-    $('.revamp-school').show()
-    $('.swiper-container').hide()
+  $('.uers-name, .uers-school, .byzs-wrapper').on('click', function () {
+    $('.revamp-school, .byzs-choose, .swiper-wrapper, .swiper-container').show()
+    $('.top200').hide()
   })
 
 
@@ -234,4 +231,28 @@ $(document).ready(function () {
     $('.revamp-school, .byzs-choose').hide();
     
   })
+  $("#photoInput").change(function () {
+    var objUrl = getObjectURL(this.files[0]);
+    if (objUrl) {
+      $("#upphoto").attr("src", objUrl);
+      $("#upphoto").removeClass("urlhide");
+    }
+  });
+  //建立一個可存取到該file的url
+  function getObjectURL(file) {
+    var url = null;
+    if (window.createObjectURL != undefined) { // basic
+      url = window.createObjectURL(file);
+    }
+    else if (window.URL != undefined) {
+      // mozilla(firefox)
+      url = window.URL.createObjectURL(file);
+    }
+    else if (window.webkitURL != undefined) {
+      // webkit or chrome
+      url = window.webkitURL.createObjectURL(file);
+    }
+    return url;
+  }
+
 })
