@@ -5402,7 +5402,7 @@ $(document).ready(function () {
   let $sjarrows = $('.shengji-arrows');
   let $dayi = $('.class .dayi');
   $ruxue.on('click', function () {
-    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.ruxueongzhi').show();
+    $(this).closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' }).children('.ruxueongzhi').show();
     setTimeout(() => {
       setInterval(() =>{
         $memorial.velocity('transition.slideUpBigIn');
