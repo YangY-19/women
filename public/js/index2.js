@@ -5242,10 +5242,11 @@ $(document).ready(function () {
     isFinished = 0;
     const $li = $t.closest('li');
     $li.next().show()
-      .closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.answer').show();
+      .closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' }).children('.answer').show();
     daoju = $t.data('daoju'); //获取点击的道具
     let newData = data['daoju'][daoju][0];
     initData(newData);  //绑定数据到页面上
+    $('.answer-upgrade').hide()
   })
 
  
@@ -5484,6 +5485,7 @@ $(document).ready(function () {
           sjInitData(sjNewdata)
         }
       })
+     $('.answer-upgrade-bg').addClass('answer-bg' + topic)
      //当前年级显示
      if (topic > 10) {
        topic = '10'
@@ -5523,17 +5525,19 @@ $(document).ready(function () {
  //数据加载 
     function sjInitData(sjNewdata) {
       if (sjIsFinished == 10) {
-        $('.result-title span').text(topic)
+        $('.result-title3 span').text(topic)
         $('.result-renwu-box').velocity('fadeIn', {
           complete: function () {
             let $t = $(this);
             if (topic >= 4 && topic < 8) {
-              $('.result-flag-daer, .daer, .ren-daer').show();
+              $('.result-flag-daer, .daer, .ren-daer, .daer-paibian').show();
               $('.result-flag-dayi, .result-flag-dasan, .dayi, .ren, .main-ti, .main-mei').hide();
+
             } 
              if (topic >= 8) {
-               $('.result-flag-dayi, .result-flag-daer, .shengji-kaoshi, .dayi, .daer, .ren, .ren-daer, .main-ti, .main-mei').hide();
-               $('.result-flag-dasan, .shengji-biye, .dasan, .ren-dasan').show();
+               $('.result-flag-dayi, .result-flag-daer, .shengji-kaoshi, .dayi, .daer, .ren, .ren-daer, .main-ti, .main-mei, daer-paibian').hide();
+               $('.result-flag-dasan, .shengji-biye, .dasan, .ren-dasan, dasan-paibian').show();
+               $('.main-de').addClass('dasan-paibian')
             }
             setTimeout(() => {
               $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });

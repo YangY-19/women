@@ -21,10 +21,11 @@ $(document).ready(function () {
     isFinished = 0;
     const $li = $t.closest('li');
     $li.next().show()
-      .closest('ul').css({ transform: 'translateY(' + -winHight * 3 + 'px)' }).children('.answer').show();
+      .closest('ul').css({ transform: 'translateY(' + -winHight * 2 + 'px)' }).children('.answer').show();
     daoju = $t.data('daoju'); //获取点击的道具
     let newData = data['daoju'][daoju][0];
     initData(newData);  //绑定数据到页面上
+    $('.answer-upgrade').hide()
   })
 
  

@@ -228,6 +228,8 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	right: 0;  
 }
 
+
+
 /* 03 - choose页面 */
 .choose{
 	background: #eee6db;
@@ -379,7 +381,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	font-size:34px;
 	position: absolute;
 	bottom: 890px;
-	left: 300px;
+	left: 320px;
 	font-family: cursive;
 }
 .classNameAn{
@@ -391,6 +393,24 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .main-de{
 	background: url(../img/03-paibian.png) no-repeat 0 0 / cover;
+	width: 410px;
+	height: 98px;
+	position: absolute;
+	bottom: 760px;
+	left: 130px;
+	display: none
+}
+.daer-paibian{
+	background: url(../img/03-paibian2.png) no-repeat 0 0 / cover;
+	width: 410px;
+	height: 98px;
+	position: absolute;
+	bottom: 760px;
+	left: 130px;
+	display: none
+}
+.dasan-paibian{
+	background: url(../img/03-paibian3.png) no-repeat 0 0 / cover;
 	width: 410px;
 	height: 98px;
 	position: absolute;
@@ -425,7 +445,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	height: 500px;
 	position: absolute;
 	bottom: 180px;
-	left: 230px;
+	left: 250px;
 }
 .jiying-ren{
 	background:url(../img/03-renwu2-1.png) no-repeat 0 0 / cover;
@@ -472,7 +492,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
    animation: renwu 0.5s steps(2, start) infinite;
 }
 @keyframes renwu{
-	 from { background-position-x: -287px }
+	 from { background-position-x: -288px }
 		 to {background-position-x: 0}
 }
 .main-ti{
@@ -931,8 +951,48 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	/* #fff9fa #fdf9ff #f9faff #f9faff #fafff9 #fffff9 #fff7f6 #fdf9ff   #fff9fa*/
 }
 .answer-upgrade-bg{
-	background: #f2f2f2;
+	background: #ffe8e8;
+	height: 0%;
+}
+.answer-bg1{
+	background: #ffe9dd ;
 	height: 10%;
+}
+.answer-bg2{
+	background: #ffffe5 ;
+	height:20%;
+}
+.answer-bg3{
+	background: #f2ffef ;
+	height: 30%;
+}
+.answer-bg4{
+	background: #edffff ;
+	height: 40%;
+}
+.answer-bg5{
+	background: #eef7ff ;
+	height: 50%;
+}
+.answer-bg6{
+	background: #f3f1ff ;
+	height: 60%;
+}
+.answer-bg7{
+	background: #faf1ff ;
+	height: 70%;
+}
+.answer-bg8{
+	background: #ffedf7 ;
+	height: 80%;
+}
+.answer-bg9{
+	background: #fff1ef  ;
+	height: 90%;
+}
+.answer-bg10{
+	background:   #ffeff2 ;
+	height: 100%;
 }
 .answer-box > .title{
 	width: 80%;
@@ -1031,7 +1091,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		background-color: #f2f1ec;
 		z-index: 2;
 		.result-wp{
-			.result-title{
+			.result-title3{
 				color: #ce3e3e;
 				font-size: 66px;
 				position: absolute;
@@ -1039,7 +1099,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				text-align: center;
 				width: 100%;
 			}
-		  .result-text{
+		  .result-text2{
 				color: #333;
 				font-size: 32px;
 				position: absolute;
@@ -1284,7 +1344,6 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		width: 100%;
 		height: 300px;
 		margin: 20px auto;
-		top:260px
 }
 .swiper-container {
 		width: 100%;
@@ -1361,3 +1420,9 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	width: 640px;
 	height: 400px;
 } 
+
+.byzs-box{
+	background: #9d9c9c;
+	position: absolute;
+	bottom: 420px
+}

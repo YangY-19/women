@@ -371,7 +371,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	font-size:5.313vw;
 	position: absolute;
 	bottom: 139.063vw;
-	left: 46.875vw;
+	left: 50vw;
 	font-family: cursive;
 }
 .classNameAn{
@@ -382,7 +382,25 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	100%{transform: scaleX(1);left: 39.063vw;}
 }
 .main-de{
-	background: url(../img/03-paibian.png?v=e35af70e48) no-repeat 0 0 / cover;
+	background: url(../img/03-paibian.png?v=4c744928d8) no-repeat 0 0 / cover;
+	width: 64.063vw;
+	height: 15.313vw;
+	position: absolute;
+	bottom: 118.75vw;
+	left: 20.313vw;
+	display: none
+}
+.daer-paibian{
+	background: url(../img/03-paibian2.png?v=7de7eb9e2e) no-repeat 0 0 / cover;
+	width: 64.063vw;
+	height: 15.313vw;
+	position: absolute;
+	bottom: 118.75vw;
+	left: 20.313vw;
+	display: none
+}
+.dasan-paibian{
+	background: url(../img/03-paibian3.png) no-repeat 0 0 / cover;
 	width: 64.063vw;
 	height: 15.313vw;
 	position: absolute;
@@ -417,7 +435,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	height: 78.125vw;
 	position: absolute;
 	bottom: 28.125vw;
-	left: 35.938vw;
+	left: 39.063vw;
 }
 .jiying-ren{
 	background:url(../img/03-renwu2-1.png?v=0147888136) no-repeat 0 0 / cover;
@@ -462,7 +480,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
    animation: renwu 0.5s steps(2, start) infinite;
 }
 @keyframes renwu{
-	 from { background-position-x: -44.844vw }
+	 from { background-position-x: -45vw }
 		 to {background-position-x: 0}
 }
 .main-ti{
@@ -826,7 +844,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			margin-top: 10.938vw
     }
 .resultSuccess .result-wp .result-flag-de,.resultSuccess-ruxue .result-wp .result-flag-de{
-			background:  url(../img/03-paibian.png?v=e35af70e48) no-repeat 0 0 / cover;
+			background:  url(../img/03-paibian.png?v=4c744928d8) no-repeat 0 0 / cover;
 			width: 78.125vw;
 			height: 18.75vw;
 			margin:  7.813vw auto
@@ -912,8 +930,48 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	/* #fff9fa #fdf9ff #f9faff #f9faff #fafff9 #fffff9 #fff7f6 #fdf9ff   #fff9fa*/
 }
 .answer-upgrade-bg{
-	background: #f2f2f2;
+	background: #ffe8e8;
+	height: 0%;
+}
+.answer-bg1{
+	background: #ffe9dd ;
 	height: 10%;
+}
+.answer-bg2{
+	background: #ffffe5 ;
+	height:20%;
+}
+.answer-bg3{
+	background: #f2ffef ;
+	height: 30%;
+}
+.answer-bg4{
+	background: #edffff ;
+	height: 40%;
+}
+.answer-bg5{
+	background: #eef7ff ;
+	height: 50%;
+}
+.answer-bg6{
+	background: #f3f1ff ;
+	height: 60%;
+}
+.answer-bg7{
+	background: #faf1ff ;
+	height: 70%;
+}
+.answer-bg8{
+	background: #ffedf7 ;
+	height: 80%;
+}
+.answer-bg9{
+	background: #fff1ef  ;
+	height: 90%;
+}
+.answer-bg10{
+	background:   #ffeff2 ;
+	height: 100%;
 }
 .answer-box > .title{
 	width: 80%;
@@ -1008,7 +1066,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		background-color: #f2f1ec;
 		z-index: 2;
 }
-.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-title{
+.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-title3{
 				color: #ce3e3e;
 				font-size: 10.313vw;
 				position: absolute;
@@ -1016,7 +1074,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				text-align: center;
 				width: 100%;
 			}
-.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-text{
+.item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-text2{
 				color: #333;
 				font-size: 5vw;
 				position: absolute;
@@ -1253,7 +1311,6 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		width: 100%;
 		height: 46.875vw;
 		margin: 3.125vw auto;
-		top:40.625vw
 }
 .swiper-container {
 		width: 100%;
@@ -1320,4 +1377,9 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .byzs-three img{
 	width: 100vw;
 	height: 62.5vw;
-} 
+}
+.byzs-box{
+	background: #9d9c9c;
+	position: absolute;
+	bottom: 65.625vw
+}
