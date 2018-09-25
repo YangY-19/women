@@ -5596,9 +5596,9 @@ $(document).ready(function () {
     const $li = $t.closest('li');
     $li.next().show()
       .closest('ul').css({ transform: 'translateY(' + -winHight * 4 + 'px)' }).children('.byzs').show();
-    $('.uers-name').text(nameNum);
+    $('.uers-name, .uers-name2').text(nameNum);
     var zhuanyeData = $('.item-wrap').data('zhuanye');
-    $('.uers-major').text(zhuanyeData)
+    $('.uers-major, .uers-major2').text(zhuanyeData)
   }
 
   $('.notarize-name').on('click', function () {
@@ -5628,12 +5628,13 @@ $(document).ready(function () {
   let $byzsChoose = $('.swiper-wrapper li')
   $byzsChoose.on('click', 'img', function () {
     let bgImg = $(this).attr("src");
-    $('.swiper-container, .top200').show()
+    $('.swiper-container, .top200, .change-byzs-info, .uers-photo2, .photohide2 ').show()
     $('.byzs-choose').hide();  
     $('.byzsImg').attr('src', bgImg)
   })
   $('.top200').on('click',function() {
     $(this).hide();
+    $('.change-byzs-info, .uers-photo2, .photohide2').hide()
     $('.revamp-school, .byzs-choose, .swiper-wrapper, .swiper-container').show()
   })
 
@@ -5643,7 +5644,7 @@ $(document).ready(function () {
   })
 
 
-  $('.notarize-revamp').on('click', function () {
+  $('.notarize-revamp ').on('click', function () {
     var myReg = /^[\u4e00-\u9fa5]+$/;
     let $revampSchool = $('.revampSchool').val();
     let $revampName = $('.revampName').val();
@@ -5661,11 +5662,29 @@ $(document).ready(function () {
     $('.revamp-school, .byzs-choose').hide();
     
   })
-  $("#photoInput").change(function () {
+
+  $('.preview-revamp').on('click', function () {
+    var myReg = /^[\u4e00-\u9fa5]+$/;
+    let $revampSchool = $('.revampSchool').val();
+    let $revampName = $('.revampName').val();
+    if (myReg.test($revampName) && $revampName.length >= 2) {
+      if ($revampName.length == 2) {
+        let $revampName2 = $revampName.charAt(0) + '    ' + $revampName.charAt(1)
+        $('.uers-name2').text($revampName2);
+      } else {
+        $('.uers-name2').text($revampName);
+      }
+    }
+    if (myReg.test($revampSchool) && $revampSchool.length >= 4) {
+      $('.uers-school2').text($revampSchool);
+    }
+  })
+
+  $("#photoInput, #photoInput2").change(function () {
     var objUrl = getObjectURL(this.files[0]);
     if (objUrl) {
-      $("#upphoto").attr("src", objUrl);
-      $("#upphoto").removeClass("urlhide");
+      $("#upphoto, #upphoto2").attr("src", objUrl);
+      $("#upphoto, .urlhide").removeClass("urlhide");
     }
   });
   //建立一個可存取到該file的url

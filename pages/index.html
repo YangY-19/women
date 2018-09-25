@@ -221,7 +221,6 @@
 				<input class="nameInput" type="text" placeholder="在此输入姓名">
 				<button class="notarize-name" type="button">打印毕业证书</button>
 				<p class="name-wrong">姓名必须汉字且不能小于两个字符</p>
-				<!-- <span class="nbsp">&nbsp;&nbsp;</span> -->
 			</li>
 
 			<!-- 毕业证书 -->
@@ -233,9 +232,8 @@
 						<div class="uers-school">苏州信息学院</div>						
 				 </div>
 				<div class="uers-photo">
-
-					<p class="photo-title">贴照片</p>
-					<input type="file" id="photoInput" multiple="multiple" style=" opacity: 0;" />
+          <p class="photo-title">贴照片</p>
+					<input type="file" id="photoInput" multiple="multiple" style=" opacity: 0; width:53px; height:100%;" />
 					<img src="" id="upphoto" class="photohide urlhide">
 				</div>
 				 <div class="byzs-revampImg"></div>
@@ -286,10 +284,23 @@
 				 <div class="revamp-school">
 					<label class="revamp-title">修改姓名、学校及毕业证书</label>
 					<img class="byzsImg top200" src="../public/img/byzs.png" alt="">
+					<div class="change-byzs-info">
+						<div class="uers-name2">刘东阳</div>
+						<div class="uers-major2"></div>
+						<div class="uers-school2">苏州信息学院</div>
+					</div>
+					<div class="uers-photo uers-photo2">
+						<p class="photo-title photo-title2">贴照片</p>
+						<input type="file" id="photoInput2" multiple="multiple" style=" opacity: 0;width: 50px;height:100%;" />
+						<div class="urlhide">
+							<img src="" id="upphoto2" style="display:none" class="photohide2">
+						</div>
+					</div>
 					 <label class="revampName-title">更改姓名</label>
 					<input class="revampName" type="text" placeholder="在此输入姓名">
 					<label class="revampSchool-title">更改学校</label>
 					<input class="revampSchool" type="text" placeholder="在此输入学校">
+					<button class="preview-revamp" type="button">点击预览</button>
 					<button class="notarize-revamp" type="button">确认修改</button>
 				 </div>
 			</li>
