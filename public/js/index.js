@@ -4696,7 +4696,7 @@ $(document).ready(function () {
         $('.cover').show();
         setTimeout(function () {
           $('.cover-text').addClass("cover-text-am")
-        }, 20);//2000
+        }, 2000);//2000
         setTimeout(function () {
           $('.cover-ufo').show();
           setTimeout(function () {
@@ -4705,7 +4705,7 @@ $(document).ready(function () {
               $('.coverArrows').hide();
             },700)
             }, 1000);;
-        }, 110); //11000
+        }, 11000); //11000
       }
     };
   };
@@ -4727,7 +4727,7 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 40);
+    }, 4000);
     // 4000
   });
 
@@ -4739,7 +4739,7 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3)//4000
+      }, 3000)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
       }, 5000)//6000
@@ -5712,43 +5712,30 @@ $(document).ready(function () {
   }
 
   //截屏
-  $('.example1').on('click', function () {
-    html2canvas(document.getElementById('byzsID'), {
-      allowTaint: true,
-      logging: true,
-      taintTest: false,
-      width: '100px'
-    }).then(canvas => {
-      $('.byzs-screen').html(canvas).show()
-    });
-  });
+//   $('.example1').on('click', function () {
+//     html2canvas(document.getElementById('byzsID'), {
+//       allowTaint: true,
+//       logging: true,
+//       taintTest: false,
+//       width: '100px'
+//     }).then(canvas => {
+//       $('.byzs-screen').html(canvas).show()
+//     });
+//   });
 
-  $('.byzs-screen').on('click', function() {
-  //   // var canvas = $('canvas')
-    // console.log(canvas);
-    // var context = canvas[0].getContext('2d');
-    // var cw = 640;
-    // var ch = 450;
-    // context.fillStyle = "#ff0000";
-    // context.fillRect(0, 0, cw, ch);
-    // var img = new Image();
-    // img.src = "images/12.jpeg";
-    // context.drawImage(img, 0, 0, cw, ch);
-
-    // var imgData = canvas[0].toDataURL("image/png");
-    // console.log(imgData)
-
-    function convertCanvasToImage(canvas) {
-      var image = new Image();
-      image.crossOrigin = "anonymous"
-      image.src = canvas.toDataURL("image/png");
-      return image;
-    }
-    var canvas = $('canvas')
-    console.log(convertCanvasToImage(canvas));
-    
-    
-  })
+//   $('.byzs-screen').on('click', function() {
+//     var canvas = $('canvas');
+//     var context = canvas[0].getContext('2d');
+//     var cw = 640;
+//     var ch = 450;
+//     context.fillStyle = "#ff0000";
+//     context.fillRect(0, 0, cw, ch);
+//     var img = new Image();
+//     image.crossOrigin = "anonymous"
+//     context.drawImage(img, 0, 0, cw, ch);
+//     var imgData = canvas[0].toDataURL("image/png");
+//     img.src = imgData;   
+// })
 
  
 

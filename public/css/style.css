@@ -11,7 +11,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	z-index: 100;
 	border:1px #000 solid;
 	opacity: .4;
-	background: url(../img/music-note.png?v=d5c3f30312) no-repeat 0 0 / cover;
+	background: url(../img/music-note.png) no-repeat 0 0 / cover;
 	animation: musicIcon 20s linear infinite;
 }
 @keyframes musicIcon{
@@ -35,7 +35,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	height: 46.875vw;
 }
 .loading-bg-yun{
-		background: url(../img/01-bg-yun.png?v=e09978f342) no-repeat 0 0 / cover;
+		background: url(../img/01-bg-yun.png) no-repeat 0 0 / cover;
 		width:95.313vw;
 		height: 80.938vw;
 		position:absolute;
@@ -48,7 +48,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 36.875vw;
 		left: 41.094vw;
-		background: url(../img/01-bi.png?v=2f40bc36ff) no-repeat 0 0 / cover;
+		background: url(../img/01-bi.png) no-repeat 0 0 / cover;
 }
 .loading-logo-ye{
 		width: 18.75vw;
@@ -56,7 +56,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 52.344vw;
 		left: 56.25vw;
-		background: url(../img/01-ye.png?v=a1d7e0b965) no-repeat 0 0 / cover
+		background: url(../img/01-ye.png) no-repeat 0 0 / cover
 }
 .loading-logo-ji{
 		width: 15.625vw;
@@ -64,7 +64,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 67.969vw;
 		left: 36.563vw;
-		background: url(../img/01-ji.png?v=a874ded3a9) no-repeat 0 0 / cover
+		background: url(../img/01-ji.png) no-repeat 0 0 / cover
 }
 .loading-logo-seal{
 		width: 12.5vw;
@@ -72,7 +72,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		position:absolute;
 		top: 62.5vw;
 		left: 23.438vw;
-		background: url(../img/01-yinzhang.png?v=2bc9e4e998) no-repeat 0 0 / cover
+		background: url(../img/01-yinzhang.png) no-repeat 0 0 / cover
 }
 .loading-yun{
 	width: 156.25vw;
@@ -112,7 +112,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	font-family: unset;
 }
 .loanding-athor{
-	background: url(../img/01-athor.png?v=95333abcdd) no-repeat 0 0 / cover;
+	background: url(../img/01-athor.png) no-repeat 0 0 / cover;
 	width: 62.656vw;
 	height: 13.75vw;
 	position: absolute;
@@ -120,7 +120,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 19.531vw;
 }
 .loading-zu{
-	background: url(../img/01-zu.png?v=34f0695292) no-repeat 0 0 / cover;
+	background: url(../img/01-zu.png) no-repeat 0 0 / cover;
 	width: 51.25vw;
 	height: 54.844vw;
 	position: absolute;
@@ -150,7 +150,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .cover{
 	display: none;
-	background: url(../img/02-bg.jpg?v=0ea613eb11) no-repeat 0 0 / cover;
+	background: url(../img/02-bg.jpg) no-repeat 0 0 / cover;
 }
 .cover-text{
 	width: 76.563vw;
@@ -158,7 +158,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom:46.875vw;
   left: 12.5vw;
   position: absolute;
-	background: url(../img/02-wengzi.png?v=d4576072a5) no-repeat 0 0 / cover;
+	background: url(../img/02-wengzi.png) no-repeat 0 0 / cover;
 }
 .cover-text-am{
 	animation: cover-text-am 8s linear both; 
@@ -234,7 +234,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
   top: 0px;
   left: 0px;
   position: absolute;
-	background: url(../img/02-top.png?v=ea786611c9) no-repeat 0 0 / cover;	
+	background: url(../img/02-top.png) no-repeat 0 0 / cover;	
 }
 .choose-bottom{
 	width: 100.156vw;
@@ -242,7 +242,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
   bottom: 0px;
   left: 0px;
   position: absolute;
-	background: url(../img/03-bottom.png?v=544eef972d) no-repeat 0 0 / cover;	
+	background: url(../img/03-bottom.png) no-repeat 0 0 / cover;	
 }
 .choose-text{
 	width: 69.375vw;
@@ -250,7 +250,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
   top: 29.688vw;
   left: 15.625vw;
   position: absolute;
-	background: url(../img/03-wengzi.png?v=9e9579c35b) no-repeat 0 0 / cover;	
+	background: url(../img/03-wengzi.png) no-repeat 0 0 / cover;	
 }
 .choose-btn > div{
   width: 15.313vw;
@@ -260,15 +260,15 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .choose-dm{
 	left: 15.625vw;
-	background: url(../img/xz_dm.png?v=68428ebc97) no-repeat 0 0 / cover;	
+	background: url(../img/xz_dm.png) no-repeat 0 0 / cover;	
 }
 .choose-jy{
 	left: 42.656vw;
-	background: url(../img/xz_jy.png?v=e20d4732f7) no-repeat 0 0 / cover;	
+	background: url(../img/xz_jy.png) no-repeat 0 0 / cover;	
 }
 .choose-rj{
 	left: 69.375vw;
-	background: url(../img/xz_rj.png?v=d38f529f07) no-repeat 0 0 / cover;	
+	background: url(../img/xz_rj.png) no-repeat 0 0 / cover;	
 }
 /* 04 - main页面 */
 .main{
@@ -279,7 +279,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .animate-leaf{
 	width: 7.344vw;
 	height: 7.969vw;
-	background: url(../img/leaf1.png?v=75be560a4d) no-repeat 0 0 / cover;	
+	background: url(../img/leaf1.png) no-repeat 0 0 / cover;	
 	position: absolute;
 	left: 31.25vw;
 	top: 0px;
@@ -296,7 +296,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .animate-leaf2{
 	width: 19.375vw;
 	height: 11.406vw;
-	background: url(../img/leaf2.png?v=8d0abf7572) no-repeat 0 0 / cover;	
+	background: url(../img/leaf2.png) no-repeat 0 0 / cover;	
 	position: absolute;
 	left: 62.5vw;
 	top: 0px;
@@ -313,7 +313,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .animate-leaf3{
 	width: 9.219vw;
 	height: 12.031vw;
-	background: url(../img/leaf3.png?v=a390415116) no-repeat 0 0 / cover;	
+	background: url(../img/leaf3.png) no-repeat 0 0 / cover;	
 	position: absolute;
 	left: 93.75vw;
 	top: 31.25vw;
@@ -382,7 +382,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	100%{transform: scaleX(1);left: 39.063vw;}
 }
 .main-de{
-	background: url(../img/03-paibian.png?v=4c744928d8) no-repeat 0 0 / cover;
+	background: url(../img/03-paibian.png) no-repeat 0 0 / cover;
 	width: 64.063vw;
 	height: 15.313vw;
 	position: absolute;
@@ -391,7 +391,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none
 }
 .daer-paibian{
-	background: url(../img/03-paibian2.png?v=7de7eb9e2e) no-repeat 0 0 / cover;
+	background: url(../img/03-paibian2.png) no-repeat 0 0 / cover;
 	width: 64.063vw;
 	height: 15.313vw;
 	position: absolute;
@@ -400,7 +400,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none
 }
 .dasan-paibian{
-	background: url(../img/03-paibian3.png?v=6cf5b596ff) no-repeat 0 0 / cover;
+	background: url(../img/03-paibian3.png) no-repeat 0 0 / cover;
 	width: 64.063vw;
 	height: 15.313vw;
 	position: absolute;
@@ -409,7 +409,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none
 }
 .main-ruxue{
-	background: url(../img/djck.png?v=ef660ebbcd) no-repeat 0 0 / cover;
+	background: url(../img/djck.png) no-repeat 0 0 / cover;
 	width: 64.063vw;
 	height: 15.313vw;
 	position: absolute;
@@ -418,7 +418,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none
 }
 .main-zhi{
-	background: url(../img/03-pinfen.png?v=79c2953ac0) no-repeat 0 0 / cover;
+	background: url(../img/03-pinfen.png) no-repeat 0 0 / cover;
 	width: 62.5vw;
 	height: 46.875vw;
 	position: absolute;
@@ -427,10 +427,10 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none
 }
 .main-zhi2{
-			background:  url(../img/03-pinfen2.png?v=0a873b303d) no-repeat 0 0 / cover;
+			background:  url(../img/03-pinfen2.png) no-repeat 0 0 / cover;
 		}
 .ren{
-	background:url(../img/03-renwu.png?v=642012f4f8) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu.png) no-repeat 0 0 / cover;
 	width: 22.344vw;
 	height: 78.125vw;
 	position: absolute;
@@ -438,15 +438,15 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 39.063vw;
 }
 .jiying-ren{
-	background:url(../img/03-renwu2-1.png?v=0147888136) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu2-1.png) no-repeat 0 0 / cover;
 	animation: none
 }
 .ruanjian-ren{
-	background:url(../img/03-renwu2-2.png?v=157ff66101) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu2-2.png) no-repeat 0 0 / cover;
 	animation: none
 }
 .ren-daer{
-	background:url(../img/03-renwu-2.png?v=295d6db761) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu-2.png) no-repeat 0 0 / cover;
 	width: 26.563vw;
 	height: 79.688vw;
 	position: absolute;
@@ -456,7 +456,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 
 }
 .ren-dasan{
-  background:url(../img/03-renwu-3.png?v=d16d7d5d12) no-repeat 0 0 / cover;
+  background:url(../img/03-renwu-3.png) no-repeat 0 0 / cover;
 	 width: 46.875vw;
 	height: 96.875vw;
 	position: absolute;
@@ -465,16 +465,16 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none;
 }
 .jiying-daer{
-	background:url(../img/03-renwu2-3.png?v=217dfafb03) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu2-3.png) no-repeat 0 0 / cover;
 }
 .ruanjian-daer{
-	background:url(../img/03-renwu2-4.png?v=c56ae06154) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu2-4.png) no-repeat 0 0 / cover;
 }
 .jiying-dasan{
-	background:url(../img/03-renwu-3-2.png?v=882e7a6e6a) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu-3-2.png) no-repeat 0 0 / cover;
 }
 .ruanjian-dasan{
-	background:url(../img/03-renwu-3-3.png?v=0cbe02e0ae) no-repeat 0 0 / cover;
+	background:url(../img/03-renwu-3-3.png) no-repeat 0 0 / cover;
 }
 .animation-renwu{
    animation: renwu 0.5s steps(2, start) infinite;
@@ -484,7 +484,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 		 to {background-position-x: 0}
 }
 .main-ti{
-	background:url(../img/03-maozi.png?v=2397cda3d9) no-repeat 0 0 / cover;
+	background:url(../img/03-maozi.png) no-repeat 0 0 / cover;
 	width: 28.125vw;
 	height: 18.75vw;
 	position: absolute;
@@ -493,7 +493,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none
 }
 .main-mei{
-	background:url(../img/03-yupei.png?v=ce7986e89c) no-repeat 0 0 / cover;;
+	background:url(../img/03-yupei.png) no-repeat 0 0 / cover;;
 	width: 3.906vw;
 	height: 14.688vw;
 	position: absolute;
@@ -502,7 +502,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none
 }
 .main-lao{
-	background:url(../img/03-zsp.png?v=0fa964017a) no-repeat 0 0 / cover;
+	background:url(../img/03-zsp.png) no-repeat 0 0 / cover;
 	width: 12.5vw;
 	height: 25.625vw;
 	position: absolute;
@@ -520,7 +520,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .dayi{
 	width: 24.531vw;
 	height: 6.25vw;
-	background:url(../img/dayi.png?v=01772f600e) no-repeat 0 0 / cover;
+	background:url(../img/dayi.png) no-repeat 0 0 / cover;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -529,7 +529,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .daer{
 	width: 24.531vw;
 	height: 6.25vw;
-	background:url(../img/daer.png?v=b98a8c005d) no-repeat 0 0 / cover;
+	background:url(../img/daer.png) no-repeat 0 0 / cover;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -538,7 +538,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .dasan{
 	width: 24.531vw;
 	height: 6.25vw;
-	background:url(../img/dasan.png?v=313e3ba71b) no-repeat 0 0 / cover;
+	background:url(../img/dasan.png) no-repeat 0 0 / cover;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -609,7 +609,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	100%{top: 2.5vw}
 }
 .de{
-	background: url(../img/btn_de.png?v=a0b182ee02) no-repeat 0 0 / cover;
+	background: url(../img/btn_de.png) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -617,7 +617,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 0px;
 }
 .zhi{
-	background: url(../img/btn_zhi.png?v=6f71de93b3) no-repeat 0 0 / cover;
+	background: url(../img/btn_zhi.png) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -625,7 +625,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 14.375vw;
 }
 .ti{
-	background: url(../img/btn_ti.png?v=6a9ebbc0b6) no-repeat 0 0 / cover;
+	background: url(../img/btn_ti.png) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -633,7 +633,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 28.75vw;
 }
 .mei{
-	background: url(../img/btn_mei.png?v=75b643bee5) no-repeat 0 0 / cover;
+	background: url(../img/btn_mei.png) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -641,7 +641,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 43.125vw;
 }
 .lao{
-	background: url(../img/btn_lao.png?v=16fa76373d) no-repeat 0 0 / cover;
+	background: url(../img/btn_lao.png) no-repeat 0 0 / cover;
 	width: 14.375vw;
 	height: 20.625vw;
 	position: absolute;
@@ -649,30 +649,29 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	left: 57.5vw;
 }
 .shengji{
-	background: url(../img/03-shengji.png?v=f24d58291a) no-repeat 0 0 / cover;
+	background: url(../img/03-shengji.png) no-repeat 0 0 / cover;
 	width: 28.125vw;
 	height: 20.625vw;
 	position: absolute;
 	bottom: 0;
 	left: 71.875vw;
-		display: none;
 	right: 0;
 
 }
 .shengji-biye{
-	background: url(../img/03-sj-biye.png?v=08d69e6cc9) no-repeat 0 0 / cover;
+	background: url(../img/03-sj-biye.png) no-repeat 0 0 / cover;
 	width: 28.125vw;
 	height: 20.625vw;
 	position: absolute;
 	bottom: 0;
 	left: 71.875vw;
 	right: 0;
-		/* display: none; */
+		display: none;
 
 
 }
 .shengji-kaoshi{
-	background: url(../img/03-shengji-kaoshi.png?v=eced683ceb) no-repeat 0 0 / cover;
+	background: url(../img/03-shengji-kaoshi.png) no-repeat 0 0 / cover;
 	width: 28.125vw;
 	height: 20.625vw;
 	position: absolute;
@@ -682,19 +681,19 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display: none;
 }
 .current-de{
-	background: url(../img/btn_de.png?v=a0b182ee02) no-repeat 0 -20.625vw / cover;
+	background: url(../img/btn_de.png) no-repeat 0 -20.625vw / cover;
 }
 .current-zhi{
-	background: url(../img/btn_zhi.png?v=6f71de93b3) no-repeat 0 -20.625vw / cover;
+	background: url(../img/btn_zhi.png) no-repeat 0 -20.625vw / cover;
 }
 .current-ti{
-	background: url(../img/btn_ti.png?v=6a9ebbc0b6) no-repeat 0 -20.625vw / cover;
+	background: url(../img/btn_ti.png) no-repeat 0 -20.625vw / cover;
 }
 .current-mei{
-	background: url(../img/btn_mei.png?v=75b643bee5) no-repeat 0 -20.625vw / cover;
+	background: url(../img/btn_mei.png) no-repeat 0 -20.625vw / cover;
 }
 .current-lao{
-	background: url(../img/btn_lao.png?v=16fa76373d) no-repeat 0 -20.625vw / cover;
+	background: url(../img/btn_lao.png) no-repeat 0 -20.625vw / cover;
 }
 /* 05-答题页 */
 .answer{
@@ -704,7 +703,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .answer-bg{
 	width: 37.5vw;
 	height: 37.5vw;
-	background: url(../img/answer_bg.jpg?v=e458e8bd8e) no-repeat 0 0 / cover;
+	background: url(../img/answer_bg.jpg) no-repeat 0 0 / cover;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -748,7 +747,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .answer .opt  .animation-correct{
 	width: 12.188vw;
 	height: 10.938vw;
-	background: url(../img/answer_correct.png?v=511864af19) no-repeat 0 0 / cover;
+	background: url(../img/answer_correct.png) no-repeat 0 0 / cover;
 	position: absolute;
 	right: 3.906vw;
 	top: 2.813vw;
@@ -757,7 +756,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .answer .opt  .animation-wrong{
 	width: 12.188vw;
 	height: 10.938vw;
-	background: url(../img/answer_wrong.png?v=7fe9164255) no-repeat 0 0 / cover;
+	background: url(../img/answer_wrong.png) no-repeat 0 0 / cover;
 	position: absolute;
 	right: 3.906vw;
 	top: 2.813vw;
@@ -786,7 +785,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	width: 31.094vw;
 	height: 4.531vw;
 	position: absolute;
-	background: url(../img/dq-dayi.png?v=f93c6379bc) no-repeat 0 0 / cover;
+	background: url(../img/dq-dayi.png) no-repeat 0 0 / cover;
 	right: 0px;
 	bottom: 0px;
 }
@@ -794,7 +793,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	width: 31.094vw;
 	height: 4.531vw;
 	position: absolute;
-	background: url(../img/dq-daer.png?v=bfa44e6378) no-repeat 0 0 / cover;
+	background: url(../img/dq-daer.png) no-repeat 0 0 / cover;
 	right: 0px;
 	bottom: 0px;
 	display: none
@@ -803,7 +802,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	width: 31.094vw;
 	height: 4.531vw;
 	position: absolute;
-	background: url(../img/dq-dasan.png?v=22f2203c40) no-repeat 0 0 / cover;
+	background: url(../img/dq-dasan.png) no-repeat 0 0 / cover;
 	right: 0px;
 	bottom: 0px;
 	display: none
@@ -831,7 +830,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display:none;
 }
 .resultSuccess .result-wp, .resultSuccess-ruxue .result-wp {
-		background:  url(../img/answer_success_bg.png?v=25dac38e85) no-repeat 0 0/cover;
+		background:  url(../img/answer_success_bg.png) no-repeat 0 0/cover;
 		width: 88.438vw;
 		height: 89.219vw;
 		position: absolute;
@@ -846,37 +845,37 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 			margin-top: 10.938vw
     }
 .resultSuccess .result-wp .result-flag-de,.resultSuccess-ruxue .result-wp .result-flag-de{
-			background:  url(../img/03-paibian.png?v=4c744928d8) no-repeat 0 0 / cover;
+			background:  url(../img/03-paibian.png) no-repeat 0 0 / cover;
 			width: 78.125vw;
 			height: 18.75vw;
 			margin:  7.813vw auto
 		}
 .resultSuccess .result-wp .result-flag-zhi,.resultSuccess-ruxue .result-wp .result-flag-zhi{
-			background:  url(../img/03-pinfen.png?v=79c2953ac0) no-repeat 0 0 / cover;
+			background:  url(../img/03-pinfen.png) no-repeat 0 0 / cover;
 			width: 59.375vw;
 			height: 31.25vw;
 			margin:  4.688vw auto
 		}
 .resultSuccess .result-wp .result-flag-ti,.resultSuccess-ruxue .result-wp .result-flag-ti{
-			background:  url(../img/03-maozi.png?v=2397cda3d9) no-repeat 0 0 / cover;
+			background:  url(../img/03-maozi.png) no-repeat 0 0 / cover;
 			width: 31.25vw;
 			height: 25vw;
 			margin:  7.813vw auto
 		}
 .resultSuccess .result-wp .result-flag-mei,.resultSuccess-ruxue .result-wp .result-flag-mei{
-			background:  url(../img/03-yupei.png?v=ce7986e89c) no-repeat 0 0 / cover;
+			background:  url(../img/03-yupei.png) no-repeat 0 0 / cover;
 			width: 6.25vw;
 			height: 25vw;
 			margin:  7.813vw auto
 		}
 .resultSuccess .result-wp .result-flag-lao,.resultSuccess-ruxue .result-wp .result-flag-lao{
-			background:  url(../img/03-zsp.png?v=0fa964017a) no-repeat 0 0 / cover;
+			background:  url(../img/03-zsp.png) no-repeat 0 0 / cover;
 			width: 12.5vw;
 			height: 25vw;
 			margin:  7.813vw auto
 		}
 .resultSuccess .result-wp .result-flag-ruxue,.resultSuccess-ruxue .result-wp .result-flag-ruxue{
-			background:  url(../img/rxtz.jpg?v=80ccfcd45f) no-repeat 0 0 / cover;
+			background:  url(../img/rxtz.jpg) no-repeat 0 0 / cover;
 			width: 15.625vw;
 			height: 25vw;
 			margin:  7.813vw auto
@@ -904,7 +903,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	display:none;
 }
 .tipsFailed .result-wp{
-		background:  url(../img/answer_failed_bg.png?v=0e9c1289ae) no-repeat 0 0 / cover;
+		background:  url(../img/answer_failed_bg.png) no-repeat 0 0 / cover;
 		width: 88.438vw;
 		height: 89.219vw;
 		position: absolute;
@@ -1014,7 +1013,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .answer-upgrade .opt  .animation-correct{
 	width: 12.188vw;
 	height: 10.938vw;
-	background: url(../img/answer_correct.png?v=511864af19) no-repeat 0 0 / cover;
+	background: url(../img/answer_correct.png) no-repeat 0 0 / cover;
 	position: absolute;
 	right: 3.906vw;
 	top: 2.813vw;
@@ -1023,7 +1022,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .answer-upgrade .opt  .animation-wrong{
 	width: 12.188vw;
 	height: 10.938vw;
-	background: url(../img/answer_wrong.png?v=7fe9164255) no-repeat 0 0 / cover;
+	background: url(../img/answer_wrong.png) no-repeat 0 0 / cover;
 	position: absolute;
 	right: 3.906vw;
 	top: 2.813vw;
@@ -1085,7 +1084,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				width: 100%;
 			}
 .item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-flag-dayi{
-				background: url(../img/dayi.png?v=01772f600e) no-repeat 0 0 /cover;
+				background: url(../img/dayi.png) no-repeat 0 0 /cover;
 				width: 49.063vw;
 				height: 12.5vw;
 				position: absolute;
@@ -1094,7 +1093,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				display: none
 			}
 .item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-flag-daer{
-				background: url(../img/daer.png?v=b98a8c005d) no-repeat 0 0 /cover;
+				background: url(../img/daer.png) no-repeat 0 0 /cover;
 				width: 49.063vw;
 				height: 12.5vw;
 				position: absolute;
@@ -1103,7 +1102,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 				display: none;
 			}
 .item-wrap ul .answer-upgrade .result-renwu-box .result-wp .result-flag-dasan{
-				background: url(../img/dasan.png?v=313e3ba71b) no-repeat 0 0 /cover;
+				background: url(../img/dasan.png) no-repeat 0 0 /cover;
 				width: 49.063vw;
 				height: 12.5vw;
 				position: absolute;
@@ -1118,14 +1117,14 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url(../img/rxtz.jpg?v=80ccfcd45f) no-repeat 0 0 / cover;
+	background: url(../img/rxtz.jpg) no-repeat 0 0 / cover;
 	display:none;
 	
 }
 .memorial_up_btn{
 		width: 10.469vw;
 		height: 6.094vw;
-		background: url(../img/memorial_up_btn.png?v=a57cb5c395) no-repeat 0 0 /cover;
+		background: url(../img/memorial_up_btn.png) no-repeat 0 0 /cover;
 	  position: absolute;
 		bottom: 6.25vw;
 		right: 43.75vw;
@@ -1143,7 +1142,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .by-explain{
 	width: 73.438vw;
 	height: 25vw;
-	background: url(../img/by-explain.png?v=42ea0f658c)  no-repeat 0 0 /cover;
+	background: url(../img/by-explain.png)  no-repeat 0 0 /cover;
 	position: absolute;
 	bottom: 101.563vw;
 	left: 14.063vw;
@@ -1197,7 +1196,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url(../img/zuomian.jpg?v=ae201a6a7d) no-repeat 0 0 /cover;
+	background: url(../img/zuomian.jpg) no-repeat 0 0 /cover;
 	display:none;
 }
 .example1{
@@ -1325,7 +1324,7 @@ canvas{
 .dyzs-share{
 	width: 72.031vw;
 	height: 14.219vw;
-	background: url(../img/share.png?v=ecdcb0c165) no-repeat 0 0 /cover;
+	background: url(../img/share.png) no-repeat 0 0 /cover;
 	position: absolute;
 	bottom: 125vw;
 	left: 14.844vw;
@@ -1333,7 +1332,7 @@ canvas{
 .byzs-revampImg{
 	width: 100vw;
 	height: 35.625vw;
-	background: url(../img/revamp.png?v=274382a439) no-repeat 0 0 /cover;
+	background: url(../img/revamp.png) no-repeat 0 0 /cover;
 	position: absolute;
 	bottom: 7.813vw;
 	left: 0px;
