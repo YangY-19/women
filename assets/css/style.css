@@ -668,6 +668,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	position: absolute;
 	bottom: 0;
 	left: 460px;
+		display: none;
 	right: 0;
 
 }
@@ -679,7 +680,7 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	bottom: 0;
 	left: 460px;
 	right: 0;
-		display: none;
+		/* display: none; */
 
 
 }
@@ -1229,6 +1230,51 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	background: url(../img/zuomian.jpg) no-repeat 0 0 /cover;
 	display:none;
 }
+.example1{
+	width: 105px;
+	height: 105px;
+	display: flex;
+	position: absolute;
+	background: #fff7f7;
+	border-radius: 50%;
+	bottom: 800px;
+	left: 270px;
+}
+.example1 img{
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+
+.byzs-screen-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	opacity: .5;
+	z-index: 10;
+	display: none;
+	
+
+}
+.byzs-screen{
+  width: 480px;
+	height: 766px;
+	position: absolute;
+	bottom: 131px;
+	left: 80px;
+	z-index: 11;
+	display: none
+
+}
+canvas{
+  width: 480px;
+	height: 766px;
+
+}
+
 .byzs-wrapper{
 	width: 100%;
 	height: 430px;

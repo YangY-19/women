@@ -19,7 +19,7 @@ $(document).ready(function () {
         $('.cover').show();
         setTimeout(function () {
           $('.cover-text').addClass("cover-text-am")
-        }, 2000);//2000
+        }, 20);//2000
         setTimeout(function () {
           $('.cover-ufo').show();
           setTimeout(function () {
@@ -28,7 +28,7 @@ $(document).ready(function () {
               $('.coverArrows').hide();
             },700)
             }, 1000);;
-        }, 11000); //11000
+        }, 110); //11000
       }
     };
   };
@@ -50,7 +50,7 @@ $(document).ready(function () {
     setTimeout(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
-    }, 4000);
+    }, 40);
     // 4000
   });
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3000)//4000
+      }, 3)//4000
       setTimeout(function () {
         $('.de-arrows').hide();
       }, 5000)//6000
