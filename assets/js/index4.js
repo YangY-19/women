@@ -278,7 +278,6 @@ $(document).ready(function () {
   }
 
   //截屏
-  var x = 0
   $('.example1').on('click', function () {
     html2canvas(document.getElementById('byzsID'), {
       allowTaint: true,
@@ -287,25 +286,39 @@ $(document).ready(function () {
       width: '100px'
     }).then(canvas => {
       $('.byzs-screen').html(canvas).show()
-      x = 1
     });
   });
 
   $('.byzs-screen').on('click', function() {
-    var canvas = $('canvas')
-    console.log(canvas);
-    var context = canvas[0].getContext('2d');
-    var cw = 640;
-    var ch = 450;
-    context.fillStyle = "#ff0000";
-    context.fillRect(0, 0, cw, ch);
-    var img = new Image();
-    img.src = "images/12.jpeg";
-    context.drawImage(img, 0, 0, cw, ch);
+  //   // var canvas = $('canvas')
+    // console.log(canvas);
+    // var context = canvas[0].getContext('2d');
+    // var cw = 640;
+    // var ch = 450;
+    // context.fillStyle = "#ff0000";
+    // context.fillRect(0, 0, cw, ch);
+    // var img = new Image();
+    // img.src = "images/12.jpeg";
+    // context.drawImage(img, 0, 0, cw, ch);
 
-    var imgData = canvas[0].toDataURL("image/png");
-    console.log(imgData)
-  })
+    // var imgData = canvas[0].toDataURL("image/png");
+    // console.log(imgData)
+
+    function convertCanvasToImage(canvas) {
+      var image = new Image();
+      image.crossOrigin = "anonymous"
+      image.src = canvas.toDataURL("image/png");
+      return image;
+    }
+    var canvas = $('canvas')
+    console.log(convertCanvasToImage(canvas));
     
+    
+  })
+
+ 
+
+    
+  
   
 })
