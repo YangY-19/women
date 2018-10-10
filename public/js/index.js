@@ -4775,11 +4775,11 @@ $(document).ready(function () {
   //音乐控制
   $('.topMusic').on('click', function () {
     if (mstop === 1) {
-      $(this).removeClass("MusiStop");
+      $(this).addClass("MusiStop");
       autoPlay();
       mstop = 0;
     } else {
-      $(this).addClass("MusiStop");
+      $(this).removeClass("MusiStop");
       closePlay();
       mstop = 1;
     }
