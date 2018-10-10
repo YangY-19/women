@@ -5509,18 +5509,6 @@ $(document).ready(function () {
      }
     }
 
-//错误时显示
-    function renwuwrong($t) {
-      $t.find('.animation-wrong').velocity('transition.shrinkIn', {
-        duration: 700,
-        complete: function () {
-          const $t = $(this);
-          let sjNewdata = data.daoju[classData][sjCount];
-          $t.velocity('fadeOut');
-          sjInitData(sjNewdata)
-        }
-      })
-    }
 
 //放弃回答
     $('.abandon').on('click', function() {
@@ -5534,7 +5522,7 @@ $(document).ready(function () {
       if (sjIsFinished == 10) {
         $('.result-title3 span').text(topic)
         $('.result-renwu-box').velocity('fadeIn', {
-          duration: 2000,
+          duration: 3000,
           complete: function () {
             let $t = $(this);
             if (topic >= 4 && topic < 8) {
