@@ -4776,11 +4776,11 @@ $(document).ready(function () {
   $('.topMusic').on('click', function () {
     if (mstop === 1) {
       $(this).addClass("MusiStop");
-      autoPlay();
+      closePlay();
       mstop = 0;
     } else {
       $(this).removeClass("MusiStop");
-      closePlay();
+      autoPlay();
       mstop = 1;
     }
   })
