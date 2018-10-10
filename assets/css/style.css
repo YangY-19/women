@@ -488,13 +488,13 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 .ruanjian-dasan{
 	background:url(../img/03-renwu-3-3.png) no-repeat 0 0 / cover;
 }
-.animation-renwu{
+/* .animation-renwu{
    animation: renwu 0.5s steps(2, start) infinite;
 }
 @keyframes renwu{
 	 from { background-position-x: -288px }
 		 to {background-position-x: 0}
-}
+} */
 .main-ti{
 	background:url(../img/03-maozi.png) no-repeat 0 0 / cover;
 	width: 180px;
@@ -620,6 +620,14 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 	80%{top: 16px}
 	90%{top: 22px}
 	100%{top: 16px}
+}
+.bottom{
+	width: 100%;
+	height: 132px;
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	overflow: hidden;
 }
 .de{
 	background: url(../img/btn_de.png) no-repeat 0 0 / cover;
@@ -953,6 +961,9 @@ body,html{overflow: hidden;width: 100%;height: 100%;}
 }
 .answer-upgrade-bg{
 	background: #fff9f9;
+	height: 0%;
+}
+.answer-bg0{
 	height: 0%;
 }
 .answer-bg1{
