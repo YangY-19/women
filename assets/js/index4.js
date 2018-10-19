@@ -4,6 +4,7 @@ $(document).ready(function () {
   let sjCount = 0;
   let sjIsFinished = 0; 
   let topic = 0;
+  let lock_click = true;  
   // 人物升级
 
  
@@ -34,15 +35,18 @@ $(document).ready(function () {
 
 //点击选项
     $('.answer-upgrade').on('click','.opt', function () {
-      sjCount++;
-      if (sjCount > 10) {
-        sjCount = '10'
-      }
-      const $t = $(this);
-      if ($(this).data('opt') === $('.answer-upgrade').data('sjcorrect')) {  //判断人物点击的答案和正确答案是否一样
-        renwucorrect($t)
-      } else {
-        renwuwrong($t);
+      if (lock_click) {
+        lock_click = false;
+        sjCount++;
+        if (sjCount > 10) {
+          sjCount = '10'
+        }
+        const $t = $(this);
+        if ($(this).data('opt') === $('.answer-upgrade').data('sjcorrect')) {  //判断人物点击的答案和正确答案是否一样
+          renwucorrect($t)
+        } else {
+          renwuwrong($t);
+        }
       }
     })
 
@@ -54,10 +58,12 @@ $(document).ready(function () {
         complete: function () {
           const $t = $(this);
           let sjNewdata = data.daoju[classData][sjCount];
+          lock_click = true;  
           $t.velocity('fadeOut');
           sjInitData(sjNewdata)
         }
       })
+      
      //当前年级显示
      if (topic > 10) {
        topic = '10'
@@ -75,7 +81,19 @@ $(document).ready(function () {
      }
     }
 
-
+    //错误时显示
+    function renwuwrong($t) {
+      $t.find('.animation-wrong').velocity('fadeIn', {
+        duration: 700,
+        complete: function () {
+          const $t = $(this);
+          let sjNewdata = data.daoju[classData][sjCount];
+          lock_click = true;
+          $t.velocity('fadeOut');
+          sjInitData(sjNewdata)
+        }
+      })
+    }
 //放弃回答
     $('.abandon').on('click', function() {
       $('.topic-corect .topic-num').text('0')
@@ -85,22 +103,22 @@ $(document).ready(function () {
 
  //数据加载 
     function sjInitData(sjNewdata) {
+      if (topic >= 4 && topic < 8) {
+        $('.result-flag-daer, .daer, .ren-daer, .daer-paibian').show();
+        $('.result-flag-dayi, .result-flag-dasan, .dayi, .ren, .main-ti, .main-mei, .result-renwu-box').hide();
+
+      }
+      if (topic >= 8) {
+        $('.result-flag-dayi, .result-flag-daer, .shengji-kaoshi, .dayi, .daer, .ren, .ren-daer, .main-ti, .main-mei, .daer-paibian, .result-renwu-box').hide();
+        $('.result-flag-dasan, .shengji-biye, .dasan, .ren-dasan, .dasan-paibian').show();
+        $('.main-de').addClass('dasan-paibian')
+      }
       if (sjIsFinished == 10) {
         $('.result-title3 span').text(topic)
         $('.result-renwu-box').velocity('fadeIn', {
           duration: 3000,
           complete: function () {
             let $t = $(this);
-            if (topic >= 4 && topic < 8) {
-              $('.result-flag-daer, .daer, .ren-daer, .daer-paibian').show();
-              $('.result-flag-dayi, .result-flag-dasan, .dayi, .ren, .main-ti, .main-mei, .result-renwu-box').hide();
-
-            } 
-             if (topic >= 8) {
-               $('.result-flag-dayi, .result-flag-daer, .shengji-kaoshi, .dayi, .daer, .ren, .ren-daer, .main-ti, .main-mei, .daer-paibian, .result-renwu-box').hide();
-               $('.result-flag-dasan, .shengji-biye, .dasan, .ren-dasan, .dasan-paibian').show();
-               $('.main-de').addClass('dasan-paibian')
-            }
             setTimeout(() => {
               $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
             }, 1000)

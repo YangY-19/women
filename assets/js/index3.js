@@ -8,7 +8,7 @@ $(document).ready(function () {
   let number = 1;
   let correctCount = 0;
   let isFinished = 0; 
-
+  let lock_click = true;  
   //04 -- 答题页
  //点击按钮
   $('.main').on('click', '.ac-shoose', function () {
@@ -46,36 +46,43 @@ $(document).ready(function () {
     })
     $('.answer-box').data('correct', newData.correct); //正确答案到'.answer-box' 上
     $('.num-count .number').text(number);
-    console.log(count);
     
   }
 
   //点击选项
-     
+  
   
     $('.answer .opt').on('click', function () {
+      
       $('.opt').data('lock','1')
-      if ($('.opt').data('lock') == 1) {
-        const $t = $(this);
-        count++
-        if ($(this).data('opt') === $('.answer-box').data('correct')) {  //判断道具点击的答案和正确答案是否一样
-          correctCount++
-          correct($t);
-          $('.opt').data('lock', '0')
-        } else {  // 错误
-          wrong($t)
-          $('.opt').data('lock', '0')
+      if (lock_click) {
+        lock_click = false;  
+        if ($('.opt').data('lock') == 1) {
+          const $t = $(this);
+          count++
+          if ($(this).data('opt') === $('.answer-box').data('correct')) {  //判断道具点击的答案和正确答案是否一样
+            correctCount++
+            correct($t);
+            $('.opt').data('lock', '0')
+           
+          } else {  // 错误
+            wrong($t)
+            $('.opt').data('lock', '0')
+          }
         }
+        
       }
     })
  
 // 每题选择正确
+
   function correct ($t) {
     $t.find('.animation-correct').velocity('fadeIn', {duration: 700, 
       complete: function () {
         const $t = $(this);
         let newData = data['daoju'][daoju][count];
         $t.velocity('fadeOut');
+        lock_click = true;  
         if (isFinished == 3) {
           if(correctCount >= 2) {
             correctResult(daoju)
@@ -122,6 +129,7 @@ $(document).ready(function () {
       complete: function () {
         const $t = $(this);
         let newData = data['daoju'][daoju][count];
+        lock_click = true; 
         if (isFinished == 3) {
           $t.velocity('fadeOut');
           if (correctCount < 2) {
