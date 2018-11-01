@@ -1,13 +1,13 @@
 $(document).ready(function () {
-  const map_opt = {0:'A', 1:'B', 2:'C'};
+  const map_opt = { 0: 'A', 1: 'B', 2: 'C' };
   const winHight = $(window).height();
   let sjCount = 0;
-  let sjIsFinished = 0; 
+  let sjIsFinished = 0;
   let topic = 0;
-  let lock_click = true;  
+  let lock_click = true;
   // 人物升级
 
- 
+
 
   function shengjidata(classData) {
     $('.item-wrap').data('zhuanye', data.daoju[classData][10]['major']);
@@ -15,7 +15,8 @@ $(document).ready(function () {
     $('.ren-daer').addClass(classData + '-daer')
     $('.ren-dasan').addClass(classData + '-dasan')
     $('.main-zhi').addClass('main-zhi2')
-// 点击考试 跳转
+
+    // 点击考试 跳转
     $('.shengji-kaoshi').on('click', function () {
       topic = 0;
       sjCount = 0;
@@ -31,10 +32,10 @@ $(document).ready(function () {
       $('.num-count .total').text('10');
       $('.dq-dayi, .abandon').velocity('fadeIn');
     })
-    
 
-//点击选项
-    $('.answer-upgrade').on('click','.opt', function () {
+
+    //点击选项
+    $('.answer-upgrade').on('click', '.opt', function () {
       if (lock_click) {
         lock_click = false;
         sjCount++;
@@ -50,35 +51,35 @@ $(document).ready(function () {
       }
     })
 
-//正确时显示
-   function renwucorrect($t) {
-     topic++;
-     $t.find('.animation-correct').velocity('fadeIn', {
+    //正确时显示
+    function renwucorrect($t) {
+      topic++;
+      $t.find('.animation-correct').velocity('fadeIn', {
         duration: 700,
         complete: function () {
           const $t = $(this);
           let sjNewdata = data.daoju[classData][sjCount];
-          lock_click = true;  
+          lock_click = true;
           $t.velocity('fadeOut');
           sjInitData(sjNewdata)
         }
       })
-      
-     //当前年级显示
-     if (topic > 10) {
-       topic = '10'
-     }
-     $('.topic-corect .topic-num').text(topic)
-     if (topic == 4) {
-       $('.dq-class .dq-dayi').velocity('fadeOut', {
-         complete: function () {
-           $('.dq-class .dq-daer').velocity('transition.shrinkIn')
-         }
-       })
-     } else if (topic == 8) {
-       $('.dq-class .dq-daer').hide();
-       $('.dq-class .dq-dasan').show();
-     }
+
+      //当前年级显示
+      if (topic > 10) {
+        topic = '10'
+      }
+      $('.topic-corect .topic-num').text(topic)
+      if (topic == 4) {
+        $('.dq-class .dq-dayi').velocity('fadeOut', {
+          complete: function () {
+            $('.dq-class .dq-daer').velocity('transition.shrinkIn')
+          }
+        })
+      } else if (topic == 8) {
+        $('.dq-class .dq-daer').hide();
+        $('.dq-class .dq-dasan').show();
+      }
     }
 
     //错误时显示
@@ -94,14 +95,15 @@ $(document).ready(function () {
         }
       })
     }
-//放弃回答
-    $('.abandon').on('click', function() {
+    
+    //放弃回答
+    $('.abandon').on('click', function () {
       $('.topic-corect .topic-num').text('0')
       $('.slide').css({ transform: 'translateY(' + -winHight + 'px)' });
       $(".result-renwu-box").hide()
     })
 
- //数据加载 
+    //数据加载 
     function sjInitData(sjNewdata) {
       if (topic >= 4 && topic < 8) {
         $('.result-flag-daer, .daer, .ren-daer, .daer-paibian').show();
@@ -127,9 +129,9 @@ $(document).ready(function () {
                 let $t = $(this);
                 setTimeout(() => {
                   $t.velocity('fadeOut')
-                },2500)
+                }, 2500)
               }
-          });
+            });
 
           }
         })
@@ -145,8 +147,8 @@ $(document).ready(function () {
         $item.text(sjNewdata.opitions[map_opt[index]]);
       })
       $('.answer-upgrade').data('sjcorrect', sjNewdata.correct); //绑定正确答案到'.answer-box' 上
-      
-     
+
+
     }
   }
 
@@ -155,7 +157,7 @@ $(document).ready(function () {
   })
   $('.choose-jy').on('click', function () {
     shengjidata('jiying')
-    
+
   })
   $('.choose-rj').on('click', function () {
     shengjidata('ruanjian')
@@ -186,7 +188,6 @@ $(document).ready(function () {
     var myReg = /^[\u4e00-\u9fa5]+$/;
     if (myReg.test(nameValue) && nameValue.length >= 2 && nameValue.length < 5) {
       const $t = $(this);
-      // const $nbsp = $('.nbsp').html();
       if (nameValue.length == 2) {
         var nameValue2 = nameValue.charAt(0) + '  ' + nameValue.charAt(1)
         addName(nameValue2, $t);
@@ -197,22 +198,21 @@ $(document).ready(function () {
       $('.name-wrong').show()
     }
     setTimeout(() => {
-      $('.dyzs-share, .byzs-revampImg').hide();
-      $('.topMusic').hide()
+      $('.dyzs-share, .byzs-revampImg, .byzs-screen, .topMusic').hide();
     }, 5000);
     setTimeout(() => {
       $('.photo-title').velocity('transition.flipBounceXOut')
-    },2000 );
+    }, 2000);
   })
   //更换毕业证书
   let $byzsChoose = $('.swiper-wrapper li')
   $byzsChoose.on('click', 'img', function () {
     let bgImg = $(this).attr("src");
     $('.swiper-container, .top200, .change-byzs-info, .uers-photo2, .photohide2 ').show()
-    $('.byzs-choose').hide();  
+    $('.byzs-choose').hide();
     $('.byzsImg').attr('src', bgImg)
   })
-  $('.top200').on('click',function() {
+  $('.top200').on('click', function () {
     $(this).hide();
     $('.change-byzs-info, .uers-photo2, .photohide2').hide()
     $('.revamp-school, .byzs-choose, .swiper-wrapper, .swiper-container').show()
@@ -228,7 +228,7 @@ $(document).ready(function () {
     var myReg = /^[\u4e00-\u9fa5]+$/;
     let $revampSchool = $('.revampSchool').val();
     let $revampName = $('.revampName').val();
-    if (myReg.test($revampName)  && $revampName.length >= 2 ) {
+    if (myReg.test($revampName) && $revampName.length >= 2) {
       if ($revampName.length == 2) {
         let $revampName2 = $revampName.charAt(0) + '    ' + $revampName.charAt(1)
         $('.uers-name').text($revampName2);
@@ -240,7 +240,7 @@ $(document).ready(function () {
       $('.uers-school').text($revampSchool);
     }
     $('.revamp-school, .byzs-choose').hide();
-    
+
   })
 
   $('.preview-revamp').on('click', function () {
@@ -283,36 +283,4 @@ $(document).ready(function () {
     }
     return url;
   }
-
-  //截屏
-//   $('.example1').on('click', function () {
-//     html2canvas(document.getElementById('byzsID'), {
-//       allowTaint: true,
-//       logging: true,
-//       taintTest: false,
-//       width: '100px'
-//     }).then(canvas => {
-//       $('.byzs-screen').html(canvas).show()
-//     });
-//   });
-
-//   $('.byzs-screen').on('click', function() {
-//     var canvas = $('canvas');
-//     var context = canvas[0].getContext('2d');
-//     var cw = 640;
-//     var ch = 450;
-//     context.fillStyle = "#ff0000";
-//     context.fillRect(0, 0, cw, ch);
-//     var img = new Image();
-//     image.crossOrigin = "anonymous"
-//     context.drawImage(img, 0, 0, cw, ch);
-//     var imgData = canvas[0].toDataURL("image/png");
-//     img.src = imgData;   
-// })
-
- 
-
-    
-  
-  
 })

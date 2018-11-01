@@ -2,9 +2,9 @@ $(document).ready(function () {
   const WinHeight = $(window).height()
   let index = 0;
   let mstop = 1;
-  let pics_lenght = pics.length;
 
   //01 - loading页面
+  let pics_lenght = pics.length;
   for (let i = 0; i < pics_lenght; i++) {
     const img = new Image();
     img.src = pics[i];
@@ -28,17 +28,18 @@ $(document).ready(function () {
               $('.coverArrows').hide();
             },700)
             }, 1000);;
-        }, 11000); //11000
+        }, 11000);
       }
     };
   };
   $('.loading-yun-img').animate({ left: "-800px" }, 21000);     
 
-  //01 - cover页面
+  //02 - cover页面
   function feidieplay() {
     const myAuto = document.getElementById('myfeifei');
     myAuto.play();
   }
+
   $('.feidie').on('click', function () {
     let _this = $(this)
     $('.cover-text, .cover-arrows, .guang').velocity('fadeOut', {duration:1500,
@@ -51,7 +52,6 @@ $(document).ready(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
     }, 4000);
-    // 4000
   });
 
   //03 - choose页面
@@ -62,10 +62,10 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3000)//4000
+      }, 3000)
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 5000)//6000
+      }, 5000)
       setInterval(function () {
         $('.ren').addClass('animation-renwu')
         setTimeout(function () {

@@ -4673,9 +4673,9 @@ $(document).ready(function () {
   const WinHeight = $(window).height()
   let index = 0;
   let mstop = 1;
-  let pics_lenght = pics.length;
 
   //01 - loading页面
+  let pics_lenght = pics.length;
   for (let i = 0; i < pics_lenght; i++) {
     const img = new Image();
     img.src = pics[i];
@@ -4699,17 +4699,18 @@ $(document).ready(function () {
               $('.coverArrows').hide();
             },700)
             }, 1000);;
-        }, 11000); //11000
+        }, 11000);
       }
     };
   };
   $('.loading-yun-img').animate({ left: "-800px" }, 21000);     
 
-  //01 - cover页面
+  //02 - cover页面
   function feidieplay() {
     const myAuto = document.getElementById('myfeifei');
     myAuto.play();
   }
+
   $('.feidie').on('click', function () {
     let _this = $(this)
     $('.cover-text, .cover-arrows, .guang').velocity('fadeOut', {duration:1500,
@@ -4722,7 +4723,6 @@ $(document).ready(function () {
       $('.cover').velocity('fadeOut');
       $('.choose').velocity('fadeIn');;
     }, 4000);
-    // 4000
   });
 
   //03 - choose页面
@@ -4733,10 +4733,10 @@ $(document).ready(function () {
       .end().closest('.slide').css({ 'transform': 'translateY(' + -WinHeight + 'px)' });
       setTimeout(function() {
         $('.main-masking').hide();
-      }, 3000)//4000
+      }, 3000)
       setTimeout(function () {
         $('.de-arrows').hide();
-      }, 5000)//6000
+      }, 5000)
       setInterval(function () {
         $('.ren').addClass('animation-renwu')
         setTimeout(function () {
@@ -5633,8 +5633,7 @@ $(document).ready(function () {
       $('.name-wrong').show()
     }
     setTimeout(() => {
-      $('.dyzs-share, .byzs-revampImg').hide();
-      $('.topMusic').hide()
+      $('.dyzs-share, .byzs-revampImg, .byzs-screen, .topMusic').hide();
     }, 5000);
     setTimeout(() => {
       $('.photo-title').velocity('transition.flipBounceXOut')
@@ -5720,31 +5719,7 @@ $(document).ready(function () {
     return url;
   }
 
-  //截屏
-//   $('.example1').on('click', function () {
-//     html2canvas(document.getElementById('byzsID'), {
-//       allowTaint: true,
-//       logging: true,
-//       taintTest: false,
-//       width: '100px'
-//     }).then(canvas => {
-//       $('.byzs-screen').html(canvas).show()
-//     });
-//   });
 
-//   $('.byzs-screen').on('click', function() {
-//     var canvas = $('canvas');
-//     var context = canvas[0].getContext('2d');
-//     var cw = 640;
-//     var ch = 450;
-//     context.fillStyle = "#ff0000";
-//     context.fillRect(0, 0, cw, ch);
-//     var img = new Image();
-//     image.crossOrigin = "anonymous"
-//     context.drawImage(img, 0, 0, cw, ch);
-//     var imgData = canvas[0].toDataURL("image/png");
-//     img.src = imgData;   
-// })
 
  
 
